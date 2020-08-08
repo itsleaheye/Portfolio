@@ -13,5 +13,5 @@ I used web developement knowledge obtained through my formal educational experie
 # Known Bugs
 * Contact me form is not functional (Will be amended in future updates)
 
-#Live Link
+# Live Link
 https://leahnonay.github.io/Portfolio/
