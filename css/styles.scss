@@ -110,6 +110,9 @@ html {
     flex:45%;
     max-width:45%;
   }
+  .info-panel {
+    height:290px;	
+    }
 }
 @media screen and (max-width:1200px) {
   .col {
@@ -135,6 +138,10 @@ html {
   .text-banner .col h2 {
   	text-align:center !important;
   }
+  .info-panel {
+    height:370px;	
+    }
+
 }
 @media screen and (max-width:1100px) {
   .row-gallery .col-gallery {
@@ -152,7 +159,7 @@ html {
   }
   .banner {
   	margin-top:50px;
-}
+ }
   .nav {
   	top:0;
   	height:40px;
@@ -223,6 +230,19 @@ html {
   #nav-check:checked ~  li {
 	visibility:visible;
   }
+  .info-panel {
+    height:295px;	
+    }
+}
+@media screen and (max-width:850px) {
+	.info-panel {
+    height:310px;	
+    }
+}
+@media screen and (max-width:590px) {
+	.info-panel {
+    height:420px;	
+    }
 }
 
 /*Header Stylings - Global*/
