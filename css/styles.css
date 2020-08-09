@@ -134,6 +134,12 @@ html {
 	footer h2  {
 		font-size:16px;
 	}
+	main p {
+	font-size:16px;
+	}
+	.text-banner .col p {
+		font-size:18px;
+	}
 }
 
 /*Responsive Design*/
@@ -175,6 +181,12 @@ html {
 		font-size:14px;
 	}
 	footer h2  {
+		font-size:16px;
+	}
+	main p {
+	font-size:16px;
+	}
+	.text-banner .col p {
 		font-size:16px;
 	}
 }
@@ -222,6 +234,14 @@ html {
 		font-size:14px;
 	}
 	footer h2  {
+		font-size:16px;
+	}
+	main p {
+	font-family:'Quattrocento Sans', sans-serif;
+	font-size:16px;
+	color:#ffffff;
+	}
+	.text-banner .col p {
 		font-size:16px;
 	}
 }
@@ -326,7 +346,7 @@ html {
 		visibility:visible;
 	}
 	.info-panel {
-		height:220px;	
+		height:270px;	
 	}
 	.col .contact-link {
 		font-size:16px;
@@ -337,10 +357,16 @@ html {
 	footer h2  {
 		font-size:16px;
 	}
+	main p {
+	font-size:18px;
+	}
+	.text-banner .col p {
+		font-size:18px;
+	}
 }
 @media screen and (max-width:850px) {
 	.info-panel {
-		height:270px;
+		height:300px;
 	}
 	.center-section {
 		width:100%;
@@ -354,24 +380,35 @@ html {
 		max-width:93%;
 	}
 	.col .contact-link {
-		font-size:16px;
+		font-size:18px;
 		margin-top:3px;
 	}
 	footer h2  {
-		font-size:16px;
+		margin-top:15px;
+		font-size:22px;
+		margin-bottom:15px;
 	}
 	footer .text-banner .col p {
-		font-size:16px;
-		margin-top:7px;
+		font-size:18px;
+		margin-top:10px;
 		line-height:2;
 	}
 	.logo-home {
-		margin-top:60px;
+		margin-top:80px;
+	}
+	footer .row {
+		height:250px;
+	}
+	main p {
+	font-size:18px;
+	}
+	.text-banner .col p {
+		font-size:18px;
 	}
 }
 @media screen and (max-width:590px) {
 	.info-panel {
-		height:320px;	
+		height:420px;	
 	}
 	.center-section {
 		width:100%;
@@ -382,16 +419,28 @@ html {
 		max-width:90%;
 	}
 	footer .text-banner .col p {
-		font-size:16px;
+		margin-top:20px;
+		font-size:18px;
 	}
 	footer h2  {
-		font-size:16px;
+		margin-top:15px;
+		font-size:22px;
+		margin-bottom:15px;
 	}
 	.col .contact-link {
-		font-size:16px;
+		font-size:18px;
 	}
 	.logo-home {
-		margin-top:60px;
+		margin-top:80px;
+	}
+	footer .row {
+		height:250px;
+	}
+	main p {
+	font-size:18px;
+	}
+	.text-banner .col p {
+		font-size:18px;
 	}
 }
 
@@ -456,7 +505,6 @@ h2 {
 }
 main p {
 	font-family:'Quattrocento Sans', sans-serif;
-	font-size:16px;
 	color:#ffffff;
 }
 .col {
@@ -479,7 +527,6 @@ main p {
 }
 .text-banner .col p {
 	text-align: right;
-	font-size:16px;
 	margin-right:25px;
 }
 .text-banner .col h2{
@@ -580,10 +627,10 @@ figure.img-container figcaption {
 	display:block;
 	text-align:center;
 	background:#282824;
-	padding:5px;
+	padding:15px;
 	z-index:100;
 	width:100%;
-	height:auto;
+	height:70px;
 	max-height:50%;
 	overflow:hidden;
 	top:40%;
@@ -601,7 +648,8 @@ figure.img-container:hover figcaption {
 	margin-bottom:-5px;
 }
 .category {
-	font-size: 1rem;
+	font-size: 1.2rem;
+	margin-top:6;
 	color:#a9a9a9;
 	font-style:italic;
 	font-weight:400;
