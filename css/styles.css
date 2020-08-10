@@ -110,9 +110,9 @@ html {
 		max-width:95%
 	}
 	.row-gallery .col-gallery {
-		-ms-flex:49%;
-		flex:49%;
-		max-width:41%;
+		-ms-flex:32.6%;
+		flex:32.6%;
+		max-width:32.76%;
 	}
 	.row-gallery .col-panel {
 		-ms-flex:45%;
@@ -630,11 +630,10 @@ figure.img-container figcaption {
 	display:block;
 	text-align:center;
 	background:#282824;
-	padding:15px;
+	padding:25px;
 	z-index:100;
 	width:100%;
-	height:70px;
-	max-height:50%;
+	height:auto;
 	overflow:hidden;
 	top:40%;
 	opacity:0;
@@ -645,26 +644,30 @@ figure.img-container:hover figcaption {
 .title {
 	margin-top:0;
 	color:#ffffff;
-	font-size:24px;
+	font-size:26px;
 	letter-spacing:.07em;
 	font-weight:400;
 	margin-bottom:-5px;
+	float:center;
+	margin-left:-65px;
 }
 .category {
 	font-size: 1.2rem;
-	margin-top:6;
 	color:#a9a9a9;
 	font-style:italic;
 	font-weight:400;
 	letter-spacing:.07em;
+	margin-left:-75px;
+	margin-bottom:6px;
 }
 
 figcaption p {
 	font-family:'Quattrocento Sans', sans-serif;
 	letter-spacing:.07em;
 	font-weight:400;
-	float:left;
+	float:center;
 	line-height:19px;
+	max-width:90%;
 }
 
 .text-banner .category {
