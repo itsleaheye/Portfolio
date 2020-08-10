@@ -383,16 +383,16 @@ html {
 		max-width:93%;
 	}
 	.col .contact-link {
-		font-size:18px;
+		font-size:22px;
 		margin-top:3px;
 	}
 	footer h2  {
 		margin-top:60px;
-		font-size:24px;
+		font-size:26px;
 		margin-bottom:15px;
 	}
 	footer .text-banner .col p {
-		font-size:20px;
+		font-size:22px;
 		margin-top:10px;
 		line-height:2;
 	}
@@ -406,7 +406,7 @@ html {
 	font-size:20px;
 	}
 	.text-banner .col p {
-		font-size:20px;
+		font-size:22px;
 	}
 }
 @media screen and (max-width:590px) {
@@ -423,15 +423,15 @@ html {
 	}
 	footer .text-banner .col p {
 		margin-top:20px;
-		font-size:18px;
+		font-size:22px;
 	}
 	footer h2  {
 		margin-top:60px;
-		font-size:24px;
+		font-size:26px;
 		margin-bottom:15px;
 	}
 	.col .contact-link {
-		font-size:20px;
+		font-size:22px;
 	}
 	.logo-home {
 		margin-top:80px;
@@ -443,7 +443,7 @@ html {
 	font-size:20px;
 	}
 	.text-banner .col p {
-		font-size:20px;
+		font-size:22px;
 	}
 }
 
