@@ -271,7 +271,7 @@ html {
 	}
 	.nav {
 		top:0;
-		height:60px;
+		height:80px;
 		width:100%;
 		position:relative;
 		display:flex;
@@ -284,19 +284,19 @@ html {
 		display:inline-block;
 		position: absolute;
 		right:0;
-		top:15px;
+		top:21px;
 	}
 	/* Hamburger Menu */
 	.nav .nav-btn label {
 		display:inline-block;
-		width:40px;
-		height:auto;
+		width:60px;
+		height:60px;
 		padding-top:12px;
 		padding-right:25px;
 	}
 	.nav .nav-btn label span {
 		display: block;
-		width:25px;
+		width:50px;
 		height:10px;
 		border-top:2px solid #ffffff;
 	}
@@ -305,7 +305,7 @@ html {
 		position:absolute;
 		width:100%;
 		background-color:#282824;
-		top:60px;
+		top:80px;
 		left:0px;
 		height:0px;
 		visibility:collapse;
@@ -315,9 +315,9 @@ html {
 		display:block;
 		max-width:100%;
 		width:100%;
-		height:50px;
+		height:80px;
 		background-color:#282824;
-		margin-bottom:5px;
+		margin-bottom:6px;
 	}
 	.nav .nav-links ul {
 		background-color:#282824;
@@ -326,9 +326,9 @@ html {
 		max-width:100%;
 	}
 	.nav .nav-links li a {
-		width:96%;
-		padding-top:15px;
-		padding-bottom:15px;
+		width:99%;
+		padding-top:25px;
+		padding-bottom:25px;
 		display:block;
 	}
 	#nav-check:checked ~ .nav-links {
@@ -338,7 +338,6 @@ html {
 		background-color:#3f4140;
 	}
 	#nav-check:checked ~ .nav-links .current {
-		margin-top:3px;
 		background-color:#3f4140;
 		border:none;
 	}
@@ -346,27 +345,31 @@ html {
 		visibility:visible;
 	}
 	.info-panel {
-		height:270px;	
+		height:300px;	
 	}
 	.col .contact-link {
-		font-size:16px;
+		font-size:20px;
 	}
 	footer .text-banner .col p {
-		font-size:16px;
+		font-size:20px;
 	}
 	footer h2  {
-		font-size:16px;
+		margin-top:60px;
+		font-size:26px;
 	}
 	main p {
-	font-size:18px;
+	font-size:20px;
 	}
 	.text-banner .col p {
-		font-size:18px;
+		font-size:20px;
+	}
+	footer .row {
+		height:350px;
 	}
 }
 @media screen and (max-width:850px) {
 	.info-panel {
-		height:300px;
+		height:400px;
 	}
 	.center-section {
 		width:100%;
@@ -384,12 +387,12 @@ html {
 		margin-top:3px;
 	}
 	footer h2  {
-		margin-top:15px;
-		font-size:22px;
+		margin-top:60px;
+		font-size:24px;
 		margin-bottom:15px;
 	}
 	footer .text-banner .col p {
-		font-size:18px;
+		font-size:20px;
 		margin-top:10px;
 		line-height:2;
 	}
@@ -397,18 +400,18 @@ html {
 		margin-top:80px;
 	}
 	footer .row {
-		height:250px;
+		height:350px;
 	}
 	main p {
-	font-size:18px;
+	font-size:20px;
 	}
 	.text-banner .col p {
-		font-size:18px;
+		font-size:20px;
 	}
 }
 @media screen and (max-width:590px) {
 	.info-panel {
-		height:420px;	
+		height:460px;	
 	}
 	.center-section {
 		width:100%;
@@ -423,24 +426,24 @@ html {
 		font-size:18px;
 	}
 	footer h2  {
-		margin-top:15px;
-		font-size:22px;
+		margin-top:60px;
+		font-size:24px;
 		margin-bottom:15px;
 	}
 	.col .contact-link {
-		font-size:18px;
+		font-size:20px;
 	}
 	.logo-home {
 		margin-top:80px;
 	}
 	footer .row {
-		height:250px;
+		height:350px;
 	}
 	main p {
-	font-size:18px;
+	font-size:20px;
 	}
 	.text-banner .col p {
-		font-size:18px;
+		font-size:20px;
 	}
 }
 
