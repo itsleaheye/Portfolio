@@ -112,7 +112,7 @@ html {
 	.row-gallery .col-gallery {
 		-ms-flex:32.6%;
 		flex:32.6%;
-		max-width:32.76%;
+		max-width:24.3%;
 	}
 	.row-gallery .col-panel {
 		-ms-flex:45%;
