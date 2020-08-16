@@ -32,9 +32,9 @@
 					<ul>
 						<li><a href="index.html">home</a></li>
 						<li><a href="about.html">about</a></li>
-						<li><a href="contact.html">contact</a></li>
+						<!--<li><a href="contact.html">contact</a></li>-->
 						<li><a class="current" href="software.html">software development</a></li>
-						<li><a href="design.html">design & illustration</a></li>
+						<li><a href="design.html">design</a></li>
 					</ul>
 				</div>
 				</section>
@@ -45,16 +45,16 @@
 				<img src="img/software-banner2.png" class="banner">
 			</div>
 			<div class="row hr-bar">
-				<div class="text-banner">
+				<div class="text-banner" style="max-width:55%">
 					<h2 class="tighten">Application Dev</h2>
-					<br><p>I like to consider myself a full-stack developer despite my formal university training being focused on primarily back end content. I take pride in creating efficient and engaging interfaces for my clients, whilst also maintaining efficient code on the back end. Due to this, the majority of my skills and training for front end content have come from years of experience, and informal training.
-					<h3 class="category">IDE's Used: Visual Studio 2014-19, Sublime Text 3, MSSQL Server Management Studio, and version controlled through GitHub</h3></p>
+					<br><p>I like to consider myself a full-stack developer despite my formal university training being focused on primarily back end content. I take pride in creating efficient and engaging interfaces for my clients, whilst also maintaining efficient code on the back end. Due to this, the majority of my skills and training for front end content have come from years of informal training and experiences.
+					<!--<h3 class="category" style="max-width:55%">IDE's Used: Visual Studio 2014-19, Sublime Text 3, MSSQL Server Management Studio, and version controlled through GitHub</h3></p>-->
 				</div>
 			</div>
 			<div class="row row-gallery center-section">	
 				<div class="col col-panel">
 					<div class="row">
-						<div class="slideshow-container">
+						<div id="slideshow1" class="slideshow-container">
 
 							<div class="mySlides fade">
 								<img src="img/webdev-star3.png" width="100%">
@@ -66,27 +66,43 @@
 								<img src="img/webdev-star2.png" width="100%">
 							</div>
 							<!-- Next and previous buttons -->
-  							<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  							<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  							<a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
 						</div>
 					</div>
 					<div class="row text-banner" style="width:88%">
-						<h2 class="title">Client Server Application</h2>
-						<p style="text-align:center">Using Visual Studio 17 and MS Sql Server Management Studio, I was the sole developer for this lab. I created and optimized a CRUD (Create Read Update Delete) web application that featured a variety of query filtering techniques (partial string, primary key search). I included JavaScript to allow paging within populated tables and also implemented validation techniques to ensure that all passed data complied with the database requirements.
+						<h2 class="title" style="margin-bottom:10px">Staff Management Application</h2>
+						<p style="text-align:center">Using Visual Studio 17 and MS Sql Server Management Studio, I created and optimized a CRUD (Create Read Update Delete) web application. This application featured a variety of query filtering techniques (partial string, primary key search). I included JavaScript to allow paging within populated tables and also implemented validation techniques to ensure that all passed data complied with the database requirements.
 						<br><br><span class="icon-link"><a href="https://github.com/leahnonay/CRUDWebApp"><img class="icon" src="img/icon-download.png"></a></span>
-						<br><span class="category">ASP .Net, SQL, Entity Framework, JavaScript, and C# - 2020</span></p>
+						<br><span class="category" >ASP .Net, SQL, Entity Framework, JavaScript, and C# - Completed 2019</span></p>
 					</div>
 				</div>
 				<div class="col col-panel">
 					<div class="row">
-						<img src="img/webdev-dnd.png" class="feature-img dev-img">
+						<div id="slideshow2" class="slideshow-container">
+							<div class="mySlides fade">
+								<img src="img/webdev-dnd.png" width="100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="img/webdev-dnd2.png" width="100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="img/webdev-dnd3.png" width="100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="img/webdev-dnd4.png" width="100%">
+							</div>
+							<!-- Next and previous buttons -->
+  							<a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+						</div>
+						
 					</div>
 					<div class="row text-banner" style="width:88%">
-						<h2 class="title">DnD Character App</h2>
+						<h2 class="title" style="margin-bottom:10px">DnD Character App</h2>
 						<p style="text-align:center">Using Visual Studio 2019, I am currently working independently on a mobile (Android OS) application that allows users to manage their 'Dungeons and Dragons' rpg characters. Users will be offered a visually appealing hub to organize their characters and the app offers full CRUD functionality. This app's progress can be tracked through the link below.
 					    <br><br><span class="icon-link"><a href="https://github.com/leahnonay/Cantrip"><img class="icon" src="img/icon-download.png"></a></span>
-						<br><span class="category">Front-End: XML/XAML, Figma
-						<br>Back-End: C#, Xamarin, and SQLite</span></p>
+						<br><span class="category">XML/XAML, Figma, C#, Xamarin, and SQLite - In Progress</span></p>
 					</div>
 				</div>
 			</div>
@@ -102,10 +118,10 @@
 						<img src="img/webdev-port1.png" class="feature-img dev-img">
 					</div>
 					<div class="row text-banner" style="width:80%">
-						<h2 class="title">Static Landing Page</h2>
+						<h2 class="title" style="margin-bottom:10px">Static Landing Page</h2>
 						<p style="text-align:center">I was the sole full stack developer for this lab, as it was designed to display basic content orientation skills through the use of rows and columns within a clearfix container. This project was not designed to be responsive to varying user screen sizes.
 						<br><br><span class="icon-link"><a href="https://github.com/leahnonay/StaticLanding"><img class="icon" src="img/icon-download.png" alt="download"></a></span>
-						<br><span class="category">HTML5, and CSS - 2018</span></p>
+						<br><span class="category">HTML5, and CSS - Completed 2018</span></p>
 					</div>
 				</div>
 				<div class="col col-panel">
@@ -113,10 +129,10 @@
 						<img src="img/webdev-sky1.png" class="feature-img dev-img">
 					</div>
 					<div class="row text-banner" style="width:80%">
-						<h2 class="title">Check Out Interface</h2>
+						<h2 class="title" style="margin-bottom:10px">Check Out Interface</h2>
 						<p style="text-align:center">I was the sole full stack developer for this project, as it was designed to reflect user UI design skills and UX integration in a environment that supported multiple forms styles. However, the project was not designed to be completely responsive to screen size.
 						<br><br><span class="icon-link"><a href="https://github.com/leahnonay/CheckOutForm"><img class="icon" src="img/icon-download.png" alt="download"></a></span>
-						<br><span class="category" >HTML5, CSS, and Limited JQuery - 2018</span></p>
+						<br><span class="category" >HTML5, CSS, and Limited JQuery - Completed 2018</span></p>
 					</div>
 				</div>
 			</div>
@@ -144,7 +160,36 @@
 		</footer>
 	</div>
 	<script>
-var slideIndex = 1;
+		var slideshow1 = document.getElementById("slideshow1");
+		slideshow1.currentSlideIndex = 1;
+		showSlides(slideshow1.currentSlideIndex, slideshow1);
+
+		var slideshow2 = document.getElementById("slideshow2");
+		slideshow2.currentSlideIndex = 1;
+		showSlides(slideshow2.currentSlideIndex, slideshow2);
+
+		function plusSlides(n, slideshow) 
+		{
+  			showSlides(slideshow.currentSlideIndex += n, slideshow);
+		}
+		function currentSlide(n, slideshow) 
+		{
+		  showSlides(slideshow.currentSlideIndex = n, slideshow);
+		}
+		function showSlides(n, slideshow) 
+		{
+  			var i;
+  			var slides = slideshow.getElementsByClassName("mySlides");
+  			if (n > slides.length) {slideshow.currentSlideIndex = 1}   
+  			if (n < 1) {slideshow.currentSlideIndex = slides.length}
+  			for (i = 0; i < slides.length; i++) {
+      			slides[i].style.display = "none";  
+  			}
+  			slides[slideshow.currentSlideIndex-1].style.display = "block";
+		}
+
+
+/*var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -158,18 +203,14 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
 }
+*/
 </script>
 </body>
 

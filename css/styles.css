@@ -59,8 +59,6 @@ html {
 	margin-right:auto;
 }
 .icon {
-	width:35px;
-	height:auto;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
@@ -78,7 +76,6 @@ html {
 	margin-right:25px;	
 }
 .slideshow-container {
-	margin-top:25px;
 	height:auto;
 	width:90%;
 	position:relative;
@@ -101,11 +98,8 @@ html {
 	color:#a9a9a9;
 	font-size:46px;
 	transition:0.6s ease;
-	border-radius:0 3px 3px 0;
+	border-radius:0 2px 2px 0;
 	user-select: none;
-}
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
 }
 .next {
   right:0;
@@ -206,10 +200,10 @@ html {
 		font-size:14px;
 	}
 	footer h2  {
-		font-size:16px;
+		font-size:1.2rem;
 	}
 	main p {
-	font-size:16px;
+	font-size:1.1rem;
 	}
 	.text-banner .col p {
 		font-size:18px;
@@ -621,7 +615,7 @@ main p {
 .text-banner .col h2{
 	text-align:left;
 	color:#282824;
-	margin-left:-25px;
+	margin-left:auto;
 	margin-top:45px;
 }
 .col .contact-link {
@@ -644,7 +638,7 @@ footer .col a:hover {
 .col p {
 	color:#7e7e7e;
 	text-align:left;
-	margin-left:-25px;
+	margin-left:auto;
 }
 .text-dark {
 	color:#373938;
@@ -734,8 +728,10 @@ figure.img-container:hover figcaption {
 	letter-spacing:.07em;
 	font-weight:400;
 	margin-bottom:-5px;
-	float:center;
-	margin-left:-65px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-right:65px;
+	line-height:27px;
 }
 .category {
 	font-size: 1.2rem;
@@ -743,8 +739,10 @@ figure.img-container:hover figcaption {
 	font-style:italic;
 	font-weight:400;
 	letter-spacing:.07em;
-	margin-left:-75px;
-	margin-bottom:6px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	padding-right:65px;
 }
 
 figcaption p {
