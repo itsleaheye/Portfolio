@@ -96,7 +96,6 @@
   							<a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
 							<a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
 						</div>
-						
 					</div>
 					<div class="row text-banner" style="width:88%">
 						<h2 class="title" style="margin-bottom:10px">DnD Character App</h2>
@@ -107,15 +106,28 @@
 				</div>
 			</div>
 			<div class="row hr-bar" style="margin-top:15px">
-				<div class="text-banner">
+				<div class="text-banner" style="max-width:55%">
 					<h2 class="tighten">Web Dev</h2>
-					<br><p>Developed through Submlime Text 3, Visual Studio 2016, and managed files through the FileZilla application
+					<br><p>I am an experienced full-stack web developer, as I have been developing my skills within this field for about 4 years now. I develop the majority of my projects through Sublime Text 3, Visual Studio 2014-19, and manage my project files through FileZilla and GitHub.
 				</div>
 			</div>
 			<div class="row row-gallery center-section">	
 				<div class="col col-panel">
 					<div class="row">
-						<img src="img/webdev-port1.png" class="feature-img dev-img">
+						<div id="slideshow3" class="slideshow-container">
+							<div class="mySlides fade">
+								<img src="img/webdev-port1.png" width="100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="img/webdev-port2.png" width="100%">
+							</div>
+							<div class="mySlides fade">
+								<img src="img/webdev-port3.png" width="100%">
+							</div>
+							<!-- Next and previous buttons -->
+  							<a class="prev" onclick="plusSlides(-1, this.parentNode)">&#10094;</a>
+							<a class="next" onclick="plusSlides(1, this.parentNode)">&#10095;</a>
+						</div>
 					</div>
 					<div class="row text-banner" style="width:80%">
 						<h2 class="title" style="margin-bottom:10px">Static Landing Page</h2>
@@ -167,6 +179,10 @@
 		var slideshow2 = document.getElementById("slideshow2");
 		slideshow2.currentSlideIndex = 1;
 		showSlides(slideshow2.currentSlideIndex, slideshow2);
+
+		var slideshow3 = document.getElementById("slideshow3");
+		slideshow3.currentSlideIndex = 1;
+		showSlides(slideshow3.currentSlideIndex, slideshow3);
 
 		function plusSlides(n, slideshow) 
 		{

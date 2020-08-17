@@ -131,7 +131,7 @@ html {
 }
 .banner {
 	margin-top:30px;
-	max-width:100%;
+	width:100%;
 	height:auto;
 	display:block;
 	margin-left:auto;
@@ -160,7 +160,7 @@ html {
 .clearfix {
 	*zoom: 1;
 }
-@media screen and (max-width:2800px) {
+@media screen and (max-width:4100px) {
 	.nav ul {
 		font-size:1.1rem;
 	}
@@ -530,7 +530,7 @@ html {
 /*Header Stylings - Global*/
 header section{
 	font-weight:lighter;
-	background-color:#111111;
+	background-color:#282824;
 	height:auto;
 	padding-bottom:8px;
 	width:100%;
