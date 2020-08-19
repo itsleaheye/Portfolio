@@ -77,12 +77,8 @@ html {
 }
 #banner-full h4{
 	display:inline-block;
-	position:absolute;
-	top:92%;
-  	left:46%;
+	margin-top:1em;
   	height:45px;
-  	margin-left:auto;
-  	margin-right:auto;
 	width:auto;
 	color:#282824;
 	font-size:26px;
@@ -102,18 +98,18 @@ html {
 }
 #banner-full h4 a {
 	padding:15px;
-	color:#ffffff;
+	color:#202;
 	text-decoration:none;
 	background-color:transparent;
-	border:2px solid #ffffff;
+	border:2px solid #282824;
 
 }
 #banner-full h4 a:hover {
 	padding:15px;
-	color:#202328;
+	color:#ffffff;
 	text-decoration:none;
-	background-color:#ffffff;
-	border:2px solid #ffffff;
+	background-color:#282824;
+	border:2px solid #282824;
 }
 /*.home-header img {
 	width:100%;
@@ -386,9 +382,6 @@ ul.icons li {
 	}
 }
 @media screen and (max-width:1200px) {
-	.nav ul {
-		font-size:13px;
-	}
 	.col {
 		flex:100%;
 		max-width:100%;
@@ -689,6 +682,9 @@ header section{
 	list-style:none;
 	text-align:center;
 }
+.nav li {
+	width:120px;
+}
 .nav li, .nav li a{
 	text-transform: uppercase;
 	letter-spacing:.07em;
@@ -698,6 +694,7 @@ header section{
 	margin-left:7px;
 	margin-right:7px;
 	color:#a9a9a9;
+	font-size: 17.6px
 	text-decoration:none;
 }
 .nav li, a:hover{
