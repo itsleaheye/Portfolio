@@ -45,6 +45,9 @@ html {
 	.row.uniform > * > :last-child {
 		margin-bottom: 0;
 	}
+	.nav .nav-links li a {
+		text-decoration: none;
+	}
 
 
 /*Body*/
@@ -552,9 +555,7 @@ ul.icons li {
 	.text-banner .col p {
 		font-size:20px;
 	}
-	footer .row {
-		height:350px;
-	}
+	
 	.home-header h4{
   		left:40%;
   		top:70%
@@ -585,9 +586,6 @@ ul.icons li {
 		font-size:22px;
 		margin-top:10px;
 		line-height:2;
-	}
-	footer .row {
-		height:350px;
 	}
 	main p {
 	font-size:20px;
