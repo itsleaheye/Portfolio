@@ -58,8 +58,9 @@ html {
 	margin-right:auto;
 	border-radius: 100%;
 	display: inline-block;
-	margin: 0 0 2em 0;
+	margin-top:-1em;
 	padding: 0.5em;
+	margin-bottom: 1em;
 }
 .avatar img {
 	border-radius:100%;
@@ -76,19 +77,27 @@ html {
 	text-align: center;
 	display: block;
 	width:100%;
-	margin-top:2em;
+	height:100%;
+	background-image:url(../img/home-banner.png);
+	background-repeat: no-repeat;
+	background-position:top;
+	background-size: cover;
+	padding-top:7em;
+	padding-bottom:3em;
 }
-#banner-full h4{
+.row h4{
 	display:inline-block;
 	margin-top:1em;
   	height:45px;
 	width:auto;
-	color:#282824;
+	color:#f4f4f4;
+	/*color:#282824;*/
 	font-size:26px;
 	letter-spacing:.07em;
 	font-weight:lighter;
 	float:center;
 	z-index:1;
+	margin:0 auto;
 }
 #banner-full h1 {
 	font-size:26px;
@@ -98,17 +107,19 @@ html {
 	width: 35%;
 	margin-left:auto;
 	margin-right: auto;
+	color:#f4f4f4;
 }
-#banner-full h4 a {
-	padding:15px;
+.row h4 a {
+	font-size:1.1rem;
+	padding:10px;
 	color:#202;
 	text-decoration:none;
 	background-color:transparent;
-	border:2px solid #282824;
-
+	border:2px solid #f4f4f4;
+	color:#f4f4f4;
 }
-#banner-full h4 a:hover {
-	padding:15px;
+.row h4 a:hover {
+	padding:10px;
 	color:#ffffff;
 	text-decoration:none;
 	background-color:#282824;
@@ -123,6 +134,16 @@ html {
 	left:0;
 	position:absolute;
 }*/
+.dark-panel {
+	background-color:#282824;
+	max-width:30%;
+	padding:10px;
+	margin-top:15px;
+	margin-left:15px;
+	height:100%;
+	text-align:center;
+	float:center;
+}
 
 .feature-img {
 	margin-top:50px;
@@ -224,7 +245,6 @@ ul.icons li {
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
-	padding-left:15px;
 }
 .banner {
 	margin-top:30px;
@@ -345,7 +365,7 @@ ul.icons li {
 	.row-gallery .col-panel {
 		-ms-flex:45%;
 		flex:45%;
-		max-width:47%;
+		max-width:50%;
 	}
 	.center-section {
 		width:70%;
@@ -383,6 +403,10 @@ ul.icons li {
   		left:43%;
   		top:75%
 	}
+	.dark-panel {
+		max-width:100%;
+	}
+
 }
 @media screen and (max-width:1200px) {
 	.col {
@@ -403,7 +427,7 @@ ul.icons li {
 	.row-gallery .col-panel {
 		-ms-flex:45%;
 		flex:45%;
-		max-width:46.3%;
+		max-width:50;
 	}
 	.text-banner .col h2 {
 		text-align:center !important;
@@ -436,6 +460,9 @@ ul.icons li {
   		left:42%;
   		top:70%
 	}
+	.dark-panel {
+		max-width:100%;
+	}
 }
 
 @media screen and (max-width:1100px) {
@@ -447,7 +474,7 @@ ul.icons li {
 	.row-gallery .col-panel {
 		-ms-flex:99%;
 		flex:99%;
-		max-width:95%;
+		max-width:100%;
 	}
 	.center-section {
 		width:70%;
@@ -571,7 +598,7 @@ ul.icons li {
 	.row-gallery .col-panel {
 		-ms-flex:99%;
 		flex:99%;
-		max-width:93%;
+		max-width:100%;
 	}
 	.col .contact-link {
 		font-size:22px;
@@ -608,7 +635,7 @@ ul.icons li {
 	.row-gallery .col-panel {
 		-ms-flex:99%;
 		flex:99%;
-		max-width:90%;
+		max-width:100%;
 	}
 	footer .text-banner .col p {
 		margin-top:20px;
@@ -791,6 +818,7 @@ footer .col a:hover {
 	margin-right:auto;
 	margin-left:auto;
 	height:auto;
+	margin:0 auto;
 }
 .row-gallery {
 	display:-ms-flexbox; /* IE10 */
@@ -798,8 +826,10 @@ footer .col a:hover {
 	-ms-flex-wrap:wrap; /* IE10 */
 	flex-wrap:wrap;
 	width:100%;
-	margin-left:auto;
-	margin-right:auto;
+	margin: 0 auto;
+	justify-content: center;
+    align-items: center;
+    padding-right:15px;
 }
 .col-gallery {
 	-ms-flex:24%; /* IE10 */
@@ -869,11 +899,11 @@ figure.img-container:hover figcaption {
 	color:#a9a9a9;
 	font-style:italic;
 	font-weight:400;
+	max-width:100%;
 	letter-spacing:.07em;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:10px;
-	padding-right:65px;
 }
 
 figcaption p {
