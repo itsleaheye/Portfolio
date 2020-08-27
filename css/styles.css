@@ -249,10 +249,18 @@ ul.icons li {
 .banner {
 	margin-top:30px;
 	width:100%;
-	height:auto;
+	height:100%;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+	padding-top:1em;
+	padding-bottom:1em;
+}
+.about-banner{
+	background-image:url(img/about-banner.png);
+	background-repeat:none;
+	background-position:center;
+	background-size:cover;
 }
 .index-bg {
 	background-color:#ffffff;
@@ -486,7 +494,7 @@ ul.icons li {
 		margin-top:70px;
 	}
 	.nav {
-		height:80px;
+		height:70px;
 		top:0;
 		width:100%;
 		position:relative;
@@ -501,7 +509,7 @@ ul.icons li {
 		display:inline-block;
 		position: absolute;
 		right:0;
-		top:21px;
+		top:15px;
 	}
 	/* Hamburger Menu */
 	.nav .nav-btn label {
@@ -577,7 +585,7 @@ ul.icons li {
 		font-size:26px;
 	}
 	main p {
-	font-size:20px;
+		font-size:1em;
 	}
 	.text-banner .col p {
 		font-size:20px;
