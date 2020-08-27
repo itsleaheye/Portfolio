@@ -247,7 +247,6 @@ ul.icons li {
 	text-align:center;
 }
 .banner {
-	margin-top:30px;
 	width:100%;
 	height:100%;
 	display:block;
@@ -256,11 +255,41 @@ ul.icons li {
 	padding-top:1em;
 	padding-bottom:1em;
 }
-.about-banner{
-	background-image:url(img/about-banner.png);
-	background-repeat:none;
-	background-position:center;
+#design-banner{
+	background-image:url(../img/illustration-banner.png);
+	background-repeat:no-repeat;
+	background-position:top;
 	background-size:cover;
+	display:block;
+	width:100%;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px; 
+}
+#software-banner{
+	background-image:url(../img/software-banner.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	background-size:cover;
+	display:block;
+	width:100%;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px; 
+}
+#about-banner{
+	background-image:url(../img/about-banner.png);
+	background-repeat:no-repeat;
+	background-position:top;
+	background-size:cover;
+	display:block;
+	width:100%;
+	height:200px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:60px; 
 }
 .index-bg {
 	background-color:#ffffff;
@@ -491,7 +520,7 @@ ul.icons li {
 		text-align:center !important;
 	}
 	.banner {
-		margin-top:70px;
+		margin-top:15px;
 	}
 	.nav {
 		height:70px;
@@ -530,7 +559,7 @@ ul.icons li {
 		position:absolute;
 		width:100%;
 		background-color:#282824;
-		top:80px;
+		top:75px;
 		left:0px;
 		height:0px;
 		visibility:collapse;
@@ -545,7 +574,7 @@ ul.icons li {
 	}
 	.nav .nav-links ul {
 		background-color:#212121;	
-		max-width:99%;
+		max-width:100%;
 	}
 	.nav .nav-links li a {
 		margin-right:auto;
