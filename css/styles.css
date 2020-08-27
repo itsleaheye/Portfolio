@@ -120,10 +120,10 @@ html {
 }
 .row h4 a:hover {
 	padding:10px;
-	color:#ffffff;
+	color:#282824;
 	text-decoration:none;
-	background-color:#282824;
-	border:2px solid #282824;
+	background-color:#f4f4f4;
+	border:2px solid #f4f4f4;
 }
 /*.home-header img {
 	width:100%;
