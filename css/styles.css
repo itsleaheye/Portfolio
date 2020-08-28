@@ -258,38 +258,38 @@ ul.icons li {
 #design-banner{
 	background-image:url(../img/illustration-banner.png);
 	background-repeat:no-repeat;
-	background-position:top;
+	background-position:center;
 	background-size:cover;
 	display:block;
 	width:100%;
-	height:200px;
+	height:350px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:60px; 
+	margin-top:50px; 
 }
 #software-banner{
 	background-image:url(../img/software-banner.png);
 	background-repeat:no-repeat;
-	background-position:top;
+	background-position:center;
 	background-size:cover;
 	display:block;
 	width:100%;
-	height:200px;
+	height:350px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:60px; 
+	margin-top:50px; 
 }
 #about-banner{
 	background-image:url(../img/about-banner.png);
 	background-repeat:no-repeat;
-	background-position:top;
+	background-position:center;
 	background-size:cover;
 	display:block;
 	width:100%;
-	height:200px;
+	height:350px;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:60px; 
+	margin-top:50px; 
 }
 .index-bg {
 	background-color:#ffffff;
@@ -623,6 +623,15 @@ ul.icons li {
 	.home-header h4{
   		left:40%;
   		top:70%
+	}
+	#about-banner {
+		height:200px;
+	}
+	#design-banner {
+		height:200px;
+	}
+	#software-banner {
+		height:200px;
 	}
 }
 @media screen and (max-width:850px) {
