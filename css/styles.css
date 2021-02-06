@@ -275,13 +275,11 @@ figure figcaption {
 /*Slide show*/
 .slideshow-container {
 	height:auto;
-	width:90%;
 	position:relative;
 	margin:auto;
 }
 .mySlides {
 	display:none;
-	margin-top:25px;
 	margin-right:auto;
 	margin-left:auto;
 }
@@ -403,7 +401,8 @@ footer {
 	}
 	.col {
 		width:40%;
-		align-items:stretch;
+		/*align-items:stretch;*/
+		align-items: flex-start;
 		margin:2rem .8rem 0 .8rem;
 	}
 	.col:last-child,
