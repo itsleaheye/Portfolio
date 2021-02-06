@@ -166,6 +166,7 @@ body {
 	border-radius:100%;
 	margin-right: auto;
  	margin-left: auto;
+ 	height: auto;
 }
 .home-banner p {
 	margin-top: 1rem;
@@ -438,6 +439,7 @@ footer {
 	}
 	.info-card img {
 		width:40% !important;
+		height: auto;
 	}
 	.hobby p {
 		width:60%;
