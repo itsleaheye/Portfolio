@@ -1,83 +1,63 @@
 <!DOCTYPE html>
-<html lang="en-us" class="index-bg">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Leah Nonay</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
-    <script src="js/html5shiv.js"></script>
-    <link rel="icon" href="img/logoHeader2.png">
-    <meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
     <meta name="description" content="A web portfolio built and deployed by junior developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
+	<script src="js/html5shiv.js"></script>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.png">
+	<title>Leah Nonay</title>
 </head>
-
 <body>
-	<div class="container">
-		<header>
-			<section class="clearfix">	
-				<section class="nav"> 
-					<input type="checkbox" id="nav-check">
-					<div class="nav-btn">
-    					<label for="nav-check">
-      						<span></span>
-      						<span></span>
-      						<span></span>
-    					</label>
- 					</div>
- 					<div class="nav-links">
-					<ul>
-						<li><a class="current" href="index.html">home</a></li>
-						<li><a href="about.html">about</a></li>
-						<li><a href="software.html">code</a></li>
-						<li><a href="design.html">design</a></li>
-					</ul>
+	<header>
+		<div class="nav"> 
+			<input type="checkbox" id="nav-check">
+			<label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			</label>
+			<ul>
+				<li><a class="current" href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="software.html">CODE</a></li>
+				<li><a href="design.html">DESIGN</a></li>
+			</ul>
+		</div>
+		<div class="home-banner">
+			<img src="img/logo-personal.jpg" alt="Logo of Leah Nonay"/>
+			<p style="margin-bottom:1rem;"><span style="font-weight:bolder">Leah Nonay</span>, a designer and coder.</p>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<img src="img/small-banner-software.jpg" alt="Software Banner"/>
+					<p>A software developer with over 7 years of training and experience</p>
+					<p class="btn"><a href="software.html">VIEW PROJECTS</a></p>
 				</div>
-				</section>
-			</section>
-		</header>
-		<main class="clearfix">
-			<section id="banner-full">
-				<span class="avatar">
-					<img src="img/logo-personal.png"/>
-				</span>
-				<h1><span style="font-weight:bolder">Leah Nonay</span>, a designer and coder.</h1>
-			</section>
-			<div class="row row-gallery center-section">	
-				<div class="dark-panel">
-					<div class="row">
-						<img src="img/zoom1.png" class="feature-img dev-img" alt="A banner for the software page">
-					</div>
-					<div class="row text-banner">
-						<p style="width:90%">A software developer with over 7 years of training and experience.
-						<h4 style="margin-top:1em"><a href="software.html" class="current" >VIEW PROJECTS</a></h4>
-					</div>
-				</div>
-				<div class="dark-panel">
-					<div class="row">
-						<img src="img/zoom2.png" class="feature-img dev-img" alt="A banner for the art page">
-					</div>
-					<div class="row text-banner">
-						<p style="width:90%">A experienced digital artist who has worked on projects with clients globally.	
-						<h4 style="margin-top:1em"><a href="design.html" class="current" >VIEW PORTFOLIO</a></h4>
-					</div>
+				<div class="col">
+					<img src="img/small-banner-design.jpg" alt="Design Banner"/>
+					<p>A experienced digital artist who has worked on projects with clients globally</p>
+					<p class="btn"><a href="software.html">VIEW PORTFOLIO</a></p>
 				</div>
 			</div>
-		</main>
-		<footer style="margin-top:15px">
-			<div class="row hr-bar">
-				<ul class="icons">
-					<li><span class="icon-style"><a href="https://www.fiverr.com/casualpancakes?"><img src="img/icon-fiverr.png" alt="Fiverr icon"/></a></span></li>
-					<li><span class="icon-style"><a href="https://github.com/leahnonay"><img src="img/icon-github.png" alt="Github icon"/></a></span></li>
-					<li><span class="icon-style"><a href="https://www.linkedin.com/in/leahnonay/"><img src="img/icon-linkedin.png" alt="Linkedin icon"/></a></span></li>
-					<li><span class="icon-style"><a href="mailto:leahnonay@gmail.com"><img src="img/icon-email.png" alt="Email icon"/></a></span></li>
-				</ul>
-			</div>
-		</footer>	
-	</div>
+		</div>
+	</main>
+	<footer>
+		<ul class="footer-icons">
+			<li><a href="https://www.fiverr.com/casualpancakes?"><img src="img/icon-fiverr.png" alt="Fiverr icon"/></a></li>
+			<li><a href="https://github.com/leahnonay"><img src="img/icon-github.png" alt="Github icon"/></a></li>
+			<li><a href="https://www.linkedin.com/in/leahnonay/"><img src="img/icon-linkedin.png" alt="Linkedin icon"/></a></li>
+			<li><a href="mailto:leahnonay@gmail.com"><img src="img/icon-email.png" alt="Email icon"/></a></li>
+		</ul>
+	</footer>
 </body>
 </html>
