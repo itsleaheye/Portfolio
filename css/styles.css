@@ -222,6 +222,7 @@ body {
  .info-card p {
  	color:#7e7e7e !important;
  	text-align: left;
+ 	width: 100%;
  }
 figure {
  	display:block;
@@ -390,8 +391,14 @@ footer {
 	.info-card {
 		width:40% 
 	}
+	.info-card p {
+		width:90%;
+	}
 	.about-card {
 		width:60% !important;
+	}
+	.hobby {
+		margin-top:1rem !important;
 	}
 	.col {
 		width:40%;
@@ -426,11 +433,14 @@ footer {
 	.home-banner img {
 		width:30%;
 	}
+	.info-card {
+		width:70%;
+	}
 	.info-card img {
 		width:40% !important;
 	}
-	.info-card:last-child p {
-		width: 60%;
+	.hobby p {
+		width:60%;
 	}
 	.gallery-banner {
 		margin-top:1rem;
