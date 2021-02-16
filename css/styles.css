@@ -388,17 +388,15 @@ footer {
 		width:80%;
 	}
 	.info-card {
-		width:40% 
+		width:40% !important; 
 	}
 	.info-card p {
 		width:90%;
 	}
 	.about-card {
-		width:60% !important;
+		width:50% !important;
 	}
-	.hobby {
-		margin-top:1rem !important;
-	}
+	
 	.col {
 		width:40%;
 		/*align-items:stretch;*/
