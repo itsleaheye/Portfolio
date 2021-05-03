@@ -312,6 +312,7 @@ figure figcaption {
 	background-color:#282824;
 	border: 2px solid #f4f4f4;
 	font-weight:lighter;
+	transition-duration:0.5s;
 }
 .btn a:hover {
 	color:#282824;
