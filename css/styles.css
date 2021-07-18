@@ -92,6 +92,9 @@ body {
 	height:0px;
 	visibility:collapse; 
 }
+.current {
+	color: #ffffff !important;
+}
 /*Ul and Li's have natural padding, you need to reset it*/
 .nav ul,
 .nav li {
@@ -446,6 +449,7 @@ footer {
 	}
 	.gallery-banner {
 		margin-top:1rem;
+		width:60%;
 	}
 	.col-gallery {
 		width:45%;
@@ -459,4 +463,25 @@ footer {
 		width:45%;
 		margin:0rem 0rem 1rem 1rem;
 	}
+}
+
+/** Animation Styles **/
+.reveal{
+	position: relative;
+	transform: translateY(25px);
+	opacity: 0;
+	transition: all 2s ease;
+}
+
+.reveal.active{
+	transform: translateY(0px);
+	opacity: 1;
+}
+.fade-in {
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

@@ -4,14 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
-    <meta name="description" content="A web portfolio built and deployed by junior developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
+	<meta name="description" content="A web portfolio built and deployed by junior developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
 	<script src="js/html5shiv.js"></script>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/favicon.png">
 	<title>About</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="info-card about-card" style="margin-top:-.2rem;">
 					<img src="img/avatar.jpg" alt="Photograph of developer Leah Nonay"/>
-					<h3 style="margin-top:1rem;">Leah Nonay<br>&#60;&#47;Developer&#62;</h3>
+					<h3 style="margin-top:1rem;">Leah Nonay &#60;&#47;The Developer&#62;</h3>
 					<p> 
 						I am a junior software developer based in Alberta, Canada. Specifically I work with object oriented programming languages, as well as database and application development. 
 						<br>In addition to my studies I am a experienced entrepeneur, as I manage my own freelance digital artwork business. I also have been exploring the world of UI and UX design and implementation.
@@ -46,17 +46,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="row text-banner">
+		<div class="row text-banner reveal">
 			<h2 style="color:#a9a9a9;">My History</h2>
 			<br><p>Ive always been a logic and technology orientated individual, with a very analytical mindset. I've been expanding my coding skills since 2013, as I had been invited to an advanced placement program to explore various software fields. From that point onwards I was always expanding my development skills. I am currently employed as a full-stack developer, and exploring large based application development, UX design, and support.</p>
 		</div>
-		<div class="container">
+		<div class="container reveal">
 			<div class="row">
 				<div class="col info-card">
 					<h3>My Skills</h3>
 					<p>
-						<span style="color:#282824">Languages & Frameworks. </span>C#, SQL, HTML/HAML, CSS, ASP .Net, Ruby, JUnit, XML/XAML, Linq, and Xamarin
-						<br><br><span style="color:#282824">Tools.</span> Visual Studio, MSSQL, GitHub, VMWare, SQL Server Management Studio, Sublime Text 3, and Eclipse
+						<span style="color:#282824">Languages & Frameworks. </span>C#, SQL, HTML/HAML, CSS, ASP .Net, Ruby, Angular TypeScript, GraphQL, and Xamarin
+						<br><br><span style="color:#282824">Tools.</span> Visual Studio, MSSQL, GitHub, VMWare, SQL Server Management Studio, Sublime Text 3, Docker, and Eclipse
 						<br><br><span style="color:#282824">Additional Experience.</span> Database management, Quality assurance, UI/UX Design, Microsoft Office, Agile/Scrum, and Project management 
 					</p>
 				</div>
@@ -84,5 +84,26 @@
 		<li><a href="mailto:leahnonay@gmail.com"><img src="img/icon-email.png" alt="Email icon"/></a></li>
 	</ul>
 </footer>
+
+<script>
+	window.addEventListener('scroll', reveal);
+
+	function reveal(){
+		var reveals = document.querySelectorAll('.reveal');
+
+		for(var i = 0; i < reveals.length; i++){
+			var windowY = window.innerHeight;
+			var revealTop = reveals[i].getBoundingClientRect().top;
+			var revealPoint = 50;
+
+			if(revealTop < windowY - revealPoint){
+				reveals[i].classList.add('active');
+			}
+			else{
+				reveals[i].classList.remove('active');
+			}
+		}
+	}
+</script>
 </body>
 </html>
