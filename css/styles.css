@@ -145,13 +145,13 @@ body {
 	padding-top: 3rem;
 }
 .software-banner {
-	background-image: url(../img/banner-software.jpg) !important;
+	background-image: url(../img/banner-software-v2.jpg) !important;
 }
 .about-banner {
 	background-image: url(../img/banner-about.jpg) !important;
 }
 .design-banner {
-	background-image: url(../img/banner-design.jpg) !important;
+	background-image: url(../img/banner-design-v2.jpg) !important;
 }
 .banner {
 	padding:5rem 0 5rem 0rem;
@@ -163,6 +163,9 @@ body {
 	margin-right:auto;
 	width:60% !important;
 	border-radius:100%;
+}
+.home-banner img {
+	max-width: 300px;
 }
 .info-card img {
 	width:80%;
@@ -218,6 +221,7 @@ body {
  	display: flex;
  	flex-wrap: wrap;
  	background-color:#282824;
+ 	max-width: 600px;
  }
  .info-card {
  	background-color: #f5f5f5 !important;
