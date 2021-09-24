@@ -333,6 +333,10 @@ footer {
 	position:absolute;
 	bottom: 0;
 }
+/*.footer-icons {
+	display: flex;
+	justify-content: space-between;
+}*/
 .footer-icons li,
 .footer-icons img {
 	display: inline-block;
@@ -395,7 +399,7 @@ footer {
 		padding:8rem 0 8rem 0rem;
 	}
 	.text-banner p {
-		width:80%;
+		width:60%;
 	}
 	.info-card {
 		width:40% !important; 
