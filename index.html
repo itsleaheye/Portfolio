@@ -1,63 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
-    <meta name="description" content="A web portfolio built and deployed by junior developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
-	<script src="js/html5shiv.js"></script>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="img/favicon.png">
-	<title>Leah Nonay</title>
-</head>
-<body>
-	<header>
-		<div class="nav"> 
-			<input type="checkbox" id="nav-check">
-			<label for="nav-check">
-				<span></span>
-				<span></span>
-				<span></span>
-			</label>
-			<ul>
-				<li><a class="current" href="index.html">HOME</a></li>
-				<li><a href="about.html">ABOUT</a></li>
-				<li><a href="software.html">CODE</a></li>
-				<li><a href="design.html">DESIGN</a></li>
-			</ul>
-		</div>
-		<div class="home-banner">
-			<img class="fade-in" src="img/logo-personal.jpg" alt="Logo of Leah Nonay"/>
-			<p class="fade-in" style="margin-bottom:1rem;"><span style="font-weight:bolder">Leah Nonay</span>, a designer and coder.</p>
-		</div>
-	</header>
-	<main>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<img src="img/small-banner-software.jpg" alt="Software Banner"/>
-					<p>A software developer with over 7 years of training and experience</p>
-					<p class="btn"><a href="software.html">VIEW PROJECTS</a></p>
-				</div>
-				<div class="col">
-					<img src="img/small-banner-design-v2.jpg" alt="Design Banner"/>
-					<p>An experienced digital artist who has worked with clients globally</p>
-					<p class="btn"><a href="design.html">VIEW PORTFOLIO</a></p>
-				</div>
-			</div>
-		</div>
-	</main>
-	<footer>
-		<ul class="footer-icons">
-			<li><a href="https://www.casualpancakes.com"><img src="img/icon-fiverr.png" alt="Art icon"/></a></li>
-			<li><a href="https://github.com/leahnonay"><img src="img/icon-github.png" alt="Github icon"/></a></li>
-			<li><a href="https://www.linkedin.com/in/leahnonay/"><img src="img/icon-linkedin.png" alt="Linkedin icon"/></a></li>
-			<li><a href="mailto:leahnonay@gmail.com"><img src="img/icon-email.png" alt="Email icon"/></a></li>
-		</ul>
-	</footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg"
+    />
+    <meta
+      name="description"
+      content="A web portfolio built and deployed by full-stack developer and freelancer, Leah Nonay. This site features both her design and software portfolios."
+    />
+    <!-- External Imports -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="js/html5shiv.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style Sheet Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.png" />
+    <title>Leah Nonay</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check" />
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul>
+          <li><a class="current" href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="software.html">CODE</a></li>
+          <li><a href="design.html">DESIGN</a></li>
+        </ul>
+      </div>
+      <div class="home-banner">
+        <img
+          class="fade-in"
+          src="img/logo-personal.jpg"
+          alt="Logo of Leah Nonay"
+        />
+        <p class="fade-in" style="margin-bottom: 1rem">
+          <span style="font-weight: bolder">Leah Nonay</span>, a designer and
+          coder.
+        </p>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- <i class="fas fa-laptop-code round-icon fa-6x"></i> -->
+            <img src="img/small-banner-software.jpg" alt="Software Banner" />
+            <p>
+              A full-stack software developer with a specialty in web
+              application development and design
+            </p>
+            <p class="btn">
+              <a class="btn" href="software.html">
+                <i class="fa fa-laptop-code" style="color: #7acddc"></i> VIEW
+                CODE
+              </a>
+            </p>
+          </div>
+          <div class="col">
+            <!-- <i class="fas fa-paint-brush round-icon fa-6x"></i> -->
+            <img src="img/small-banner-design-v2.jpg" alt="Design Banner" />
+            <p>
+              An experienced entrepeneur and digital artist who has worked with
+              over 300 clients globally
+            </p>
+            <p class="btn">
+              <a href="design.html">
+                <i class="fa fa-paint-brush" style="color: #7acddc"></i> VIEW
+                DESIGNS
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul class="row-icons">
+        <li>
+          <a href="https://www.casualpancakes.com"
+            ><img src="img/icon-fiverr.png" alt="Art icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/leahnonay"
+            ><img src="img/icon-github.png" alt="Github icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/leahnonay/"
+            ><img src="img/icon-linkedin.png" alt="Linkedin icon"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:leahnonay@gmail.com"
+            ><img src="img/icon-email.png" alt="Email icon"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>

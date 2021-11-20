@@ -2,16 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
-	<meta name="description" content="A web portfolio built and deployed by junior developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
+  <meta name="description" content="A web portfolio built and deployed by full-stack developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
+	<!-- External Imports -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="js/html5shiv.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
-	<script src="js/html5shiv.js"></script>
+	<!-- Style Sheet Imports -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="icon" href="img/favicon.png">
+  <link rel="icon" href="img/favicon.png">
 	<title>About</title>
 </head>
 <body>
@@ -37,24 +40,50 @@
 			<div class="row">
 				<div class="info-card about-card" style="margin-top:-.2rem;">
 					<img src="img/avatar.jpg" alt="Photograph of developer Leah Nonay"/>
-					<h3 style="margin-top:1rem;">Leah Nonay <br/>&#60;&#47;The Developer&#62;</h3>
-					<p> I am a full stack developer based in Alberta, Canada.
-						<br><br>In addition to my development skills I have also been exploring the world of UI/UX design and implementation in my web applications. I am also an experienced entrepeneur, as I manage my own freelance illustration and design business.
-						<br><br><i>Computer Software Development Graduate, NAIT '21</i>
-					</p>
+					<span class="details">
+						<h3 style="margin-top:1rem;">Leah Nonay <br/>&#60;&#47;The Developer&#62;</h3>
+						<p> I am a full stack developer based in central Alberta, Canada.
+							<br><br>In addition to my development skills I have also been exploring the world of UI/UX design and implementation in both my professional and personal web applications. Additionally, although on paper I am considered a junior developer, I have been personally commended for my advancements in my skills and performance.
+							<!-- I am also an experienced entrepeneur, as I manage my own freelance illustration and design business. -->
+							<br><br><i>Computer Software Development Graduate, NAIT '21</i>
+						</p>
+					</span>
 				</div>
 			</div>
 		</div>
-		<div class="row text-banner reveal">
-			<h2 style="color:#a9a9a9;">My Start In Tech</h2>
-			<br><p>I have always been a logic and technology orientated individual, with a very analytical mindset. As such, I have been expanding my coding skills since 2013. It started with an invitation to an advanced placement program to explore various software fields. From that point onwards I have always been expanding my skills.</p>
+		<div class="row text-banner">
+			<h2 style="color:#a9a9a9;">Primary Skills</h2>
+			<div class="skill-card">
+				<img src="img/icon-html.png" alt="Html icon"/>
+				<p>HTML<br>CSS</p>
+			</div>
+			<div class="skill-card">
+				<img src="img/icon-angular.png" alt="Angular icon"/>
+				<p>Angular</p>
+			</div>
+			<div class="skill-card">
+				<img src="img/icon-ruby.png" alt="Ruby icon"/>
+				<p>Ruby</p>
+			</div>
+			<div class="skill-card">
+				<img src="img/icon-graphql.png" alt="GraphQL icon"/>
+				<p>GraphQL</p>
+			</div>
+			<div class="skill-card">
+				<img src="img/icon-typescript.png" alt="TypeScript icon"/>
+				<p>Typescript</p>
+			</div>
+			<div class="skill-card">
+				<img src="img/icon-sql.png" alt="SQL icon"/>
+				<p>SQL</p>
+			</div>
 		</div>
 		<div class="container reveal">
 			<div class="row">
 				<div class="col info-card">
-					<h3>My Skills</h3>
+					<h3>Additional Skills</h3>
 					<p>
-						<span style="color:#282824">Languages & Frameworks. </span>C#, SQL, HTML/HAML, CSS, ASP .Net, Ruby, TypeScript, GraphQL, and Xamarin
+						<span style="color:#282824">Languages & Frameworks. </span>C#, HAML, SCSS, ASP .Net, Xamarin, and some JavaScript
 						<br><br><span style="color:#282824">Tools.</span> Visual Studio, GitHub, VMWare, SQL Server Management Studio, Sublime Text 3, Docker, and Figma
 						<br><br><span style="color:#282824">Additional Experience.</span> Database management, Quality assurance, UI/UX Design, Microsoft Office, and Agile/Scrum
 					</p>
@@ -76,7 +105,7 @@
 	</div>
 </main>
 <footer>
-	<ul class="footer-icons">
+	<ul class="row-icons">
 		<li><a href="https://www.casualpancakes.com"><img src="img/icon-fiverr.png" alt="Art icon"/></a></li>
 		<li><a href="https://github.com/leahnonay"><img src="img/icon-github.png" alt="Github icon"/></a></li>
 		<li><a href="https://www.linkedin.com/in/leahnonay/"><img src="img/icon-linkedin.png" alt="Linkedin icon"/></a></li>
