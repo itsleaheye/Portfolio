@@ -450,6 +450,7 @@ footer {
     width: 90%;
   }
   .about-card {
+    justify-content: center;
     width: 80% !important;
     max-width: 1250px;
     display: flex;
@@ -508,6 +509,7 @@ footer {
   .info-card img {
     width: 40% !important;
     height: auto;
+    margin-top: 8%;
   }
   .hobby p {
     width: 60%;
