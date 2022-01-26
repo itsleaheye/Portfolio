@@ -1,3 +1,11 @@
+/*Ul and Li's have natural padding, you need to reset it*/
+.nav ul,
+.nav li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 /* Box sizing rules */
 *,
 *::before,
