@@ -1,9 +1,11 @@
 body {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 62.5%;
+  line-height: 2rem;
   min-height: 100vh;
   position: relative;
   padding-bottom: 5.5rem;
+  letter-spacing: 0.05rem;
 }
 
 /* Typography */
@@ -14,12 +16,25 @@ h2 {
   font-size: 2rem;
   color: #a9a9a9;
 }
+.card-h2 {
+  font-size: 1.6rem;
+  margin: 1rem 0 0.5rem 0;
+  color: #7acddc;
+  height: auto;
+}
 h3 {
   font-size: 1.8rem;
 }
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #ffffff;
+  width: 100%;
+  line-height: 1.5rem;
+}
+.project-details {
+  text-align: left;
+  vertical-align: top;
+  display: inline-flex;
 }
 h1,
 h2,
@@ -27,10 +42,8 @@ h3 {
   text-transform: uppercase;
   font-weight: lighter;
   margin-bottom: 0.4rem;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   color: #282824;
-  line-height: 2rem;
   width: 100%;
 }
 h1,
@@ -38,14 +51,7 @@ h2,
 h3,
 p,
 a {
-  letter-spacing: 0.05rem;
   text-align: center;
-}
-.card-h2 {
-  font-size: 1.6rem;
-  width: 100%;
-  margin: 1rem 0 -1.2rem 0;
-  color: #a9a9a9;
 }
 .tags {
   background-color: #464545;
@@ -53,7 +59,7 @@ a {
   padding: 0.4rem;
   font-size: 1.2rem;
   margin: 0.2rem;
-  line-height: 2.5rem;
+  display: inline-block;
 }
 
 /*Header*/
@@ -64,7 +70,19 @@ a {
   position: relative;
   display: flex;
   justify-content: space-between;
-  background-color: #282824;
+}
+.nav ul {
+  display: inline-block;
+  position: absolute;
+  font-size: 1.4rem;
+  list-style: none;
+  top: 4.5rem;
+  left: 0px;
+  height: 0px;
+  visibility: collapse;
+}
+.current {
+  color: #ffffff !important;
 }
 /* Hamburger Menu */
 .nav label,
@@ -86,39 +104,15 @@ a {
   height: 10px;
   border-top: 3px solid #ffffff;
 }
-/*Navigation Menu*/
-.nav ul {
-  display: inline-block;
-  position: absolute;
-  background-color: #212121;
-  font-size: 1.6rem;
-  list-style: none;
-  top: 4.5rem;
-  left: 0px;
-  height: 0px;
-  visibility: collapse;
-}
-.current {
-  color: #ffffff !important;
-}
-/*Ul and Li's have natural padding, you need to reset it*/
-.nav ul,
-.nav li {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
 .nav ul li,
 .nav ul li a {
   display: block;
   background-color: #212121;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   text-decoration: none;
 }
 .nav ul li a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   color: #a9a9a9;
   border-bottom: 1px solid #3f4140;
   width: 100%;
@@ -128,75 +122,60 @@ a {
   color: #ffffff;
 }
 /*Navigation Toggle*/
+#nav-check:checked ~ .nav ul li,
 #nav-check:checked ~ ul {
-  visibility: visible;
-}
-#nav-check:checked ~ .nav ul li {
   visibility: visible;
 }
 
 /*Banners*/
-.home-banner,
 .banner {
-  background-image: url(../img/banner-home.jpg);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
   display: block;
-  padding-bottom: 1rem;
-  padding-top: 3rem;
+  padding: 5rem 0 5rem 0rem;
+}
+.home-banner {
+  background-image: url(../img/banner-home.jpg);
 }
 .software-banner {
-  background-image: url(../img/banner-software.jpg) !important;
+  background-image: url(../img/banner-software.jpg);
 }
 .about-banner {
-  background-image: url(../img/banner-about.jpg) !important;
+  background-image: url(../img/banner-about.jpg);
 }
 .design-banner {
-  background-image: url(../img/banner-design-v2.jpg) !important;
-}
-.banner {
-  padding: 5rem 0 5rem 0rem;
-  background-position: center;
+  background-image: url(../img/banner-design-v2.jpg);
 }
 .home-banner img,
 .home-banner p {
-  margin-left: auto;
-  margin-right: auto;
-  width: 60% !important;
+  margin: 0 auto;
   border-radius: 100%;
-}
-.home-banner img {
-  max-width: 300px;
-}
-.info-card img {
-  width: 80%;
-  border-radius: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  height: auto;
+  max-width: 270px;
 }
 .home-banner p {
   margin-top: 1rem;
-  width: 70% !important;
-  color: #f4f4f4;
+  width: 70%;
   font-weight: lighter;
-  line-height: 3rem;
+  font-size: 1.4rem;
+  max-width: 450px !important;
 }
-.gallery-banner {
-  width: 95%;
-  margin-top: 0.5rem;
+.text-banner {
+  background-color: #282824;
+  padding: 2rem;
 }
 
 /*Main*/
 header {
   background-color: #282824;
 }
-.row,
 footer,
-.text-banner {
+.text-banner,
+.row {
+  width: 100%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -209,16 +188,14 @@ footer,
 .container {
   padding: 1rem;
 }
-footer,
-.text-banner {
-  width: 100%;
-  height: auto;
-}
-.text-banner {
-  background-color: #282824;
-  padding: 2rem;
-}
+
 /*Col Styles*/
+.col:last-child {
+  margin-top: 1rem;
+}
+.col p {
+  margin: 1rem auto;
+}
 .col,
 .info-card {
   padding: 2rem;
@@ -234,8 +211,22 @@ footer,
 .info-card p {
   color: #7e7e7e !important;
   text-align: left;
-  width: 100%;
+  height: 100%;
 }
+.col-gallery {
+  margin-top: -1rem;
+}
+.col-gallery:nth-child(even) {
+  display: none;
+}
+.about-card img {
+  margin: 0 auto;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 100%;
+}
+
+/* Hover figcaptions */
 figure {
   display: block;
   position: relative;
@@ -260,73 +251,41 @@ figure figcaption {
 figcaption h2 {
   margin: 0 !important;
 }
-.col:last-child {
-  margin-top: 1rem;
-}
-.col img,
-.col p,
-.info-card p,
-.text-banner p,
-figcaption p {
-  width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  font-size: 1.2rem !important;
-  color: #ffffff;
-}
-.col p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.col-gallery {
-  margin-top: -1rem;
-}
-.col-gallery:nth-child(even) {
-  display: none;
-}
 
 /*Slide show*/
 .slideshow-container {
-  height: auto;
   position: relative;
-  margin: auto;
 }
 .mySlides {
   display: none;
-  margin-right: auto;
-  margin-left: auto;
 }
 .prev,
 .next {
   cursor: pointer;
   position: absolute;
   bottom: 0;
-  margin-top: -22px;
-  padding: 25px;
-  color: #a9a9a9;
+  padding: 2rem;
+  color: #7acddc;
   font-size: 3rem;
-  opacity: 70%;
-  transition: 0.6s ease;
+  transition: 1s ease;
   user-select: none;
 }
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
 }
 .prev {
   left: 0;
-  border-radius: 3px 0 0 3px;
 }
 
 /*Btn Styles*/
 .btn a {
-  padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   color: #7acddc;
   text-decoration: none;
   background-color: #282824;
   border: 2px solid #7acddc;
   font-weight: lighter;
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
 }
 .btn a:hover {
   color: #282824;
@@ -334,7 +293,7 @@ figcaption p {
 }
 .btn a:hover > .fa {
   color: #282824 !important;
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
 }
 
 /*Footer*/
@@ -344,19 +303,21 @@ footer {
   position: absolute;
   bottom: 0;
 }
-.row-icons li,
-.row-icons img {
+.row-icons li {
   display: inline-block;
-  list-style: none;
   width: 2.5rem;
-  margin: 0 0.5rem 0 0.5rem;
+  margin: 0 0.5rem;
+}
+.row-icons img {
+  vertical-align: middle;
+  display: inline;
 }
 .row-icons img:hover {
   opacity: 0.3;
   transition: 0.5s;
 }
 
-/* Other */
+/* Icons */
 .fab,
 .fas {
   color: #282824;
@@ -369,6 +330,8 @@ footer {
   width: 8rem;
   margin: 0 auto;
 }
+
+/* Skill Card */
 .skill-card {
   display: flex;
   padding: 0.6rem 0.2rem;
@@ -385,12 +348,9 @@ footer {
 .skill-card p {
   margin-top: 0.5rem;
   color: #7acddc;
-  line-height: 1.1rem;
-  width: 100% !important;
 }
 
-/* Responsive */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 750px) {
   /*Navigation*/
   .nav {
     height: 3rem;
@@ -401,8 +361,7 @@ footer {
   .nav ul {
     top: 0;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0.15rem auto 0 auto;
     left: 50%;
     transform: translate(-50%, -50%);
     visibility: visible;
@@ -414,6 +373,7 @@ footer {
     border: none;
     font-size: 1.2rem;
     color: #a9a9a9;
+    line-height: 1.4rem;
   }
   .nav li,
   .nav ul li a {
@@ -430,15 +390,64 @@ footer {
     border-bottom: 1px solid #7acddc !important;
     color: #7acddc !important;
   }
+  /* Other */
+  .home-banner img {
+    width: 30%;
+  }
+  .info-card {
+    width: 70%;
+  }
+  .info-card img {
+    /* width: 40% !important; */
+    height: auto;
+    margin-top: 5%;
+  }
+  .hobby p {
+    width: 60%;
+  }
+  .gallery-banner {
+    margin-top: 1rem;
+    width: 60%;
+  }
+  .col {
+    width: 43%;
+    margin: 0 0.5rem;
+  }
+  .col:last-child {
+    margin-top: 0;
+  }
+  .col-gallery {
+    width: 20%;
+    margin: 0 0.5rem !important;
+  }
+  .col-gallery:nth-child(even) {
+    display: block;
+  }
+  .col-gallery figcaption p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  .col-gallery h2 {
+    font-size: 1.2rem;
+    color: #7acddc;
+    line-height: 1.3rem !important;
+  }
+  figcaption {
+    padding: 2rem 1rem !important;
+  }
+}
+
+/* Responsive Desktop*/
+@media only screen and (min-width: 1024px) {
   /*Main*/
+  .banner {
+    padding: 6rem 0;
+  }
   .home-banner {
     margin-bottom: 0.5rem;
-  }
-  .home-banner img {
-    width: 20% !important;
-  }
-  .banner {
-    padding: 7rem 0 7rem 0rem;
+    padding: 5rem 0;
+    background-position: top;
+    background-attachment: fixed;
   }
   .text-banner p {
     width: 60%;
@@ -458,77 +467,19 @@ footer {
   }
   .about-card h3 {
     text-align: left;
-    width: 90%;
+    width: 1000%;
   }
   .about-card .details {
     width: 66%;
   }
-  .about-card img {
-    margin-right: 0;
-    margin-left: 0;
-    max-width: 300px;
-    max-height: 300px;
-  }
   .col {
     width: 40%;
-    /*align-items:stretch;*/
     align-items: flex-start;
     margin: 2rem 0.8rem 0 0.8rem;
   }
   .col:last-child,
   .col {
     margin-top: 0;
-  }
-  .col-gallery {
-    width: 20% !important;
-  }
-  .col-gallery figcaption p {
-    font-size: 1rem;
-    margin-top: 0.6rem;
-    line-height: 1.3rem !important;
-  }
-  .col-gallery h2 {
-    font-size: 1.2rem;
-    line-height: 1.3rem !important;
-  }
-  .col-gallery:nth-child(3) {
-    margin-left: 1rem;
-  }
-  figcaption {
-    padding: 1rem !important;
-  }
-}
-
-@media only screen and (min-width: 750px) {
-  .home-banner img {
-    width: 30%;
-  }
-  .info-card {
-    width: 70%;
-  }
-  .info-card img {
-    width: 40% !important;
-    height: auto;
-    margin-top: 8%;
-  }
-  .hobby p {
-    width: 60%;
-  }
-  .gallery-banner {
-    margin-top: 1rem;
-    width: 60%;
-  }
-  .col-gallery {
-    width: 45%;
-    margin: 0rem 0 1rem 0;
-  }
-  .col-gallery figure:last-child {
-    margin-bottom: -1rem;
-  }
-  .col-gallery:nth-child(even) {
-    display: block;
-    width: 45%;
-    margin: 0rem 0rem 1rem 1rem;
   }
 }
 
