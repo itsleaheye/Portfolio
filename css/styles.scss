@@ -192,6 +192,9 @@ footer,
 }
 
 /*Col Styles*/
+.avatar-badge {
+  width:100%;
+}
 .col:last-child {
   margin-top: 1rem;
 }
@@ -225,8 +228,8 @@ footer,
   margin: 0 auto;
   display: block;
   position: relative;
-  max-width: 250px;
-  max-height: 250px;
+  max-width: 15rem;
+  max-height: 15rem;
   border-radius: 100%;
   transition: all 0.5s cubic-bezier(.55,0,.1,1);
 }
@@ -465,6 +468,13 @@ footer {
   .info-card p {
     width: 90%;
   }
+  .avatar-badge {
+    max-width: 30%;
+    margin-right: 2em;
+  }
+  .about-card .details {
+    max-width: 70%;
+  }
   .about-card {
     justify-content: center;
     width: 80% !important;
@@ -522,20 +532,20 @@ footer {
 .about-card .main:hover + .logo-badge,
 .logo-badge:hover {
   transform: rotate(-45deg) translate(0px) rotate(-315deg);
-  height: 260px;
-  width: 260px;
+  height: 10rem;
+  width: 10rem;
   transition: all 0.5s cubic-bezier(.55,0,.1,1), letter-spacing 1.5s ease-out;
-  margin-top: 3rem;
-  margin-left: -49rem;
+  // margin-top: -19.75%;
+  // margin-left: 26.5%;
 }
 
 .logo-badge {
-  display: none;
-  position: absolute;
-  width: 6rem;
-  height: 6rem;
-  margin-top: 22em;
-  margin-left: -33rem;
+  // display: none;
+  position: relative;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin-top: -5rem;
+  margin-left: 50%;
   border-radius: 100%;
   box-shadow: 0px .5rem 1rem rgba(91, 96, 98, 0.5);
   transition: all 0.5s cubic-bezier(.55,0,.1,1);
