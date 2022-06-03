@@ -33,7 +33,6 @@ p {
 }
 .project-details {
   text-align: left;
-  vertical-align: top;
   display: inline-flex;
 }
 h1,
@@ -398,7 +397,6 @@ footer {
     width: 70%;
   }
   .info-card img {
-    /* width: 40% !important; */
     height: auto;
     margin-top: 5%;
   }
