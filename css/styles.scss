@@ -447,6 +447,9 @@ footer {
   .banner {
     padding: 6rem 0;
   }
+  .logo-badge {
+    display: block !important;
+  }
   .home-banner {
     margin-bottom: 0.5rem;
     padding: 5rem 0;
@@ -471,7 +474,7 @@ footer {
   }
   .about-card h3 {
     text-align: left;
-    width: 1000%;
+    width: 100%;
   }
   .about-card .details {
     width: 66%;
@@ -526,9 +529,8 @@ footer {
   margin-left: -49rem;
 }
 
-
 .logo-badge {
-  display: block;
+  display: none;
   position: absolute;
   width: 6rem;
   height: 6rem;
