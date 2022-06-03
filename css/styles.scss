@@ -154,6 +154,9 @@ a {
   border-radius: 100%;
   max-width: 270px;
 }
+.home-banner img {
+  box-shadow: 0px .5rem 1rem rgba(8, 9, 10, 0.5);
+}
 .home-banner p {
   margin-top: 1rem;
   width: 70%;
@@ -218,11 +221,14 @@ footer,
 .col-gallery:nth-child(even) {
   display: none;
 }
-.about-card img {
+.about-card .main {
   margin: 0 auto;
+  display: block;
+  position: relative;
   max-width: 250px;
   max-height: 250px;
   border-radius: 100%;
+  transition: all 0.5s cubic-bezier(.55,0,.1,1);
 }
 
 /* Hover figcaptions */
@@ -396,7 +402,7 @@ footer {
   .info-card {
     width: 70%;
   }
-  .info-card img {
+  .info-card .main {
     height: auto;
     margin-top: 5%;
   }
@@ -447,7 +453,7 @@ footer {
     background-position: top;
     background-attachment: fixed;
   }
-  .text-banner p {
+  .text-banner .header-p {
     width: 60%;
   }
   .info-card {
@@ -504,4 +510,31 @@ footer {
   to {
     opacity: 1;
   }
+}
+
+// Image Rollover
+.about-card .main:hover {
+  background-position: 0% 50%;
+}
+.about-card .main:hover + .logo-badge,
+.logo-badge:hover {
+  transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  height: 260px;
+  width: 260px;
+  transition: all 0.5s cubic-bezier(.55,0,.1,1), letter-spacing 1.5s ease-out;
+  margin-top: 3rem;
+  margin-left: -49rem;
+}
+
+
+.logo-badge {
+  display: block;
+  position: absolute;
+  width: 6rem;
+  height: 6rem;
+  margin-top: 22em;
+  margin-left: -33rem;
+  border-radius: 100%;
+  box-shadow: 0px .5rem 1rem rgba(91, 96, 98, 0.5);
+  transition: all 0.5s cubic-bezier(.55,0,.1,1);
 }

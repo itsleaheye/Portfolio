@@ -77,19 +77,19 @@ $("#form").submit(function(event) {
 console.log($('#email_address').val);
 
 
-var fields{};
-document.addEventListener("DOMContentLoaded", function()
-{
-  fields.name = document.getElementById('name');
-  fields.emailAddress = document.getElementById('emailAddress');
-  fields.message = document.getElementById('message');
-})
-function isEmailValid(emailAddress) 
-{
-  let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  return regex.test(String(emailAddress).toLowerCase());
-}
-function sendEmail
+// var fields{};
+// document.addEventListener("DOMContentLoaded", function()
+// {
+//   fields.name = document.getElementById('name');
+//   fields.emailAddress = document.getElementById('emailAddress');
+//   fields.message = document.getElementById('message');
+// })
+// function isEmailValid(emailAddress) 
+// {
+//   let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+//   return regex.test(String(emailAddress).toLowerCase());
+// }
+// function sendEmail
   /*--------------------------------------------------------------------------*/
 
   /**
