@@ -173,6 +173,9 @@ a {
   background-color: #282824;
   padding: 2rem;
 }
+.text-banner p {
+  max-width: 800px;
+}
 
 /*Main*/
 header {
@@ -221,6 +224,19 @@ footer,
 .wedding-card {
   background-color: #282828 !important;
   text-align: center !important;
+  padding: 0 !important;
+}
+.wedding-card button {
+  border: 2px solid #f3ab45;
+  color: #f3ab45;
+  background-color: #282828;
+  padding: 0 3.5rem;
+}
+.wedding-card button:hover {
+  border: 2px solid #f3ab45;
+  background-color: #f3ab45;
+  color: #282824;
+  transition-duration: 0.7s;
 }
 .wedding-card .details {
   width:100%;
@@ -594,4 +610,58 @@ footer {
   border-radius: 100%;
   box-shadow: 0px .5rem 1rem rgba(91, 96, 98, 0.5);
   transition: all 0.5s cubic-bezier(.55,0,.1,1);
+}
+
+/*Forms*/
+.form-field {
+  display: block;
+  width: 100%;
+  margin: 1.5em 0;
+  text-align: left !important;
+}
+label {
+  color: #f3ab45;
+  font-size: 1.6em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  border: none;
+  font-size: 1.6em;
+  color: #7e7e7e;
+  padding: 0.3em 0.75em;
+}
+input,
+select {
+  height: 2em;
+  padding: 0.3em 0.75em;
+}
+textarea {
+  height: 6em;
+}
+fieldset {
+  width: 100%;
+  border: none;
+  font-size: 1.6em;
+  color: #7e7e7e;
+}
+input[type="checkbox"] {
+  height: 1.2em;
+  width: 1.2em;
+  margin: 0.5em 0.5em 0.5em 0;
+}
+.form-btn {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+.form-btn:hover {
+  cursor: pointer;
 }

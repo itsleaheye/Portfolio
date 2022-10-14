@@ -21,8 +21,6 @@
 </head>
 <body>
 	<header>
-		<div class="nav"> 
-		</div>
 		<div class="wedding-banner banner">
 			<img style="margin: 0 auto;" src="img/wedding-text.png">
 		</div>
@@ -31,22 +29,74 @@
 		<div class="container">
 			<div class="row">
 				<div class="info-card wedding-card">
-					<img class="main" src="img/wedding-avatar.jpg" alt="Photograph of developer Leah Nonay" class="fade-in">
+					<!-- <img class="main" src="img/wedding-avatar.jpg" alt="Photograph of developer Leah Nonay" class="fade-in"> -->
 					<span class="details">
 						<img style="border-radius: 0% !important; margin-top: 3em; max-width: 400px;"src="img/wedding-death.png">
 						<p style="color:#f5f5f5 !important;"> 
-							<br>October 7, 2023
-							<br>At Rundleview Parkette Canmore, AB
-							<p class="btn">
-                <a href="https://github.com/leahnonay/Portfolio" style="">RSVP</a>
-              </p>
-							<br><br>
+							<br>October 7, 2023 | 3:00 PM
+							<br>Canmore, AB
 						</p>
+						<div
+							id="orderForm"
+							class="row order-bar order-form"
+							style="
+								padding: 2em;
+								margin-bottom: 4em;
+							"
+						>
+							<form
+								id="submitRSVPForm"
+								method="POST"
+								data-netlify="true"
+								netlify
+								action="/thanks.html"
+							>
+								<span class="form-field">
+									<label for="senderName">Your Name.</label>
+									<input
+										type="text"
+										name="senderName"
+										required="true"
+										placeholder="Name(s) of guests..."
+									/>
+								</span>
+								<span class="form-field">
+									<label for="attending">Will you be attending?</label>
+									<select name="attending" id="attending">
+										<option value="yes">Yes, gladly</option>
+										<option value="no">No, sadly</option>
+									</select>
+								</span>
+								<span class="form-field">
+									<label for="seatTotal">Number of Seats</label>
+									<input
+										type="number"
+										min="0"
+										max="4"
+										name="seatTotal"
+										placeholder="1"
+										required="false"
+									/>
+								</span>
+								<span class="form-field">
+									<label for="extras">Anything else we should know?</label>
+									<input
+										type="text"
+										name="senderName"
+										required="false"
+										placeholder="If you have been given a plus one, who will it be, etc..."
+									/>
+								</span>
+								<button class="order-btn form-btn btn" type="submit">
+									<i class="fa fa-paper-plane"></i> RSVP
+								</button>
+							</form>
+						</div>
 					</span>
 				</div>
 			</div>
 		</div>
-		<div class="container reveal">
+		<!-- <div class="container reveal">
 			<div class="row">
 				<div class="col info-card">
 					<h3 style="font-family: 'Rock Salt', cursive !important;">Ceremony</h3>
@@ -65,11 +115,11 @@
 					</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </main>
 <footer>
-	<p style="color:#f5f5f5 !important; font-size: 1.5em; font-family: 'Rock Salt', cursive !important;">In lieu of gifts, we ask for a gift to our honeymoon fund instead.</p>
+	<p style="color:#f5f5f5 !important; font-size: 1.5em;">In lieu of gifts we humbly ask for a gift to our honeymoon travels instead.</p>
 </footer>
 
 <script>
