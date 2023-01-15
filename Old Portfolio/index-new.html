@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg"
+    />
+    <meta
+      name="description"
+      content="A web portfolio built and deployed by full-stack developer and freelancer, Leah Nonay. This site features both her design and software portfolios."
+    />
+    <!-- External Imports -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="js/html5shiv.js"></script> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Style Sheet Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.scss" />
+    <link rel="icon" href="img/favicon.png" />
+    <title>Leah Nonay</title>
+  </head>
+  <body>
+    <header>
+      <div class="nav">
+        <input type="checkbox" id="nav-check" />
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul>
+          <li><a class="current" href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="software.html">CODE</a></li>
+          <li><a href="design.html">DESIGN</a></li>
+        </ul>
+      </div>
+      <div class="home-banner banner new-banner">
+        <div class="animated-logo"></div>
+        <p class="fade-in">
+          developer <span class="blue">&#9900;</span> designer
+          <span class="blue">&#9900;</span> illustrator
+          <!-- Leah Nonay, a designer and coder. -->
+        </p>
+      
+        <div class="row">
+          <div class="col">
+            <img
+              src="img/small-banner-softwarev3.jpg"
+              alt="Software Banner"
+              class="fade-in"
+          />
+          <p>
+            A full-stack software developer with a specialty in web
+            application development and design
+          </p>
+          <p class="btn">
+            <a class="btn" href="software.html">
+              <i class="fa fa-laptop-code" style="color: #7acddc"></i> VIEW
+              PROJECTS
+            </a>
+          </p>
+        </div>
+        <div class="col">
+          <img
+            src="img/small-banner-design-v2.jpg"
+            alt="Design Banner"
+            class="fade-in"
+          />
+          <p>
+            An experienced entrepeneur and digital artist who has worked with
+            over 300 clients globally
+          </p>
+          <p class="btn">
+            <a href="design.html">
+              <i class="fa fa-paint-brush" style="color: #7acddc"></i> VIEW
+              DESIGNS
+            </a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- About Section -->
+      <div class="container reveal">
+        <div class="banner" style="padding:2em 0em">
+          <h2 style="color: #7acddc; border-bottom: 3px solid #7acddc; max-width: 250px;">Hello World!</h2>
+        </div>
+        <div class="row">
+          <div class="info-card about-card" style="margin-top:-.2rem;">
+            <span class="avatar-badge">
+              <img class="main" src="img/avatar.png" alt="Photograph of developer Leah Nonay" class="fade-in">
+              <img class="logo-badge" src="img/logo-personal.jpg" alt="Personal Logo" class="fade-in">
+            </span>
+            <span class="details">
+              <h3 style="margin-top:1rem;">Leah Nonay <br/>&#60;&#47;Software Developer&#62;</h3>
+              <p>Hi, I'm <span class="bolder">Leah Nonay</span>. A full stack developer, and freelance designer based in western Canada.
+                <br><br>In addition to my full stack development skills and responsibilites, I have been exploring the world of UI/UX design and implementation.
+                <!-- <br><br>I also get involved with sprint planning, client meetings, UI/UX prototyping and execution, and leadership opportunies, on top of my regular developer responsibilities. -->
+                <br><br><i>Software Engineer II, Jobber</i>
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row text-banner">
+        <h2 style="color:#a9a9a9;">Primary Skills</h2>
+        <div class="skill-card">
+          <img src="img/icon-html.png" alt="Html icon"/>
+          <p>HTML<br>CSS</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/icon-angular.png" alt="Angular icon"/>
+          <p>Angular</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/icon-ruby.png" alt="Ruby icon"/>
+          <p>Ruby</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/icon-graphql.png" alt="GraphQL icon"/>
+          <p>GraphQL</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/icon-typescript.png" alt="TypeScript icon"/>
+          <p>Typescript</p>
+        </div>
+        <div class="skill-card">
+          <img src="img/icon-sql.png" alt="SQL icon"/>
+          <p>SQL</p>
+        </div>
+      </div>
+      <div class="container reveal">
+        <div class="row">
+          <div class="col info-card">
+            <h3>Additional Skills</h3>
+            <p>
+              <span style="color:#282824">Languages & Frameworks. </span>C#, Rails, HAML, SCSS, ASP .Net, Xamarin, RSpec, React Native, and JavaScript
+              <br><br><span style="color:#282824">Tools.</span> Visual Studio, GitHub, VMWare, SQL Server Management Studio, Sublime Text 3, Docker, JIRA, and Figma
+              <br><br><span style="color:#282824">Additional Experience.</span> Database management, Quality assurance, UI/UX Design, Microsoft Office, Mac & Windows OS, and Agile/Scrum
+            </p>
+          </div>
+          <div class="col info-card hobby">
+            <h3>My Hobbies</h3>
+            <p>
+              <span style="color:#282824">&#62;</span> Drinking LOTS of coffee & tea
+              <br><span style="color:#282824">&#62; </span> Video games
+              <br><span style="color:#282824">&#62; </span> UI/UX design
+              <br><span style="color:#282824">&#62; </span> Interior design & architecture (AutoCAD)
+              <br><span style="color:#282824">&#62; </span> Graphic design
+              <br><span style="color:#282824">&#62; </span> Photography
+              <br><span style="color:#282824">&#62; </span> Freelance digital illustration
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Software -->
+      <div class="software-banner banner">
+        <h2 style="color: #7acddc">What I Do</h2>
+        <p class="fade-in">
+          web design <span class="blue">&#9900;</span> mobile & web applications
+        </p>
+      </div>
+      <div class="container" style="background: #282824;">
+        <div class="portfolio-card">
+          <div class="project-col">
+            <h2 class="card-h2" style="text-align: left !important">My Projects</h2>
+            <ul class="project-list">
+              <li>Cantrip</li>
+              <li>Chrysalis</li>
+              <li>Hackathon</li>
+              <li>Edmonton Rocketry Club</li>
+            </ul>
+          </div>
+          <div class="details-col">
+            <img src="img/dev-dnd1.jpg" alt="Page 1 of the Cantrip app" />
+            <div class="card-data">
+              <span class="card-cantrip card">
+                <h2 class="card-h2">Cantrip</h2>
+                <p>
+                  A web application that allows users to create and manage
+                  their 'Dungeons and Dragons' characters and inventories.
+                  <br /><br />
+                  I am actively developing a web version of this application and
+                  utilizing the PrimeNG components library in unison of my own
+                  custom designs.
+                  <p class="btn">
+                    <a class="btn" href="https://github.com/leahnonay/Cantrip">
+                      <i class="fa fa-laptop-code" style="color: #7acddc"></i> VIEW
+                      CODE
+                    </a>
+                  </p>
+                </p>
+                <p>
+                  <span class="tags">Angular</span>
+                  <span class="tags">TypeScript</span>
+                  <span class="tags">SQLite</span> <span class="tags">Figma</span>
+                </p>
+              </span>
+            </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul class="row-icons">
+        <li>
+          <a href="https://www.casualpancakes.com"
+            ><img src="img/icon-fiverr.png" alt="Art icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/leahnonay"
+            ><img src="img/icon-github.png" alt="Github icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/leahnonay/"
+            ><img src="img/icon-linkedin.png" alt="Linkedin icon"
+          /></a>
+        </li>
+        <li>
+          <a href="mailto:leahnonay@gmail.com"
+            ><img src="img/icon-email.png" alt="Email icon"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+  <script>
+    window.addEventListener('scroll', reveal);
+  
+    function reveal(){
+      var reveals = document.querySelectorAll('.reveal');
+  
+      for(var i = 0; i < reveals.length; i++){
+        var windowY = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 50;
+  
+        if(revealTop < windowY - revealPoint){
+          reveals[i].classList.add('active');
+        }
+        else{
+          reveals[i].classList.remove('active');
+        }
+      }
+    }
+  </script>
+</html>

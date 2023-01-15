@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
+  <meta name="description" content="A web portfolio built and deployed by full-stack developer and freelancer, Leah Nonay. This site features both her design and software portfolios." />
+	<!-- External Imports -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- <script src="js/html5shiv.js"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
+	<!-- Style Sheet Imports -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/styles.scss">
+  <link rel="icon" href="img/favicon.png">
+	<title>DL Wedding</title>
+</head>
+<body>
+	<header>
+		<div class="wedding-banner banner">
+			<img style="margin: 0 auto;" src="img/wedding-text.png">
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="info-card wedding-card">
+					<!-- <img class="main" src="img/wedding-avatar.jpg" alt="Photograph of developer Leah Nonay" class="fade-in"> -->
+					<span class="details">
+						<img style="border-radius: 0% !important; margin-top: 3em; max-width: 400px;"src="img/wedding-death.png">
+						<p style="color:#f5f5f5 !important;"> 
+							<br>October 7, 2023 | 3:00 PM
+							<br>Canmore, AB
+						</p>
+						<div
+							id="orderForm"
+							class="row order-bar order-form"
+							style="
+								padding: 2em;
+								margin-bottom: 4em;
+							"
+						>
+							<form
+								id="submitRSVPForm"
+								method="POST"
+								data-netlify="true"
+								netlify
+								action="/thanks.html"
+							>
+								<span class="form-field">
+									<label for="senderName">Your Name.</label>
+									<input
+										type="text"
+										name="senderName"
+										required="true"
+										placeholder="Name(s) of guests..."
+									/>
+								</span>
+								<span class="form-field">
+									<label for="attending">Will you be attending?</label>
+									<select name="attending" id="attending">
+										<option value="yes">Yes, gladly</option>
+										<option value="no">No, sadly</option>
+									</select>
+								</span>
+								<span class="form-field">
+									<label for="seatTotal">Number of Seats</label>
+									<input
+										type="number"
+										min="0"
+										max="4"
+										name="seatTotal"
+										placeholder="1"
+										required="false"
+									/>
+								</span>
+								<span class="form-field">
+									<label for="extras">Anything else we should know?</label>
+									<input
+										type="text"
+										name="senderName"
+										required="false"
+										placeholder="If you have been given a plus one, who will it be, dietary, etc..."
+									/>
+								</span>
+								<button class="order-btn form-btn btn" type="submit">
+									<i class="fa fa-paper-plane"></i> RSVP
+								</button>
+							</form>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="container reveal">
+			<div class="row">
+				<div class="col info-card">
+					<h3 style="font-family: 'Rock Salt', cursive !important;">Ceremony</h3>
+					<p>
+						<span style="color:#282824; font-family: 'Rock Salt', cursive !important;">What: </span>Vows, ring exchange, handfasting, and the signing of the marriage license.
+						<br><br><span style="color:#282824; font-family: 'Rock Salt', cursive !important;">Where: </span> Rundleview Parkette Canmore, Alberta
+						<br><br><span style="color:#282824; font-family: 'Rock Salt', cursive !important;">When: </span> 3:00 in the Afternoon
+					</p>
+				</div>
+				<div class="col info-card hobby">
+					<h3 style="font-family: 'Rock Salt', cursive !important;">Reception</h3>
+					<p>
+						<span style="color:#282824; font-family: 'Rock Salt', cursive !important;">What: </span>Dinner, dancing, and drinks!
+						<br><br><span style="color:#282824; font-family: 'Rock Salt', cursive !important;">Where: </span> Miners Union Hall Canmore, AB
+						<br><br><span style="color:#282824; font-family: 'Rock Salt', cursive !important;">When: </span> 6:00 in the Evening
+					</p>
+				</div>
+			</div>
+		</div> -->
+	</div>
+</main>
+<footer>
+	<p style="color:#f5f5f5 !important; font-size: 1.5em;">In lieu of gifts we humbly ask for a gift to our honeymoon travels instead.</p>
+</footer>
+
+<script>
+	window.addEventListener('scroll', reveal);
+
+	function reveal(){
+		var reveals = document.querySelectorAll('.reveal');
+
+		for(var i = 0; i < reveals.length; i++){
+			var windowY = window.innerHeight;
+			var revealTop = reveals[i].getBoundingClientRect().top;
+			var revealPoint = 50;
+
+			if(revealTop < windowY - revealPoint){
+				reveals[i].classList.add('active');
+			}
+			else{
+				reveals[i].classList.remove('active');
+			}
+		}
+	}
+</script>
+</body>
+</html>
+
+
+
+
+// @keyframes clipMe {
+	//   0% {
+	//     clip: rect(0px, , 2px, 0px);
+	//   }
+	//   100% {
+	//     clip: rect(0px, 250px * (1 + .05 * 2), 2px, 0px);
+	//   }
+	//   25% {
+	//     clip: rect(0px, 2px, 250px * (1 + .05 * 2), 0px);
+	//   }
+	//   50% {
+	//     clip: rect(250px * (1 + .05 * 2) - 2px, 250px * (1 + .05 * 2), 250px * (1 + .05 * 2), 0px);
+	//   }
+	//   75% {
+	//     clip: rect(0px, 250px * (1 + .05 * 2), 250px * (1 + .05 * 2), 250px * (1 + .05 * 2) - 2px);
+	//   }
+	// }
