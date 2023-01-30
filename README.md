@@ -1,15 +1,10 @@
-# Portfolio Details
-This web portfolio was developed by myself, in 2020. Then completely rebuilt using proper web development fundamentals, in 2021.
-All images and content within this portfolio, belong to and were created by myself (including images). This sites UI and themes were also entirely constructed by myself, and are not free to be re-used.
-* Languages - HTML, CSS/SCSS, and JS
-* IDE - Sublime Text 3, and Visual Studio 2019
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/61296534/215552112-ce8d4681-8a3b-460f-89d3-36f319eabed2.png" width="250"/>
+</p>
 
-# Features
-* Responsive Design - Column populations within a row, and menu formatting adjust as the screen resolution adjusts
-* Contact links - Easily accessed through the footer
-* About Section - Page features content about myself (i.e. skills, hobbies, how I got into software, about myself)
-* Software Portfolio - Page features past and current software projects. Along with project details and software used
-* Design Portfolio - Page features past and current graphic design and illustrative projects. Along with project details and software used.
-
-# Live Link
-https://leahnonay.ca
+# Portfolio Details | [View Live](https://leahnonay.ca)
+Portfolio developed by myself, and has been incrementally improved over the years.  
+All images and content within this portfolio belong to and were created by myself. They are not free to be re-used.
+* Languages - HTML, JavaScript, SCSS with CSS compression
+* Libraries - FontAwesome Icons, Google Fonts
+* IDE - Visual Studio Code
