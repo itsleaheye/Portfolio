@@ -1,5 +1,6 @@
 :root {
   --black: #212121;
+  --nav: #20201c;
   --charcoal: #282824;
   --gray: #a9a9a9;
   --light-gray: #f0f0f0 ;
@@ -585,6 +586,7 @@ footer ul li a img:not(:hover) {
     position: fixed;
     width: 100vw;
     z-index: 3;
+    background-color: var(--nav);
   }
   .nav label {
     display: none;
@@ -595,7 +597,7 @@ footer ul li a img:not(:hover) {
     visibility: visible;
   }
   .nav ul li {
-    background-color: var(--charcoal);
+    background-color: var(--nav);
     border: none;
     float: left;
     padding: var(--pad-xs);

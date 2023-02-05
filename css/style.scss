@@ -1,6 +1,7 @@
 :root {
   // Colours
   --black: #212121;
+  --nav: #20201c;
   --charcoal: #282824;
   --gray: #a9a9a9;
   --light-gray: #f0f0f0 ;
@@ -475,13 +476,14 @@ footer {
     position: fixed;
     width: 100vw;
     z-index: 3;
+    background-color: var(--nav);
     label {display: none;}
     ul {
       padding-left: var(--pad-xs);
       top: 0;
       visibility: visible;
       li {
-        background-color: var(--charcoal);
+        background-color: var(--nav);
         border: none;
         float: left;
         padding:var(--pad-xs);
