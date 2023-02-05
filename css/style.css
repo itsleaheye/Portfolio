@@ -70,34 +70,53 @@ a {
   text-decoration: none;
 }
 
+.script {
+  font-family: "Covered By Your Grace", cursive;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  font-size: 2rem;
+}
+
 .nav {
-  height: 4.5rem;
+  height: 4rem;
   background-color: var(--charcoal);
 }
 .nav ul {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   list-style: none;
   max-width: 100vw;
   position: absolute;
-  top: 4.5rem;
+  top: 4rem;
   visibility: collapse;
   z-index: 2;
-}
-.nav ul .active {
-  color: var(--teal);
 }
 .nav ul li {
   background-color: var(--black);
   border-bottom: 1px solid var(--medium-gray);
   padding: var(--pad-xs) 0;
 }
+.nav ul li img {
+  height: 2rem;
+  width: 2rem;
+  top: 0;
+  margin: 0 auto;
+}
+.nav ul li img:hover {
+  opacity: 0.5;
+  transition: var(--ease-in);
+}
 .nav ul li a:hover {
+  cursor: pointer;
   color: var(--white);
+  transition: var(--ease-in);
+}
+.nav ul li a:not(:hover) {
   transition: var(--ease-in);
 }
 .nav #nav-check:checked ~ .nav ul li,
 .nav #nav-check:checked ~ ul {
   visibility: visible;
+  transition: var(--ease-in);
 }
 .nav .hamburger, .nav label, .nav #nav-check {
   position: absolute;
@@ -107,6 +126,7 @@ a {
 }
 .nav #nav-check {
   opacity: 0;
+  transition: var(--ease-in);
 }
 .nav label span {
   border-top: 3px solid var(--white);
@@ -137,6 +157,7 @@ a {
   margin: var(--pad-sm) 0rem;
 }
 .row .col {
+  max-width: 75%;
   background-color: var(--charcoal);
   align-content: start;
 }
@@ -158,6 +179,21 @@ a {
 .banner .tagline {
   font-size: 1.3rem;
 }
+.banner .row:last-child {
+  margin: var(--pad-md) auto 0 auto;
+}
+.banner .row:last-child i {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+.banner .row:last-child i:hover {
+  cursor: pointer;
+  color: var(--teal);
+  transition: var(--ease-in);
+}
+.banner .row:last-child i:not(:hover) {
+  transition: var(--ease-in);
+}
 
 .text-banner {
   background-color: var(--charcoal);
@@ -169,6 +205,9 @@ a {
 
 .clickable {
   cursor: pointer;
+  border: 2px solid var(--charcoal);
+  flex-direction: column;
+  max-width: 75%;
 }
 .clickable:hover {
   outline: 3px solid var(--teal);
@@ -183,13 +222,19 @@ a {
   transition: var(--ease-in);
 }
 .clickable i {
+  margin: 0 auto var(--pad-xxs) auto;
   color: var(--light-gray);
-  font-size: 3rem;
-  margin: 0 auto;
+  font-size: 2.5rem !important;
 }
 .clickable p {
-  margin: var(--pad-xs) 0rem;
+  font-size: 1rem;
+  border-top: 2px solid var(--medium-gray);
+  padding-top: var(--pad-xxs);
+  margin: var(--pad-xxs) 0 var(--pad-xs) 0;
   color: var(--light-gray);
+}
+.clickable:nth-child(3) {
+  margin-top: var(--pad-xs);
 }
 
 .info-card {
@@ -205,6 +250,9 @@ a {
 .info-card h3 {
   margin: var(--pad-xs) 0;
 }
+.info-card .fade-in {
+  margin: 0 auto;
+}
 .info-card img:first-child {
   border-radius: 100%;
   display: block;
@@ -216,6 +264,9 @@ a {
 }
 .info-card img:first-child:hover {
   background-position: 0% 50%;
+}
+.info-card img:first-child:not(:hover) {
+  transition: var(--ease-in);
 }
 .info-card img:first-child:hover + img:last-child,
 .info-card img:first-child img:last-child:hover {
@@ -239,10 +290,12 @@ a {
   border-radius: 3px;
   margin: var(--pad-xxs) var(--pad-xxs);
   height: 16rem;
-  width: 25rem;
   overflow: hidden;
   position: relative;
   box-shadow: 0px 0.5rem 1rem var(--light-gray);
+}
+.tile img {
+  height: 16rem;
 }
 .tile:hover {
   background: linear-gradient(to bottom, var(--charcoal) 50%, var(--black) 100%);
@@ -266,6 +319,9 @@ a {
   bottom: 0;
   left: 0;
   opacity: 0;
+}
+.tile:not(:hover) {
+  transition: var(--ease-in);
 }
 
 .skill-token {
@@ -307,16 +363,6 @@ button:hover {
   transition: var(--ease-in);
 }
 
-.primary {
-  border: 2px solid var(--teal);
-  margin: var(--pad-xs) auto;
-}
-.primary:hover {
-  opacity: 1;
-  color: var(--charcoal);
-  background-color: var(--teal);
-}
-
 input[type=radio] {
   display: none;
 }
@@ -343,6 +389,9 @@ footer ul li a img:hover {
   opacity: 0.3;
   transition: var(--ease-in);
 }
+footer ul li a img:not(:hover) {
+  transition: var(--ease-in);
+}
 
 .portfolio {
   height: 35rem;
@@ -354,12 +403,11 @@ footer ul li a img:hover {
   flex-direction: column;
   position: relative;
   transform-style: preserve-3d;
-  width: 100%;
+  width: 50%;
 }
 .portfolio .project-cards .card {
   border-radius: 3px;
   cursor: pointer;
-  height: 17rem;
   max-width: 27rem;
   overflow: hidden;
   position: absolute;
@@ -368,8 +416,8 @@ footer ul li a img:hover {
 .portfolio .project-details {
   background-color: var(--charcoal);
   border-radius: 3px;
-  margin-top: 17rem;
-  width: 75rem;
+  margin-top: 12rem;
+  max-width: 100vw;
   overflow: hidden;
   padding: var(--pad-xs) 0;
 }
@@ -460,18 +508,6 @@ footer ul li a img:hover {
           animation-delay: -4s;
 }
 
-.reveal {
-  opacity: 0;
-  position: relative;
-  transform: translateY(25px);
-  transition: all 2s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0px);
-}
-
 .fade-in {
   -webkit-animation: fadein 3s;
           animation: fadein 3s;
@@ -545,6 +581,11 @@ footer ul li a img:hover {
   }
 }
 @media only screen and (min-width: 750px) {
+  .nav {
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+  }
   .nav label {
     display: none;
   }
@@ -569,11 +610,17 @@ footer ul li a img:hover {
     margin-top: 0 !important;
     margin-right: 0;
   }
+  .banner {
+    padding-top: 15rem;
+  }
   .banner .col {
     width: 30%;
   }
   .banner .col:nth-child(2) {
     margin-top: 0 !important;
+  }
+  .clickable:nth-child(3) {
+    margin-top: 0;
   }
   .info-card {
     max-width: 35rem;
@@ -585,10 +632,26 @@ footer ul li a img:hover {
     width: 3.5rem;
   }
   .tile {
-    width: 47.5%;
+    width: 47%;
+    max-width: 25rem !important;
+    overflow: hidden;
   }
   .tile:last-child {
     display: none;
+  }
+  .tile img {
+    width: 25rem;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  .portfolio {
+    margin-top: -8rem;
+    height: 45rem;
+  }
+  .portfolio .project-details {
+    margin-top: 20rem;
+    width: 75rem;
   }
   .portfolio .project-details .info label p {
     opacity: 1 !important;
@@ -599,6 +662,17 @@ footer ul li a img:hover {
   .portfolio .project-details .info label:hover p {
     opacity: 0.5;
     transition: var(--ease-in);
+  }
+  .portfolio .project-details .info label:not(:hover) {
+    transition: var(--ease-in);
+  }
+  .portfolio .project-cards {
+    margin-top: -12rem;
+    height: 17rem;
+    width: 75rem;
+  }
+  .portfolio .project-cards .card {
+    margin-top: 17rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -621,10 +695,10 @@ footer ul li a img:hover {
     padding: 0 var(--pad-sm);
     text-align: left;
   }
-  .tile {
+  .stile {
     width: 30%;
   }
-  .tile:last-child {
+  .stile:last-child {
     display: block;
   }
   .col {
@@ -633,13 +707,7 @@ footer ul li a img:hover {
   .hobby p {
     margin-left: var(--pad-md);
   }
-  .primary {
-    max-width: 23rem;
-  }
   .project-details {
     padding: var(--pad-xs) var(--pad-md);
-  }
-  .tile {
-    width: 25rem;
   }
 }/*# sourceMappingURL=style.css.map */

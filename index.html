@@ -12,10 +12,12 @@
       content="A portfolio developed and deployed by full-stack developer and freelancer, Leah Nonay."
     />
     <!-- External Imports -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
@@ -23,6 +25,10 @@
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap"
       rel="stylesheet"
     />
     <!-- Style Sheet Imports -->
@@ -42,13 +48,15 @@
           <span></span>
         </label>
         <ul>
-          <li><a class="active" href="#index">Home</a></li>
+          <li>
+            <a href="#banner"><img src="img/nav-icon.png" alt="Home" /></a>
+          </li>
           <li><a href="#about">About</a></li>
           <li><a href="#software">Code</a></li>
           <li><a href="#design">Design</a></li>
         </ul>
       </div>
-      <div class="banner">
+      <div class="banner" id="banner">
         <div class="animated-logo"></div>
         <p class="fade-in tagline">
           developer <span style="color: var(--teal)">&#9900;</span> designer
@@ -57,51 +65,47 @@
         <div class="row fade-in">
           <div class="col clickable" onclick="location.href='#software'">
             <i class="fa-brands fa-react"></i>
-            <p>
-              A full-stack developer with a specialty in web and mobile application development
-            </p>
-          <!-- <button>
-              View Projects
-          </button> -->
+            <p>A full-stack web and mobile application developer</p>
           </div>
           <div class="col clickable" onclick="location.href='#design'">
             <i class="fa fa-desktop"></i>
-            <p>
-              A developer who focuses on optimal UI/UX designs within her applications
-            </p>
-            <!-- <button>
-               View Designs
-            </button> -->
+            <p>A developer who focuses on optimal UI/UX designs</p>
           </div>
           <div class="col clickable" onclick="location.href='#design'">
             <i class="fa fa-pen-nib"></i>
-            <p>
-              An experienced entrepeneur & digital artist who has worked with over 300 clients globally
-            </p>
-            <!-- <button>
-               View Designs
-            </button> -->
+            <p>An experienced entrepeneur and character designer</p>
           </div>
+          <div class="row fade-in" onclick="location.href='#about'">
+            <i class="fa-sharp fa-solid fa-angle-down"></i>
+          </div>
+        </div>
       </div>
     </header>
     <main>
       <!-- About Section -->
-      <div class="container reveal" id="about">
+      <div class="container" id="about">
         <div class="row">
           <h2>About Me</h2>
         </div>
         <div class="row">
           <div class="info-card">
             <span class="fade-in">
-              <img src="img/avatar.png" alt="Photograph of developer Leah Nonay">
-              <img src="img/logo-personal.jpg" alt="Personal Logo">
+              <img
+                src="img/avatar.png"
+                alt="Photograph of developer Leah Nonay"
+              />
+              <img src="img/logo-personal.jpg" alt="Personal Logo" />
             </span>
             <span>
-              <h3>Leah Nonay <br/>&#60;&#47;Software Developer&#62;</h3>
+              <h3 class="script">&#60;&#47;Software Developer&#62;</h3>
               <p>
-                Hi, I'm <span class="bolder">Leah Nonay</span>! A full stack developer, and freelance digital artist based in western Canada.
-                <br><br>In addition to my full stack development skills and responsibilites, I have been exploring the world of UI/UX design and implementation.
-                <br><br><i>Software Engineer II, Jobber</i>
+                Hi, I'm <span class="bolder">Leah Nonay</span>! A full stack
+                developer, and freelance digital artist based in western Canada.
+                <br /><br />In addition to my full stack development skills and
+                responsibilites, I have been exploring the world of UI/UX design
+                and implementation. <br /><br /><i
+                  >Software Engineer II, Jobber</i
+                >
               </p>
             </span>
           </div>
@@ -110,84 +114,98 @@
       <div class="row text-banner">
         <h2 style="color: var(--light-gray)">Primary Skills</h2>
         <div class="skill-token">
-          <img src="img/icon-html.png" alt="Html icon"/>
-          <p>HTML<br>CSS</p>
+          <img src="img/icon-html.png" alt="Html icon" />
+          <p>HTML<br />CSS</p>
         </div>
         <div class="skill-token">
-          <img src="img/icon-angular.png" alt="Angular icon"/>
+          <img src="img/icon-angular.png" alt="Angular icon" />
           <p>Angular</p>
         </div>
         <div class="skill-token">
-          <img src="img/icon-ruby.png" alt="Ruby icon"/>
+          <img src="img/icon-ruby.png" alt="Ruby icon" />
           <p>Ruby</p>
         </div>
         <div class="skill-token">
-          <img src="img/icon-graphql.png" alt="GraphQL icon"/>
+          <img src="img/icon-graphql.png" alt="GraphQL icon" />
           <p>GraphQL</p>
         </div>
         <div class="skill-token">
-          <img src="img/icon-typescript.png" alt="TypeScript icon"/>
+          <img src="img/icon-typescript.png" alt="TypeScript icon" />
           <p>TypeScript</p>
         </div>
         <div class="skill-token">
-          <img src="img/icon-sql.png" alt="SQL icon"/>
+          <img src="img/icon-sql.png" alt="SQL icon" />
           <p>SQL</p>
         </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col info-card">
-            <h3>Additional Skills</h3>
+            <h3 class="script">Additional Skills</h3>
             <p>
-              <span class="dark-text">Languages & Frameworks.</span> Rails, HAML, SCSS, Ruby,TypeScript, RSpec, React Native, and JavaScript
-              <br><br><span class="dark-text">Tools.</span> Visual Studio, GitHub, Android Studio, XCode, Bitrise, Docker, JIRA, and Figma
-              <br><br><span class="dark-text">Additional Experience.</span> Database management, Quality assurance, UI/UX Design, Microsoft Office, Mac & Windows OS, and Agile/Scrum
+              <span class="dark-text">Languages & Frameworks.</span> Rails,
+              HAML, SCSS, Ruby,TypeScript, RSpec, React Native, and JavaScript
+              <br /><br /><span class="dark-text">Tools.</span> Visual Studio,
+              GitHub, Android Studio, XCode, Bitrise, Docker, JIRA, and Figma
+              <br /><br /><span class="dark-text">Additional Experience.</span>
+              Database management, Quality assurance, UI/UX Design, Microsoft
+              Office, Mac & Windows OS, and Agile/Scrum
             </p>
           </div>
           <div class="col info-card hobby">
-            <h3>My Hobbies</h3>
+            <h3 class="script">My Hobbies</h3>
             <p>
-              <span>&#62;</span> Drinking LOTS of coffee & tea
-              <br><span>&#62;</span> Video games
-              <br><span>&#62;</span> UI/UX design
-              <br><span>&#62;</span> Interior design & architecture (AutoCAD)
-              <br><span>&#62;</span> Graphic design
-              <br><span>&#62;</span> Photography
-              <br><span>&#62;</span> Digital illustration
+              <span>&#62;</span> Drinking LOTS of coffee & tea <br /><span
+                >&#62;</span
+              >
+              Video games <br /><span>&#62;</span> UI/UX design <br /><span
+                >&#62;</span
+              >
+              Interior design & architecture (AutoCAD) <br /><span>&#62;</span>
+              Graphic design <br /><span>&#62;</span> Photography <br /><span
+                >&#62;</span
+              >
+              Digital illustration
             </p>
           </div>
         </div>
       </div>
       <!-- Software -->
-      <div class="row text-banner" style="margin-bottom: 0;" id="software">
-        <h2 style="color:var(--teal)">What I Do</h2>
+      <div class="row text-banner" style="margin-bottom: 0" id="software">
+        <h2 style="color: var(--teal)">What I Do</h2>
         <p>
-          mobile <span style="color: var(--teal)">&#9900;</span> web applications
+          mobile <span style="color: var(--teal)">&#9900;</span> web
+          applications
         </p>
       </div>
       <div class="row text-banner portfolio">
-        <input type="radio" name="slider" id="dev-1" checked>
-        <input type="radio" name="slider" id="dev-2">
-        <input type="radio" name="slider" id="dev-3">
+        <input type="radio" name="slider" id="dev-1" checked />
+        <input type="radio" name="slider" id="dev-2" />
+        <input type="radio" name="slider" id="dev-3" />
         <div class="project-cards">
           <label class="card" for="dev-1" id="dev-1">
-            <img src="img/dev-dnd.jpg" alt="Project thumbnail">
+            <img src="img/dev-dnd.jpg" alt="Project thumbnail" />
           </label>
           <label class="card" for="dev-2" id="dev-2">
-            <img src="img/dev-cap.jpg" alt="Project thumbnail">
+            <img src="img/dev-cap.jpg" alt="Project thumbnail" />
           </label>
           <label class="card" for="dev-3" id="dev-3">
-            <img src="img/dev-hack.jpg" alt="Project thumbnail">
+            <img src="img/dev-hack.jpg" alt="Project thumbnail" />
           </label>
         </div>
         <div class="project-details">
           <div class="info" id="test">
             <!-- Make cards clickable -->
-            <label id="dev-info-1" onclick="location.href='https://github.com/leahnonay/Cantrip'">
-              <h2>Cantrip <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
+            <label
+              id="dev-info-1"
+              onclick="location.href='https://github.com/leahnonay/Cantrip'"
+            >
+              <h2>
+                Cantrip <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
               <p>
-                A web application that allows users to create and manage
-                their 'Dungeons and Dragons' characters and inventories.
+                A web application that allows users to create and manage their
+                'Dungeons and Dragons' characters and inventories.
                 <br /><br />
                 I am actively developing a web version of this application and
                 utilizing the PrimeNG components library in unison of my own
@@ -199,17 +217,26 @@
                 <span class="tags">SQLite</span> <span class="tags">Figma</span>
               </p>
             </label>
-            <label id="dev-info-2" onclick="location.href='https://chrysalisapp.ca/'">
-              <h2>Chrysalis Anti-Human Trafficking <i class="fa-solid fa-arrow-up-right-from-square"></i></h2>
+            <label
+              id="dev-info-2"
+              onclick="location.href='https://chrysalisapp.ca/'"
+            >
+              <h2>
+                Chrysalis Anti-Human Trafficking
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </h2>
               <p>
-                A web application developed for a national non-profit, in 
-                ~3 months with my capstone team.
-                <br /><br />We ran out of time to polish front-end components due to prioritizing security features: crisis chat rooms, location pings, and 'SafeDate'.
+                A web application developed for a national non-profit, in ~3
+                months with my capstone team.
+                <br /><br />We ran out of time to polish front-end components
+                due to prioritizing security features: crisis chat rooms,
+                location pings, and 'SafeDate'.
               </p>
               <p>
                 <span class="tags">TypeScript</span>
                 <span class="tags">JavaScript</span>
-                <span class="tags">MongoDB</span> <span class="tags">React</span>
+                <span class="tags">MongoDB</span>
+                <span class="tags">React</span>
                 <span class="tags">Firebase</span>
               </p>
             </label>
@@ -218,7 +245,10 @@
               <p>
                 In 2021 I placed 1st in a company wide hackathon event.
                 <br /><br />In under 10 hours I developed a certification badge
-                builder, using basic UI & UX elements. It collected form data, including an uploaded company logo, and then bound this data to another component -right badge- which rendered the final exportable SVG.
+                builder, using basic UI & UX elements. It collected form data,
+                including an uploaded company logo, and then bound this data to
+                another component -right badge- which rendered the final
+                exportable SVG.
               </p>
               <p>
                 <span class="tags">Angular</span>
@@ -231,99 +261,117 @@
       </div>
 
       <!-- Design -->
-      <div class="row reveal" id="design">
+      <div class="row" id="design">
         <h2>Design</h2>
-        <p style="color:var(--charcoal)">
-          web design <span style="color: var(--teal)">&#9900;</span> wireframes <span style="color: var(--teal)">&#9900;</span> graphic design
+        <p style="color: var(--charcoal)">
+          web design <span style="color: var(--teal)">&#9900;</span> wireframes
+          <span style="color: var(--teal)">&#9900;</span> graphic design
         </p>
       </div>
       <div class="container">
         <div class="row">
-          <a class="tile" href="https://www.figma.com/file/t9gJ1cqXQLW8AChamJwsRv/Cantrip-Basic-UI?node-id=0%3A1">
-            <img src="img/dev-dnd.jpg" alt="design tile">
+          <a
+            class="tile"
+            href="https://www.figma.com/file/t9gJ1cqXQLW8AChamJwsRv/Cantrip-Basic-UI?node-id=0%3A1"
+          >
+            <img src="img/dev-dnd.jpg" alt="design tile" />
             <p>
-              An interactive prototype & mockup of my upcoming mobile & web application, Cantrip. I completed this after gathering valuable UX feedback from the global DnD community.
-              <br/><br/>View More
+              An interactive prototype & mockup of my upcoming mobile & web
+              application, Cantrip. I completed this after gathering valuable UX
+              feedback from the global DnD community.
+              <br /><br />View More
             </p>
           </a>
-          <a class="tile" href="https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1">
-            <img src="img/design-cap.jpg" alt="design tile">
+          <a
+            class="tile"
+            href="https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1"
+          >
+            <img src="img/design-cap.jpg" alt="design tile" />
             <p>
-              A mockup & rebranding I designed for a non-profit group, as part of a rebranding pitch. I designed both a static website layout, and mobile app UI/UX layout.
-              <br/><br/>View More
+              A mockup & rebranding I designed for a non-profit group, as part
+              of a rebranding pitch. I designed both a static website layout,
+              and mobile app UI/UX layout.
+              <br /><br />View More
             </p>
           </a>
           <a class="tile" href="https://www.casualpancakes.com">
-            <img src="img/design-pan.jpg" alt="design tile">
+            <img src="img/design-pan.jpg" alt="design tile" />
             <p>
-              I designed & developed my own art portfolio and shop.<br/><br/>
-              I use this as a hub to interact with my clients, and to log
-              order details through a customized form and script.
-              <br/><br/>View Live
+              I designed & developed my own art portfolio and shop.<br /><br />
+              I use this as a hub to interact with my clients, and to log order
+              details through a customized form and script.
+              <br /><br />View Live
             </p>
           </a>
         </div>
-        <div class="row" style="margin-top: -2rem;">
+        <div class="row" style="margin-top: -2rem">
           <a class="tile" href="https://github.com/leahnonay/Portfolio">
-            <img src="img/dev-port.jpg" alt="design tile">
+            <img src="img/dev-port.jpg" alt="design tile" />
             <p>
               I built, designed and deployed my software portfolio -this
               website-, to best reflect my own personality and web development
               skills.
-              <br/><br/>View More
+              <br /><br />View More
             </p>
           </a>
-          <a class="tile" href="https://github.com/leahnonay/ERC-MembershipTool">
-            <img src="img/dev-erc.jpg" alt="design tile">
+          <a
+            class="tile"
+            href="https://github.com/leahnonay/ERC-MembershipTool"
+          >
+            <img src="img/dev-erc.jpg" alt="design tile" />
             <p>
-              ERC Admin Tool and UI Revamp. I am working on a membership management web app for the Edmonton Rocketry Club. I have also developed and re-designed their previously static website.
-              <br/><br/>View More
+              ERC Admin Tool and UI Revamp. I am working on a membership
+              management web app for the Edmonton Rocketry Club. I have also
+              developed and re-designed their previously static website.
+              <br /><br />View More
             </p>
           </a>
           <div class="tile">
-            <img src="img/design-logo.jpg" alt="design tile">
-            <p>
-              My personal logo
-            </p>
+            <img src="img/design-logo.jpg" alt="design tile" />
+            <p>My personal logo</p>
           </div>
         </div>
-        <div class="row" style="margin-top: -2rem;">
+        <div class="row" style="margin-top: -2rem">
           <div class="tile">
-            <img src="img/design-erc.jpg" alt="design tile">
+            <img src="img/design-erc.jpg" alt="design tile" />
             <p>
-              I designed an ad campaign for the ERC's 50th anniversary event.<br/><br/>In addition to the logo, posters were also created and displayed across Edmonton (KDays, Telus World of Science, etc.)
+              I designed an ad campaign for the ERC's 50th anniversary event.<br /><br />In
+              addition to the logo, posters were also created and displayed
+              across Edmonton (KDays, Telus World of Science, etc.)
             </p>
           </div>
           <div class="tile">
-            <img src="img/des-art1.jpg" alt="design tile">
+            <img src="img/des-art1.jpg" alt="design tile" />
             <p>
-              Taking a break from drawing hundreds of client's characters, I took the time for a personal illustration of one of my many DnD adventurers, Quinna.
+              Taking a break from designing commissioned characters, I took the
+              time for a personal illustration of one of my many DnD
+              adventurers, Quinna.
             </p>
           </div>
           <div class="tile">
-            <img src="img/des-can.jpg" alt="design tile">
-            <p>
-              A logo I designed for my upcoming Cantrip application.
-            </p>
+            <img src="img/des-can.jpg" alt="design tile" />
+            <p>A logo I designed for my upcoming Cantrip application.</p>
           </div>
         </div>
-        <div class="row" style="margin-top: -2rem;">
+        <div class="row" style="margin-top: -2rem">
           <div class="tile">
-            <img src="img/des-temp.jpg" alt="design tile">
+            <img src="img/des-temp.jpg" alt="design tile" />
             <p>
               A logo I designed for a client offering interior design services.
             </p>
           </div>
           <div class="tile">
-            <img src="img/des-tea.jpg" alt="design tile">
+            <img src="img/des-tea.jpg" alt="design tile" />
             <p>
-              A rebranding project for a crested gecko breeder that included a complete branding revamp and logo.
+              A rebranding project for a crested gecko breeder that included a
+              complete branding revamp and logo.
             </p>
           </div>
           <div class="tile">
-            <img src="img/des-art2.jpg" alt="design tile">
+            <img src="img/des-art2.jpg" alt="design tile" />
             <p>
-              A frog NPC potions merchant that I designed for an indie card game.
+              A frog NPC potions merchant that I designed for an indie card
+              game.
             </p>
           </div>
         </div>
@@ -355,18 +403,38 @@
     </footer>
   </body>
   <script>
-    window.addEventListener('scroll', reveal);
-    function reveal(){
-      var reveals = document.querySelectorAll('.reveal');
-      for(var i = 0; i < reveals.length; i++){
-        var revealTop = reveals[i].getBoundingClientRect().top;
-        if(revealTop < window.innerHeight - 50){
-          reveals[i].classList.add('active');
-        }
-        else{
-          reveals[i].classList.remove('active');
-        }
-      }
-    }
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+        var href = this.getAttribute("href");
+        var element =
+          document.querySelector(href) ||
+          document.querySelector(
+            "a[name=" + href.substring(1, href.length) + "]"
+          );
+        window.scroll({
+          top: element.offsetTop - 85,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    });
+    document.querySelectorAll(".clickable").forEach((a) => {
+      a.onclick = function (e) {
+        var href = this.getAttribute("onclick");
+        var getId = href.substring(15, href.length - 1);
+        var element =
+          document.querySelector(getId) ||
+          document.querySelector(
+            "a[name=" + getId.substring(1, getId.length) + "]"
+          );
+        window.scroll({
+          top: element.offsetTop - 85,
+          left: 0,
+          behavior: "smooth",
+        });
+      };
+    });
   </script>
 </html>
