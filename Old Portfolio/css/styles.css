@@ -484,7 +484,7 @@ form {width: 95%;}
 .wedding-card p {
   width: 100% !important;
   height: auto !important;
-  text-align: center !important;
+  text-align: left;
 }
 
 .wedding-card .btn {
