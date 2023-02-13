@@ -123,45 +123,14 @@
 </footer>
 
 <script>
-	window.addEventListener('scroll', reveal);
-
-	function reveal(){
-		var reveals = document.querySelectorAll('.reveal');
-
-		for(var i = 0; i < reveals.length; i++){
-			var windowY = window.innerHeight;
-			var revealTop = reveals[i].getBoundingClientRect().top;
-			var revealPoint = 50;
-
-			if(revealTop < windowY - revealPoint){
-				reveals[i].classList.add('active');
-			}
-			else{
-				reveals[i].classList.remove('active');
-			}
-		}
+	function show() {
+		var loadingAnimation = document.getElementById("loadingAnimation");
+		loadingAnimation.classList.add('open');
+	}
+	function hide() {
+		var loadingAnimation = document.getElementById("loadingAnimation");
+		loadingAnimation.classList.remove('open');
 	}
 </script>
 </body>
 </html>
-
-
-
-
-// @keyframes clipMe {
-	//   0% {
-	//     clip: rect(0px, , 2px, 0px);
-	//   }
-	//   100% {
-	//     clip: rect(0px, 250px * (1 + .05 * 2), 2px, 0px);
-	//   }
-	//   25% {
-	//     clip: rect(0px, 2px, 250px * (1 + .05 * 2), 0px);
-	//   }
-	//   50% {
-	//     clip: rect(250px * (1 + .05 * 2) - 2px, 250px * (1 + .05 * 2), 250px * (1 + .05 * 2), 0px);
-	//   }
-	//   75% {
-	//     clip: rect(0px, 250px * (1 + .05 * 2), 250px * (1 + .05 * 2), 250px * (1 + .05 * 2) - 2px);
-	//   }
-	// }

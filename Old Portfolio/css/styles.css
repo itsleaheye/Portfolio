@@ -30,6 +30,19 @@ h3 {
   font-size: 1.8rem;
 }
 
+.passwordField {
+  margin: 2rem 2rem 1rem 2rem !important;
+  width: 75% !important;
+  background-color: #3f4140;
+  color:#e7e7e7 !important;
+  max-width: 400px;
+}
+.loadingAnimation {
+  display: none;
+  z-index: -3;
+}
+
+
 p,
 .project-list li {
   font-size: 1.2rem;
@@ -228,31 +241,11 @@ a {
   content: "";
   margin: -5%;
   box-shadow: inset 0 0 0 var(--path-width) var(--main-color);
-  -webkit-animation: clipAnimation var(--timer) linear infinite;
-          animation: clipAnimation var(--timer) linear infinite;
+  animation: clipAnimation var(--timer) linear infinite;
 }
 
 .animated-logo::before {
-  -webkit-animation-delay: -4s;
-          animation-delay: -4s;
-}
-
-@-webkit-keyframes clipAnimation {
-  0% {
-    clip: rect(0px var(--clip-size) var(--path-width) 0px);
-  }
-  25% {
-    clip: rect(0px var(--path-width) var(--clip-size) 0px);
-  }
-  50% {
-    clip: rect(218px var(--clip-size) var(--clip-size) 0px);
-  }
-  75% {
-    clip: rect(0px var(--clip-size) var(--clip-size) 218px);
-  }
-  100% {
-    clip: rect(0px var(--clip-size) var(--path-width) 0px);
-  }
+  animation-delay: -4s;
 }
 
 @keyframes clipAnimation {
@@ -367,8 +360,7 @@ footer,
 
 .card.card-expanded {
   height: 770px;
-  -webkit-animation: expand 0.5s ease;
-          animation: expand 0.5s ease;
+  animation: expand 0.5s ease;
 }
 
 .card-data {
@@ -390,25 +382,12 @@ footer,
 
 .card-expanded > .card-data {
   opacity: 1;
-  -webkit-animation: reveal 0.7s ease;
-          animation: reveal 0.7s ease;
+  animation: reveal 0.7s ease;
 }
 
 .card-unexpanded > .card-data {
   opacity: 0;
-  -webkit-animation: unreveal 0.2s ease;
-          animation: unreveal 0.2s ease;
-}
-
-@-webkit-keyframes reveal {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  animation: unreveal 0.2s ease;
 }
 
 @keyframes reveal {
@@ -421,16 +400,6 @@ footer,
     transform: translateY(0);
   }
 }
-@-webkit-keyframes unreveal {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-}
 @keyframes unreveal {
   0% {
     opacity: 1;
@@ -441,28 +410,12 @@ footer,
     transform: translateY(-20px);
   }
 }
-@-webkit-keyframes expand {
-  0% {
-    height: 450px;
-  }
-  100% {
-    height: 770px;
-  }
-}
 @keyframes expand {
   0% {
     height: 450px;
   }
   100% {
     height: 770px;
-  }
-}
-@-webkit-keyframes unexpand {
-  0% {
-    height: 240px;
-  }
-  100% {
-    height: 180px;
   }
 }
 @keyframes unexpand {
@@ -488,12 +441,13 @@ footer,
 
 .col,
 .info-card {
-  padding: 2rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   background-color: #282824;
   max-width: 600px;
 }
+form {width: 95%;}
 
 .info-card {
   background-color: #e7e7e7 !important;
@@ -504,13 +458,14 @@ footer,
   background-color: #282828 !important;
   text-align: center !important;
   padding: 0 !important;
+  flex-direction: column;
 }
 
 .wedding-card button {
   border: 2px solid #f3ab45;
   color: #f3ab45;
   background-color: #282828;
-  padding: 0 3.5rem;
+  padding: 0 2rem;
 }
 
 .wedding-card button:hover {
@@ -522,12 +477,9 @@ footer,
 
 .wedding-card .details {
   width: 100%;
+  padding-bottom: 2.5rem;
 }
-
-.wedding-card h3 {
-  font-family: "Rock Salt", cursive !important;
-  margin-top: 1em !important;
-}
+.wedding-card img {max-width: 15rem;}
 
 .wedding-card p {
   width: 100% !important;
@@ -538,7 +490,15 @@ footer,
 .wedding-card .btn {
   margin-top: 2em;
 }
+.close {
+  display: none;
+  z-index: -3;
+}
 
+.open {
+  display: block;
+  z-index: 1;
+}
 .info-card p {
   color: #636363 !important;
   text-align: left;
@@ -563,6 +523,10 @@ footer,
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
+.error p{
+  color: #f5f5f5 !important;
+  margin-bottom: 1rem;
+}
 /* Hover figcaptions */
 figure {
   display: block;
@@ -612,7 +576,6 @@ figcaption h2 {
   transition: 1s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -725,8 +688,8 @@ footer {
     visibility: visible;
   }
   .nav ul,
-.nav ul li,
-.nav ul li a {
+  .nav ul li,
+  .nav ul li a {
     background-color: #282824;
     border: none;
     font-size: 1.2rem;
@@ -734,14 +697,14 @@ footer {
     line-height: 1.4rem;
   }
   .nav li,
-.nav ul li a {
+  .nav ul li a {
     width: auto;
     float: left;
     margin: 0 1.6rem 0 1.6rem;
     padding: 0.3rem 0 0 0;
   }
   .nav li,
-a:hover {
+  a:hover {
     color: #ffffff;
   }
   .current {
@@ -816,11 +779,16 @@ a:hover {
     width: 60%;
   }
   .info-card {
-    width: 40% !important;
+    width: 65% !important;
+    max-width: 50rem;
   }
   .info-card p {
     width: 90%;
   }
+  .loadingAnimation .row .col {
+    width: 45% !important;
+  }
+  .loading
   .avatar-badge {
     max-width: 30%;
     margin-right: 2em;
@@ -848,7 +816,7 @@ a:hover {
     margin: 2rem 0.8rem 0 0.8rem;
   }
   .col:last-child,
-.col {
+  .col {
     margin-top: 0;
   }
 }
@@ -866,17 +834,7 @@ a:hover {
 }
 
 .fade-in {
-  -webkit-animation: fadein 3s;
-          animation: fadein 3s;
-}
-
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation: fadein 3s;
 }
 
 @keyframes fadein {
@@ -885,14 +843,6 @@ a:hover {
   }
   to {
     opacity: 1;
-  }
-}
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes rotate {

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="8rXRHbgrhpm9iJ6cmFKN-KjYYaAV3wbKDolqjueUYCg" />
+	<!-- External Imports -->
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+		integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"
+	/>
+	<!-- <script src="js/html5shiv.js"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Rock+Salt&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+	<!-- Style Sheet Imports -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="Old Portfolio\css\styles.css">
+  <link rel="icon" href="img/favicon.png">
+	<title>DL Wedding</title>
+</head>
+<body>
+	<header>
+		<div class="wedding-banner banner">
+			<img style="margin: 0 auto;" src="Old Portfolio/img/wedding-text.png">
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="info-card wedding-card">
+					<img class="main" src="img/crows.png" alt="Photograph of developer Leah Nonay">
+					<span class="details">
+						<img style="border-radius: 0% !important; margin-top: 3em; max-width: 400px;"src="Old Portfolio/img/wedding-death.png">
+						<div id="password">
+							<input
+								id="eventPassword"
+								class="passwordField"
+								type="text"
+								name="eventPassword"
+								placeholder="Enter the password from your RSVP card..."
+							/>
+							<div id="error" class="close error"><p>Incorrect...</p></div>
+							<div>
+								<button class="order-btn form-btn btn" style="margin-top: 0rem !important" onclick="show()"><i class="fa-solid fa-eye"></i> Click to Reveal Details</button>
+							</div>
+						</div>
+						<div id="loadingAnimation" class="loadingAnimation">
+							<p style="color:#f5f5f5 !important; margin-bottom: 2rem;"> 
+								<br>October 7, 2023 | 3:00 PM MST
+								<br>Canmore, AB
+							</p>
+							<div class="row">
+								<div class="col info-card">
+									<h3 style="font-family: 'Alex Brush', cursive !important; font-weight: bolder;">Ceremony</h3>
+									<p>
+										<span style="color:#282824; font-weight: bolder;">What: </span>Ring exchange & handfast
+										<br><br><span style="color:#282824; font-weight: bolder;">Where: </span> Rundleview Parkette
+										<br><br><span style="color:#282824; font-weight: bolder;">When: </span> 3:00 PM
+									</p>
+								</div>
+								<div class="col info-card hobby">
+									<h3 style="font-family: 'Alex Brush', cursive !important; font-weight: bolder;">Reception</h3>
+									<p>
+										<span style="color:#282824;font-weight: bolder;">What: </span>Dinner, dancing, and drinks
+										<br><br><span style="color:#282824; font-weight: bolder;">Where: </span> Miner's Union Hall
+										<br><br><span style="color:#282824; font-weight: bolder;">When: </span> 6:00 PM
+									</p>
+								</div>
+							</div>
+							<div
+								id="orderForm"
+								class="row order-bar order-form"
+								style="padding: 2em;"
+							>
+								<form
+									id="submitRSVPForm"
+									method="POST"
+									data-netlify="true"
+									netlify
+									action="/thanks.html"
+								>
+								<!-- TO DO THANK YOU MENU -->
+									<span class="form-field">
+										<label for="senderName">Your Name*</label>
+										<input
+											type="text"
+											name="senderName"
+											required="true"
+											placeholder="Name(s) of guests, including if you have been given a plus one..."
+										/>
+									</span>
+									<span class="form-field">
+										<label for="attending">Will you be attending?</label>
+										<select name="attending" id="attending">
+											<option value="yes">Yes, gladly</option>
+											<option value="no">No, sadly</option>
+										</select>
+									</span>
+									<span class="form-field">
+										<label for="seatTotal">Number of Seats</label>
+										<input
+											type="number"
+											min="0"
+											max="4"
+											name="seatTotal"
+											placeholder="1"
+											required="false"
+										/>
+									</span>
+									<span class="form-field">
+										<label for="extras">Anything else we should know?*</label>
+										<input
+											type="text"
+											name="senderName"
+											required="false"
+											placeholder="Dietary restrictions, etc..."
+										/>
+									</span>
+									<button class="order-btn form-btn btn" type="submit">
+										<i class="fa fa-paper-plane"></i> RSVP
+									</button>
+								</form>
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+		</div>
+			
+	</div>
+</main>
+<footer>
+	<p style="color:#f5f5f5 !important; font-size: 1.5em;">In lieu of a registry we humbly ask for a gift to our honeymoon travels instead.</p>
+</footer>
+
+<script>
+	function show() {
+		password = document.getElementById('eventPassword');
+		var errorBanner = document.getElementById("error");
+		if(password.value === "BlackWedding2023") {
+			var loadingAnimation = document.getElementById("loadingAnimation");
+			loadingAnimation.classList.add('open');
+			var password = document.getElementById("password");
+			password.classList.add('close');
+			errorBanner.classList.add('close');
+		}
+		else {
+			errorBanner.classList.add('open');
+		}
+	}
+	function hide() {
+		var loadingAnimation = document.getElementById("loadingAnimation");
+		loadingAnimation.classList.remove('open');
+	}
+</script>
+</body>
+</html>
