@@ -3,7 +3,7 @@
   --nav: #20201c;
   --charcoal: #282824;
   --gray: #a9a9a9;
-  --light-gray: #f0f0f0 ;
+  --light-gray: #f0f0f0;
   --medium-gray: #636363;
   --teal: #7acddc;
   --white: #ffffff;
@@ -13,7 +13,7 @@
   --pad-md: 5rem;
   --ease-in: 0.5s ease-in;
   --box-size: 200px;
-  --clip-distance: .05;
+  --clip-distance: 0.05;
   --clip-size: 220px;
   --path-width: 3px;
   --timer: 8s;
@@ -441,24 +441,32 @@ footer ul li a img:not(:hover) {
   opacity: 0;
 }
 
-#dev-1:checked ~ .project-cards #dev-3, #dev-2:checked ~ .project-cards #dev-1, #dev-3:checked ~ .project-cards #dev-2 {
+#dev-1:checked ~ .project-cards #dev-3,
+#dev-2:checked ~ .project-cards #dev-1,
+#dev-3:checked ~ .project-cards #dev-2 {
   transform: translatex(-40%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
 }
 
-#dev-1:checked ~ .project-cards #dev-2, #dev-2:checked ~ .project-cards #dev-3, #dev-3:checked ~ .project-cards #dev-1 {
+#dev-1:checked ~ .project-cards #dev-2,
+#dev-2:checked ~ .project-cards #dev-3,
+#dev-3:checked ~ .project-cards #dev-1 {
   transform: translatex(40%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
 }
 
-#dev-1:checked ~ .project-cards #dev-1, #dev-2:checked ~ .project-cards #dev-2, #dev-3:checked ~ .project-cards #dev-3 {
+#dev-1:checked ~ .project-cards #dev-1,
+#dev-2:checked ~ .project-cards #dev-2,
+#dev-3:checked ~ .project-cards #dev-3 {
   transform: translatex(0) scale(1);
   opacity: 1;
   z-index: 1;
 }
-#dev-1:checked ~ .project-cards #dev-1 img, #dev-2:checked ~ .project-cards #dev-2 img, #dev-3:checked ~ .project-cards #dev-3 img {
+#dev-1:checked ~ .project-cards #dev-1 img,
+#dev-2:checked ~ .project-cards #dev-2 img,
+#dev-3:checked ~ .project-cards #dev-3 img {
   box-shadow: 0px 0px 5px 0px var(--black);
 }
 
@@ -600,9 +608,6 @@ footer ul li a img:not(:hover) {
     max-width: 25rem !important;
     overflow: hidden;
   }
-  .tile:last-child {
-    display: none;
-  }
   .tile img {
     width: 25rem;
     height: -moz-max-content;
@@ -654,7 +659,8 @@ footer ul li a img:not(:hover) {
   .info-card span:last-child {
     width: 68%;
   }
-  .info-card span:last-child h3, .info-card span:last-child p {
+  .info-card span:last-child h3,
+  .info-card span:last-child p {
     padding: 0 var(--pad-sm);
     text-align: left;
   }
