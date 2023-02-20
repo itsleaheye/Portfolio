@@ -36,18 +36,18 @@
 				<div class="info-card wedding-card">
 					<img class="main" src="img/crow.gif" alt="Photograph of developer Leah Nonay">
 					<span class="details">
-						<img style="border-radius: 0% !important; margin-top: 3em; max-width: 400px;"src="old/img/wedding-death.png">
+						<img style="border-radius: 0% !important; margin: 3em auto; max-width: 400px;"src="old/img/wedding-death.png">
 						<div id="password">
 							<input
 								id="eventPassword"
 								class="passwordField"
 								type="text"
 								name="eventPassword"
-								placeholder="Enter the password from your RSVP card..."
+								placeholder="Password from your RSVP card..."
 							/>
-							<div id="error" class="close error"><p style="text-align: center !important;">Incorrect...</p></div>
+							<div id="error" class="close error"><p style="text-align: center !important;">Incorrect Password...</p></div>
 							<div>
-								<button class="order-btn form-btn btn" style="margin-top: 0rem !important" onclick="show()"><i class="fa-solid fa-eye"></i> Click to Reveal Details</button>
+								<button class="order-btn form-btn btn" onclick="show()"><i class="fa-solid fa-eye"></i> Click to Reveal Details</button>
 							</div>
 						</div>
 						<div id="loadingAnimation" class="loadingAnimation">
@@ -78,7 +78,7 @@
 								class="row order-bar order-form"
 								style="padding: 2em;"
 							>
-								<img style="border-radius: 0% !important; margin-top: 3em; max-width: 400px;"src="old/img/wedding-rsvp.png">
+								<img style="border-radius: 0% !important; margin-top: 3em; max-width: 70px;"src="old/img/wedding-rsvp.png">
 								<form
 									id="submitRSVPForm"
 									method="POST"
@@ -86,14 +86,13 @@
 									netlify
 									action="/thanks.html"
 								>
-								<!-- TO DO THANK YOU MENU -->
 									<span class="form-field">
 										<label for="senderName">Your Name*</label>
 										<input
 											type="text"
 											name="senderName"
 											required
-											placeholder="Name(s) of guests, including if you have been given a plus one..."
+											placeholder="Name(s) of guests..."
 										/>
 									</span>
 									<span class="form-field">
@@ -139,6 +138,12 @@
 </footer>
 
 <script>
+	 const $myInput = document.getElementById("eventPassword")
+		$myInput.onkeydown = function(event){
+        if(event.key === 'Enter') {
+            show();       
+        }
+    }
 	function show() {
 		password = document.getElementById('eventPassword');
 		var errorBanner = document.getElementById("error");

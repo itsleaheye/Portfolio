@@ -7,10 +7,6 @@ body {
   padding-bottom: 5.5rem;
   letter-spacing: 0.05rem;
   background-color: #f5f5f5;
-  background-image: url(../img/bg-wedding.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
 }
 
 /* Typography */
@@ -208,10 +204,9 @@ a {
   --main-color: #7acddc;
 }
 
-.error,
-.loadingAnimation {
+.error {
+  padding-top: 1rem;
   display: none;
-  padding-bottom: 1rem;
 }
 
 .animated-logo {
@@ -245,7 +240,7 @@ a {
   animation-delay: -4s;
 }
 
-.password input {
+.password-field {
   background-color: #3f4140;
   width: 75% !important;
 }
@@ -391,9 +386,6 @@ footer,
   opacity: 0;
   animation: unreveal 0.2s ease;
 }
-form {
-  width: 80%;
-}
 
 @keyframes reveal {
   0% {
@@ -461,8 +453,25 @@ form {
 .wedding-card {
   background-color: #282828 !important;
   text-align: center !important;
-  padding: 0 !important;
-  padding-bottom: 2rem !important;
+  padding: 2rem 1rem;
+}
+.wedding-card img {
+  width: 75%;
+}
+.wedding-card img:last-child {
+  margin-bottom: 1rem;
+}
+
+.open {
+  display: block !important;
+}
+
+.close {
+  display: none;
+}
+
+.loadingAnimation {
+  display: none;
 }
 
 .wedding-card button {
@@ -494,9 +503,13 @@ form {
   text-align: center !important;
 }
 
+.wedding-card .btn {
+  margin-top: 1em;
+}
+
 .info-card p {
   color: #636363 !important;
-  text-align: left !important;
+  text-align: left;
   height: 100%;
 }
 
@@ -566,8 +579,8 @@ figcaption h2 {
   font-size: 3rem;
   transition: 1s ease;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .next {
@@ -709,6 +722,7 @@ footer {
   .info-card .main {
     height: auto;
     margin-top: 5%;
+    max-width: 200px;
   }
   .hobby p {
     width: 60%;
@@ -839,6 +853,10 @@ footer {
     transform: rotate(360deg);
   }
 }
+form {
+  width: 100%;
+}
+
 .about-card .main:hover {
   background-position: 0% 50%;
 }
@@ -848,8 +866,7 @@ footer {
   transform: rotate(-45deg) translate(0px) rotate(-315deg);
   height: 10rem;
   width: 10rem;
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1),
-    letter-spacing 1.5s ease-out;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
 }
 
 .logo-badge {
@@ -867,11 +884,8 @@ footer {
 .form-field {
   display: block;
   width: 100%;
-  margin: 1.5em 0;
-  text-align: left !important;
-}
-.wedding-card button {
-  padding: 0 0.5rem;
+  text-align: center !important;
+  margin: 1.5em auto;
 }
 
 label {
@@ -879,28 +893,22 @@ label {
   font-size: 1.6em;
   font-weight: 500;
   letter-spacing: 0.1em;
-}
-.order-btn {
-  max-width: 80%;
-  width: 50%;
+  width: 100%;
+  display: block;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="file"],
+input[type=text],
+input[type=number],
+input[type=file],
 select,
 textarea {
   width: 100%;
+  max-width: 400px;
   border: none;
   font-size: 1.6em;
-  background-color: #464545;
-  color: #7e7e7e;
+  background-color: #3f4140;
+  color: #a9a9a9;
   padding: 0.3em 0.75em;
-  margin-bottom: 1rem;
-}
-.passwordField {
-  max-width: 400px;
-  margin-top: 1rem;
 }
 
 input,
@@ -920,7 +928,7 @@ fieldset {
   color: #7e7e7e;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   height: 1.2em;
   width: 1.2em;
   margin: 0.5em 0.5em 0.5em 0;
@@ -934,13 +942,6 @@ input[type="checkbox"] {
   letter-spacing: 0.1em;
 }
 
-.open {
-  display: block;
-}
-.close {
-  display: none;
-}
-
 .form-btn:hover {
   cursor: pointer;
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

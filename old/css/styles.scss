@@ -180,6 +180,7 @@ a {
   --main-color: #7acddc;
 }
 .error {
+  padding-top: 1rem;
   display: none;
 }
 .animated-logo {
@@ -403,7 +404,22 @@ footer,
 .wedding-card {
   background-color: #282828 !important;
   text-align: center !important;
-  padding: 0 !important;
+  padding: 2rem 1rem;
+  img {
+    width: 75%;
+    &:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+}
+.open {
+  display: block !important;
+}
+.close {
+  display: none;
+}
+.loadingAnimation {
+  display: none;
 }
 .wedding-card button {
   border: 2px solid #f3ab45;
@@ -430,7 +446,7 @@ footer,
   text-align: center !important;
 }
 .wedding-card .btn {
-  margin-top: 2em;
+  margin-top: 1em;
 }
 .info-card p {
   color: #636363 !important;
@@ -628,6 +644,7 @@ footer {
   .info-card .main {
     height: auto;
     margin-top: 5%;
+    max-width: 200px;
   }
   .hobby p {
     width: 60%;
@@ -760,7 +777,9 @@ footer {
     transform: rotate(360deg);
   }
 }
-
+form {
+  width: 100%;
+}
 // Image Rollover
 .about-card .main:hover {
   background-position: 0% 50%;
@@ -789,14 +808,16 @@ footer {
 .form-field {
   display: block;
   width: 100%;
-  margin: 1.5em 0;
-  text-align: left !important;
+  text-align: center !important;
+  margin: 1.5em auto;
 }
 label {
   color: #f3ab45;
   font-size: 1.6em;
   font-weight: 500;
   letter-spacing: 0.1em;
+  width: 100%;
+  display: block;
 }
 input[type="text"],
 input[type="number"],
@@ -804,9 +825,11 @@ input[type="file"],
 select,
 textarea {
   width: 100%;
+  max-width: 400px;
   border: none;
   font-size: 1.6em;
-  color: #7e7e7e;
+  background-color: #3f4140;
+  color: #a9a9a9;
   padding: 0.3em 0.75em;
 }
 input,
