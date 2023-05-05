@@ -651,7 +651,7 @@ footer ul li a img:not(:hover) {
     margin-top: var(--pad-md);
   }
   .info-card {
-    max-width: 70rem;
+    max-width: 60rem !important;
   }
   .info-card span:first-child {
     max-width: 30%;
@@ -664,6 +664,9 @@ footer ul li a img:not(:hover) {
     padding: 0 var(--pad-sm);
     text-align: left;
   }
+  .hobby-card {
+    max-width: 29rem !important;
+  }
   .stile {
     width: 30%;
   }
@@ -672,9 +675,6 @@ footer ul li a img:not(:hover) {
   }
   .col {
     max-width: 600px;
-  }
-  .hobby p {
-    margin-left: var(--pad-md);
   }
   .project-details {
     padding: var(--pad-xs) var(--pad-md);

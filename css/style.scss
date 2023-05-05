@@ -653,7 +653,7 @@ footer {
     }
   }
   .info-card {
-    max-width: 70rem;
+    max-width: 60rem !important;
     span:first-child {
       max-width: 30%;
     }
@@ -666,6 +666,9 @@ footer {
       }
     }
   }
+  .hobby-card {
+    max-width: 29rem !important;
+  }
   .stile {
     width: 30%;
     &:last-child {
@@ -674,9 +677,6 @@ footer {
   }
   .col {
     max-width: 600px;
-  }
-  .hobby p {
-    margin-left: var(--pad-md);
   }
   .project-details {
     padding: var(--pad-xs) var(--pad-md);
