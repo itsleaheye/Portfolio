@@ -73,8 +73,8 @@ a {
   text-decoration: none;
 }
 .script {
-  font-family: "Covered By Your Grace", cursive;
-  text-transform: uppercase;
+  font-family: "Caveat", cursive;
+  font-weight: 500;
   color: var(--charcoal);
   font-size: 2rem;
 }
@@ -268,7 +268,7 @@ a {
       background-position: 0% 50%;
     }
     &:not(:hover) {
-      transition: var(--ease-in);
+      transition: all var(--ease-in);
     }
     &:hover + img:last-child,
     img:last-child:hover {
