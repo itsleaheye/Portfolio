@@ -579,8 +579,8 @@ figcaption h2 {
   font-size: 3rem;
   transition: 1s ease;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .next {
@@ -784,10 +784,14 @@ footer {
     width: 60%;
   }
   .info-card {
-    width: 40% !important;
+    width: 80% !important;
+    margin-bottom: 1rem;
   }
   .info-card p {
     width: 90%;
+  }
+  .info-card img {
+    margin-bottom: 1rem;
   }
   .avatar-badge {
     max-width: 30%;
@@ -866,7 +870,8 @@ form {
   transform: rotate(-45deg) translate(0px) rotate(-315deg);
   height: 10rem;
   width: 10rem;
-  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1),
+    letter-spacing 1.5s ease-out;
 }
 
 .logo-badge {
@@ -897,9 +902,9 @@ label {
   display: block;
 }
 
-input[type=text],
-input[type=number],
-input[type=file],
+input[type="text"],
+input[type="number"],
+input[type="file"],
 select,
 textarea {
   width: 100%;
@@ -928,7 +933,7 @@ fieldset {
   color: #7e7e7e;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   height: 1.2em;
   width: 1.2em;
   margin: 0.5em 0.5em 0.5em 0;
@@ -944,4 +949,4 @@ input[type=checkbox] {
 
 .form-btn:hover {
   cursor: pointer;
-}/*# sourceMappingURL=styles.css.map */
+} /*# sourceMappingURL=styles.css.map */
