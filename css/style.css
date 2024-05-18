@@ -171,7 +171,7 @@ footer,
   margin: var(--pad-sm) 0rem;
 }
 .row .col {
-  max-width: 75%;
+  max-width: 55%;
   background-color: var(--charcoal);
   align-content: start;
 }
@@ -184,21 +184,18 @@ footer,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: var(--pad-md) var(--pad-xs) var(--pad-xs) var(--pad-xs);
+  padding: var(--pad-md) var(--pad-xs) var(--pad-sm) var(--pad-xs);
   background-image: url(../img/banner-xl-home.jpg);
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 100vh;
+  min-height: 70vh;
 }
 .banner .tagline {
   font-size: 1.3rem;
 }
 .banner .row:last-child {
-  margin: var(--pad-md) auto 0 auto;
-}
-.banner .row:last-child i {
-  color: var(--white);
-  font-size: 1.5rem;
+  margin-top: var(--pad-xs);
+  margin-bottom: 0;
 }
 .banner .row:last-child i:hover {
   cursor: pointer;
@@ -208,7 +205,10 @@ footer,
 .banner .row:last-child i:not(:hover) {
   transition: var(--ease-in);
 }
-
+.banner-arrow {
+  margin-bottom: 0 !important;
+  border: none !important;
+}
 .text-banner {
   background-color: var(--charcoal);
   padding: var(--pad-sm);
@@ -216,7 +216,6 @@ footer,
 .text-banner p {
   max-width: 80rem;
 }
-
 .clickable {
   cursor: pointer;
   border: 2px solid var(--charcoal);
@@ -239,6 +238,10 @@ footer,
   margin: 0 auto var(--pad-xxs) auto;
   color: var(--light-gray);
   font-size: 2.5rem !important;
+}
+.banner-arrow i {
+  color: var(--white);
+  font-size: 1.75rem !important;
 }
 .clickable p {
   font-size: 1rem;
@@ -581,7 +584,7 @@ footer ul li a img:not(:hover) {
     margin-right: 0;
   }
   .banner {
-    padding-top: 15rem;
+    padding: 15rem 0 1rem 0;
   }
   .banner .col {
     width: 30%;
@@ -647,9 +650,6 @@ footer ul li a img:not(:hover) {
     max-width: 20rem;
     height: 15rem;
     justify-content: space-evenly;
-  }
-  .banner .row {
-    margin-top: var(--pad-md);
   }
   .info-card {
     max-width: 60rem !important;

@@ -76,8 +76,13 @@
             <i class="fa fa-pen-nib"></i>
             <p>An experienced entrepeneur and character designer</p>
           </div>
-          <div class="row fade-in" onclick="location.href='#about'">
-            <i class="fa-sharp fa-solid fa-angle-down"></i>
+          <div class="row">
+            <div
+              class="clickable banner-arrow"
+              onclick="location.href='#about'"
+            >
+              <i class="fa-sharp fa-solid fa-angle-down"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -186,16 +191,32 @@
         <input type="radio" name="slider" id="dev-1" checked />
         <input type="radio" name="slider" id="dev-2" />
         <input type="radio" name="slider" id="dev-3" />
+        <input type="radio" name="slider" id="dev-4" />
         <div class="project-cards">
           <label class="card" for="dev-1" id="dev-1">
-            <img src="img/dev-dnd.jpg" alt="Project thumbnail" />
+            <img
+              src="img/dev-dnd.jpg"
+              alt="Cantrip, a dungeons and dragons project thumbnail"
+            />
           </label>
           <label class="card" for="dev-2" id="dev-2">
-            <img src="img/design-cap.jpg" alt="Project thumbnail" />
+            <img
+              src="img/design-cap.jpg"
+              alt="Mental health capstone project thumbnail"
+            />
           </label>
           <label class="card" for="dev-3" id="dev-3">
-            <img src="img/dev-hack.jpg" alt="Project thumbnail" />
+            <img
+              src="img/dev-hack.jpg"
+              alt="Hackathon svg badge builder project thumbnail"
+            />
           </label>
+          <!-- <label class="card" for="dev-4" id="dev-4">
+            <img
+              src="img/dev-hack.jpg"
+              alt="Hackathon Jobber automation project thumbnail"
+            />
+          </label> -->
         </div>
         <div class="project-details">
           <div class="info" id="test">
@@ -248,6 +269,23 @@
               <h2>Hackathon - SVG Generator</h2>
               <p>
                 In 2021 I placed 1st in a company wide hackathon event.
+                <br /><br />Within 8 hours I created a certification badge
+                builder from scratch, while employing fundamental UI & UX
+                components. It facilitated user input collection and image
+                uploading, seamlessly integrating this data into a custom badge
+                componnent, which produced a final exportable SVG.
+              </p>
+              <p>
+                <span class="tags">Angular</span>
+                <span class="tags">TypeScript</span>
+                <span class="tags">HTML/SCSS</span>
+              </p>
+            </label>
+            <label id="dev-info-4">
+              <h2>Hackathon - Automated Workflows</h2>
+              <p>
+                In 2023 I placed 1st in another hackathon event, this time at
+                Jobber.
                 <br /><br />Within 8 hours I created a certification badge
                 builder from scratch, while employing fundamental UI & UX
                 components. It facilitated user input collection and image
@@ -418,31 +456,56 @@
         var href = this.getAttribute("href");
         var element =
           document.querySelector(href) ||
-          document.querySelector(
-            "a[name=" + href.substring(1, href.length) + "]"
-          );
-        window.scroll({
-          top: element.offsetTop - 85,
-          left: 0,
-          behavior: "smooth",
-        });
+          document.querySelector('a[name="' + href.substring(1) + '"]');
+        console.log(href);
+        if (element) {
+          window.scroll({
+            top: element.offsetTop - 85,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
       });
     });
+
     document.querySelectorAll(".clickable").forEach((a) => {
       a.onclick = function (e) {
         var href = this.getAttribute("onclick");
         var getId = href.substring(15, href.length - 1);
         var element =
           document.querySelector(getId) ||
-          document.querySelector(
-            "a[name=" + getId.substring(1, getId.length) + "]"
-          );
-        window.scroll({
-          top: element.offsetTop - 85,
-          left: 0,
-          behavior: "smooth",
-        });
+          document.querySelector('a[name="' + getId.substring(1) + '"]');
+        if (element) {
+          window.scroll({
+            top: element.offsetTop - 85,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
       };
+    });
+
+    document.querySelectorAll(".banner-arrow").forEach((div) => {
+      console.log(div);
+      div.addEventListener("click", function () {
+        var onclickValue = this.getAttribute("onclick");
+        if (onclickValue) {
+          var hashIndex = onclickValue.indexOf("#");
+          if (hashIndex !== -1) {
+            var hash = onclickValue.substring(hashIndex);
+            var element =
+              document.querySelector(hash) ||
+              document.querySelector('a[name="' + hash.substring(1) + '"]');
+            if (element) {
+              window.scroll({
+                top: element.offsetTop - 85,
+                left: 0,
+                behavior: "smooth",
+              });
+            }
+          }
+        }
+      });
     });
   </script>
 </html>
