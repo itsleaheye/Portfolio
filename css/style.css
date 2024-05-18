@@ -393,8 +393,9 @@ footer ul li a img:not(:hover) {
 }
 
 .portfolio {
-  height: 35rem;
   margin-top: -1rem;
+  background-color: var(--charcoal);
+  min-height: 325px;
 }
 .portfolio .project-cards {
   align-items: center;
@@ -414,8 +415,9 @@ footer ul li a img:not(:hover) {
 }
 .portfolio .project-details {
   background-color: var(--charcoal);
-  border-radius: 3px;
+  display: none;
   margin-top: 12rem;
+  border-radius: 3px;
   max-width: 100vw;
   overflow: hidden;
   padding: var(--pad-xs) 0;
@@ -442,31 +444,35 @@ footer ul li a img:not(:hover) {
 
 #dev-1:checked ~ .project-cards #dev-3,
 #dev-2:checked ~ .project-cards #dev-1,
-#dev-3:checked ~ .project-cards #dev-2 {
-  transform: translatex(-40%) scale(0.8);
+#dev-3:checked ~ .project-cards #dev-2,
+#dev-4:checked ~ .project-cards #dev-3 {
+  transform: translatex(-60%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
 }
 
 #dev-1:checked ~ .project-cards #dev-2,
 #dev-2:checked ~ .project-cards #dev-3,
-#dev-3:checked ~ .project-cards #dev-1 {
-  transform: translatex(40%) scale(0.8);
+#dev-3:checked ~ .project-cards #dev-4,
+#dev-4:checked ~ .project-cards #dev-1 {
+  transform: translatex(60%) scale(0.8);
   opacity: 0.5;
   z-index: 0;
 }
 
 #dev-1:checked ~ .project-cards #dev-1,
 #dev-2:checked ~ .project-cards #dev-2,
-#dev-3:checked ~ .project-cards #dev-3 {
-  transform: translatex(0) scale(1);
+#dev-3:checked ~ .project-cards #dev-3,
+#dev-4:checked ~ .project-cards #dev-4 {
+  transform: translateX(0) scale(1);
   opacity: 1;
   z-index: 1;
 }
 #dev-1:checked ~ .project-cards #dev-1 img,
 #dev-2:checked ~ .project-cards #dev-2 img,
-#dev-3:checked ~ .project-cards #dev-3 img {
-  box-shadow: 0px 0px 5px 0px var(--black);
+#dev-3:checked ~ .project-cards #dev-3 img,
+#dev-4:checked ~ .project-cards #dev-4 img {
+  box-shadow: 0px 15px 15px 0px var(--black);
 }
 
 #dev-2:checked ~ .project-details #test {
@@ -479,6 +485,10 @@ footer ul li a img:not(:hover) {
 
 #dev-3:checked ~ .project-details #test {
   transform: translateY(-575px);
+}
+
+#dev-4:checked ~ .project-details #test {
+  transform: translateY(-870px);
 }
 
 .position-fixed,
@@ -604,6 +614,12 @@ footer ul li a img:not(:hover) {
   }
   .skill-token img {
     width: 3.5rem;
+  }
+  .portfolio {
+    overflow: hidden;
+  }
+  .portfolio .project-details {
+    display: block;
   }
   .tile {
     width: 47%;
