@@ -1,0 +1,134 @@
+:root {
+  // Colours
+  --black: #212121;
+  --charcoal: #282824;
+  --gray: #a9a9a9;
+  --light-gray: #f0f0f0;
+  --medium-gray: #636363;
+  --nav: #20201c;
+  --teal: #7acddc;
+  --white: #ffffff;
+
+  // Spacing
+  --pad-xxs: 0.5rem;
+  --pad-xs: 1rem;
+  --pad-sm: 2rem;
+  --pad-md: 5rem;
+
+  // Transitions
+  --ease-in: 0.5s ease-in;
+
+  // Animation Variables
+  --box-size: 200px;
+  --clip-distance: 0.05;
+  --clip-size: 220px;
+  --path-width: 3px;
+  --timer: 8s;
+}
+
+body {
+  font-family: "Quattrocento Sans", sans-serif;
+  letter-spacing: 0.05rem;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  background-color: var(--charcoal);
+  display: block;
+  padding: var(--pad-sm);
+  position: relative;
+
+  a {
+    color: var(--light-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--teal);
+    }
+  }
+
+  input {
+    height: 1.5rem;
+    opacity: 0;
+    position: absolute;
+    width: 2.5rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .menu-items {
+    position: absolute;
+    width: 75%;
+    min-width: 150px;
+    padding: var(--pad-md) 0 var(--pad-sm) var(--pad-sm);
+    top: 0;
+    left: 0;
+    background: var(--black);
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+    ul {
+      list-style: none;
+
+      li {
+        padding: var(--pad-xs) 0;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+
+  // Hamburger menu for mobile
+  span {
+    background: var(--white);
+    border-radius: 3px;
+    display: block;
+    height: 0.25rem;
+    margin-bottom: var(--pad-xxs);
+    position: relative;
+    transform-origin: 7.2px 1px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    width: 3rem;
+    z-index: 1;
+  }
+
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  span:nth-child(3) {
+    transform-origin: 0% 100%;
+  }
+
+  span:nth-child(4) {
+    margin-bottom: 0;
+  }
+
+  input:checked {
+    ~ span {
+      background: var(--teal);
+      opacity: 1;
+      transform: rotate(-45deg);
+    }
+
+    ~ span:nth-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.1);
+    }
+
+    ~ span:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    ~ .menu-items {
+      transform: none;
+    }
+  }
+}
