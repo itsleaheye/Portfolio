@@ -56,10 +56,55 @@
             <li><a href="#about">About</a></li>
             <li><a href="#software">Code</a></li>
             <li><a href="#design">Design</a></li>
+            <ul class="social-items">
+              <li>
+                <a href="https://github.com/leahnonay">
+                  <img src="img/icon-github.png" alt="Github icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.casualpancakes.com">
+                  <img src="img/icon-fiverr.png" alt="Art icon"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/leaheyestone/">
+                  <img src="img/icon-linkedin.png" alt="Linkedin icon" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:leaheyestone@gmail.com">
+                  <img src="img/icon-email.png" alt="Email icon" />
+                </a>
+              </li>
+            </ul>
           </ul>
         </div>
       </div>
-      <div class="banner"></div>
+      <div class="banner">
+        <div class="logo-animated fade-in"></div>
+        <p class="title fade-in">
+          developer <span class="teal">&#9900;</span> designer
+          <span class="teal">&#9900;</span> illustrator
+        </p>
+        <div class="fade-in row">
+          <div class="card cta" onclick="location.href='#software'">
+            <i class="fa-brands fa-react"></i>
+            <p>A full-stack web and mobile application developer</p>
+          </div>
+          <div class="card cta" onclick="location.href='#design'">
+            <i class="fa fa-desktop"></i>
+            <p>A developer who focuses on optimal UI/UX designs</p>
+          </div>
+          <div class="card cta" onclick="location.href='#design'">
+            <i class="fa fa-pen-nib"></i>
+            <p>An experienced entrepeneur and character designer</p>
+          </div>
+        </div>
+        <div class="cta" onclick="location.href='#about'">
+          <i class="fa-sharp fa-solid fa-angle-down"></i>
+        </div>
+      </div>
     </header>
     <main>
       <!-- About Section -->
@@ -428,58 +473,30 @@
       a.addEventListener("click", function (e) {
         e.preventDefault();
         var href = this.getAttribute("href");
-        var element =
-          document.querySelector(href) ||
-          document.querySelector('a[name="' + href.substring(1) + '"]');
-        console.log(href);
-        if (element) {
-          window.scroll({
-            top: element.offsetTop - 85,
-            left: 0,
-            behavior: "smooth",
-          });
-        }
+        smoothScrollToElement(href);
       });
     });
 
-    document.querySelectorAll(".clickable").forEach((a) => {
+    document.querySelectorAll(".cta").forEach((a) => {
       a.onclick = function (e) {
-        var href = this.getAttribute("onclick");
-        var getId = href.substring(15, href.length - 1);
-        var element =
-          document.querySelector(getId) ||
-          document.querySelector('a[name="' + getId.substring(1) + '"]');
-        if (element) {
-          window.scroll({
-            top: element.offsetTop - 85,
-            left: 0,
-            behavior: "smooth",
-          });
-        }
+        e.preventDefault();
+        var attribute = this.getAttribute("onclick");
+        var href = attribute.substring(15, attribute.length - 1);
+        smoothScrollToElement(href);
       };
     });
 
-    document.querySelectorAll(".banner-arrow").forEach((div) => {
-      console.log(div);
-      div.addEventListener("click", function () {
-        var onclickValue = this.getAttribute("onclick");
-        if (onclickValue) {
-          var hashIndex = onclickValue.indexOf("#");
-          if (hashIndex !== -1) {
-            var hash = onclickValue.substring(hashIndex);
-            var element =
-              document.querySelector(hash) ||
-              document.querySelector('a[name="' + hash.substring(1) + '"]');
-            if (element) {
-              window.scroll({
-                top: element.offsetTop - 85,
-                left: 0,
-                behavior: "smooth",
-              });
-            }
-          }
-        }
-      });
-    });
+    function smoothScrollToElement(href) {
+      var element =
+        document.querySelector(href) ||
+        document.querySelector('a[name="' + href.substring(1) + '"]');
+
+      if (element) {
+        window.scroll({
+          top: element.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    }
   </script>
 </html>

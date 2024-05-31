@@ -12,13 +12,97 @@
   --pad-sm: 2rem;
   --pad-md: 5rem;
   --ease-in: 0.5s ease-in;
-  --box-size: 200px;
+  --box-size: 12.5rem;
   --clip-distance: 0.05;
-  --clip-size: 220px;
-  --path-width: 3px;
+  --clip-size: 13.75rem;
+  --path-width: 0.188rem;
   --timer: 8s;
+  --border-radius-base: 0.25rem;
+  --border-size: 0.125rem;
+  --icon-lg: 3rem;
+  --icon-md: 2rem;
 }
 
+.teal {
+  color: var(--teal);
+}
+
+.position-fixed, .logo-animated::before,
+.logo-animated::after, .logo-animated {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.space-evenly, .row, .nav .menu-items ul .social-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hover-teal, .banner .card:hover i, .banner i:hover {
+  color: var(--teal);
+  cursor: pointer;
+  transition: var(--ease-in);
+}
+
+.bottom {
+  bottom: var(--pad-sm);
+  position: absolute;
+}
+
+.logo-animated {
+  background: url("../img/logo-personal.jpg") no-repeat 50%/95% var(--charcoal);
+  border-radius: var(--border-radius-base);
+  box-shadow: inset 0 0 0 var(--path-width) var(--teal);
+  height: var(--box-size);
+  position: relative;
+  width: var(--box-size);
+}
+
+.logo-animated::before,
+.logo-animated::after {
+  animation: clipAnimation var(--timer) linear infinite;
+  border-radius: var(--border-radius-base);
+  box-shadow: inset 0 0 0 var(--path-width) var(--teal);
+  content: "";
+  margin: -5%;
+  position: absolute;
+}
+
+.logo-animated::before {
+  animation-delay: -4s;
+}
+
+.fade-in {
+  animation: fadein 3s;
+}
+
+@keyframes clipAnimation {
+  0% {
+    clip: rect(0px var(--clip-size) var(--path-width) 0px);
+  }
+  25% {
+    clip: rect(0px var(--path-width) var(--clip-size) 0px);
+  }
+  50% {
+    clip: rect(218px var(--clip-size) var(--clip-size) 0px);
+  }
+  75% {
+    clip: rect(0px var(--clip-size) var(--clip-size) 218px);
+  }
+  100% {
+    clip: rect(0px var(--clip-size) var(--path-width) 0px);
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   font-family: "Quattrocento Sans", sans-serif;
   letter-spacing: 0.05rem;
@@ -31,6 +115,7 @@ body {
   display: block;
   padding: var(--pad-sm);
   position: relative;
+  z-index: 1;
 }
 .nav a {
   color: var(--light-gray);
@@ -41,43 +126,51 @@ body {
   color: var(--teal);
 }
 .nav input {
+  cursor: pointer;
   height: 1.5rem;
   opacity: 0;
   position: absolute;
   width: 2.5rem;
   z-index: 2;
-  cursor: pointer;
 }
 .nav .menu-items {
-  position: absolute;
-  width: 75%;
-  min-width: 150px;
-  padding: var(--pad-md) 0 var(--pad-sm) var(--pad-sm);
-  top: 0;
-  left: 0;
   background: var(--black);
+  left: 0;
+  padding: var(--pad-md) var(--pad-sm) var(--pad-sm) var(--pad-sm);
+  position: absolute;
+  top: 0;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  width: 100vw;
 }
 .nav .menu-items ul {
   list-style: none;
 }
 .nav .menu-items ul li {
-  padding: var(--pad-xs) 0;
-  font-size: 24px;
+  font-size: 1.5rem;
+  margin: var(--pad-xs) 0;
+}
+.nav .menu-items ul .social-items li {
+  margin: 0;
+  max-width: 3rem;
+  transition: 0.5s;
+}
+.nav .menu-items ul .social-items li:hover {
+  opacity: 0.5;
+  transform: translate(0, -10%);
 }
 .nav .logo {
   display: none;
 }
 .nav span {
   background: var(--white);
-  border-radius: 3px;
+  border-radius: var(--border-radius-base);
   display: block;
   height: 0.25rem;
   margin-bottom: var(--pad-xxs);
   position: relative;
-  transform-origin: 7.2px 1px;
+  transform-origin: 0.45rem 0.063rem;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   width: 3rem;
   z-index: 1;
@@ -105,4 +198,59 @@ body {
 }
 .nav input:checked ~ .menu-items {
   transform: none;
+}
+
+.banner {
+  align-items: center;
+  background: url(../img/banner-xl-home.jpg) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: var(--pad-md) var(--pad-sm) var(--pad-sm) var(--pad-sm);
+  gap: var(--pad-sm);
+  color: var(--white);
+}
+.banner .title {
+  font-size: 1.15rem;
+}
+@media only screen and (min-width: 23rem) {
+  .banner .title {
+    font-size: 1.3rem;
+  }
+}
+.banner i {
+  font-size: var(--icon-md);
+}
+.banner .card {
+  background: var(--charcoal);
+  border: var(--border-size) solid var(--charcoal);
+  text-align: center;
+  padding: var(--pad-sm);
+  max-width: 20rem;
+}
+.banner .card:hover {
+  border: var(--border-size) solid var(--teal);
+  border-radius: var(--border-radius-base);
+  cursor: pointer;
+  transition: var(--ease-in);
+}
+.banner .card i {
+  font-size: var(--icon-lg);
+}
+.banner .card p {
+  border-top: var(--border-size) solid var(--medium-gray);
+  padding-top: var(--pad-xs);
+  margin-top: var(--pad-sm);
+}
+
+.row {
+  flex-direction: column;
+  gap: var(--pad-xs);
+}
+@media only screen and (min-width: 46.875rem) {
+  .row {
+    gap: var(--pad-sm);
+    flex-direction: row;
+  }
 }/*# sourceMappingURL=style.css.map */
