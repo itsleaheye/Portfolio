@@ -139,13 +139,20 @@ p {
   display: flex;
   gap: var(--pad-sm);
   justify-content: center;
-  margin-bottom: var(--pad-sm);
 }
 .centre {
   text-align: center;
 }
 .margin-bottom-md {
   margin-bottom: calc(var(--pad-md) / 1.5);
+}
+.ease-in-cards {
+  #dev-info-1,
+  #dev-info-2,
+  #dev-info-3 {
+    opacity: 1;
+    transition: var(--ease-in);
+  }
 }
 
 // Animated Content
@@ -174,6 +181,68 @@ p {
 }
 .fade-in {
   animation: fadein 3s;
+}
+#dev-1:checked ~ .carousel-cards #dev-3,
+#dev-2:checked ~ .carousel-cards #dev-1,
+#dev-3:checked ~ .carousel-cards #dev-2 {
+  transform: translatex(-40%) scale(0.8);
+  transition: var(--ease-in);
+  opacity: 0.5;
+  z-index: 0;
+}
+#dev-1:checked ~ .carousel-cards #dev-2,
+#dev-2:checked ~ .carousel-cards #dev-3,
+#dev-3:checked ~ .carousel-cards #dev-1 {
+  transform: translatex(40%) scale(0.8);
+  transition: var(--ease-in);
+  opacity: 0.5;
+  z-index: 0;
+}
+#dev-1:checked ~ .carousel-cards #dev-1,
+#dev-2:checked ~ .carousel-cards #dev-2,
+#dev-3:checked ~ .carousel-cards #dev-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  img {
+    box-shadow: 0 0 5rem 0 var(--black);
+  }
+}
+#dev-1:checked ~ .carousel-details {
+  @extend .ease-in-cards;
+  #dev-info-1 {
+    opacity: 1;
+  }
+  #dev-info-2 {
+    opacity: 0;
+  }
+  #dev-info-3 {
+    opacity: 0;
+  }
+}
+#dev-2:checked ~ .carousel-details {
+  @extend .ease-in-cards;
+  #dev-info-1 {
+    opacity: 0;
+  }
+  #dev-info-2 {
+    opacity: 1;
+  }
+  #dev-info-3 {
+    opacity: 0;
+  }
+}
+#dev-3:checked ~ .carousel-details {
+  @extend .ease-in-cards;
+  #dev-info-1 {
+    opacity: 0;
+  }
+  #dev-info-2 {
+    opacity: 0;
+  }
+  #dev-info-3 {
+    opacity: 1;
+  }
 }
 
 // Keyframes
@@ -420,7 +489,7 @@ i {
 }
 
 .container {
-  padding: var(--pad-xs) var(--pad-sm) var(--pad-sm) var(--pad-sm);
+  padding: var(--pad-sm);
 
   h2 {
     margin-bottom: var(--pad-xs);
@@ -462,10 +531,26 @@ i {
 }
 
 .card-lg {
-  @extend .card;
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
   background-color: var(--light-gray);
   border: none;
-  margin-top: var(--pad-xs);
+
+  .about-container {
+    padding: var(--pad-sm);
+
+    p {
+      color: var(--charcoal);
+      border-top: var(--border-size) solid var(--charcoal);
+      margin-top: var(--pad-xs);
+      padding-top: var(--pad-xs);
+      text-align: left;
+    }
+
+    .script {
+      font-size: var(--font-sm);
+    }
+  }
 
   img {
     border-radius: 100%;
@@ -477,12 +562,13 @@ i {
     }
   }
 
-  p {
-    color: var(--medium-gray);
-    border-top: var(--border-size) solid var(--charcoal);
-    margin-top: var(--pad-xs);
-    padding-top: var(--pad-xs);
-    text-align: left;
+  .avatar-container {
+    padding: var(--pad-sm);
+    background-color: var(--charcoal);
+
+    p {
+      text-align: center;
+    }
   }
 
   @media only screen and (min-width: 37.5rem) {
@@ -517,7 +603,34 @@ i {
 }
 
 .text-col {
-  width: 20vw;
+  align-items: center;
+  display: flex;
+  gap: var(--pad-xs);
+  margin: var(--pad-sm) auto;
+
+  i {
+    background-color: var(--teal);
+    border-radius: 100%;
+    color: var(--white);
+    font-size: 1.5rem;
+    min-width: 56px;
+    padding: 1rem 0.9rem;
+    text-align: center;
+    width: 56px;
+  }
+
+  p {
+    color: var(--charcoal);
+  }
+
+  @media only screen and (min-width: 46.875rem) {
+    max-width: 30rem;
+  }
+}
+
+.tagline {
+  margin-top: -1.5rem;
+  font-size: var(--font-md);
   text-align: center;
 }
 
@@ -578,7 +691,71 @@ i {
 }
 
 .tags {
-  background-color: var(--lighter-gray);
+  background-color: var(--medium-gray);
   border-radius: var(--border-radius-base);
   padding: var(--pad-xxs);
+  margin: 0.2rem;
+}
+
+.code-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-xs);
+
+  input {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+
+    &:hover {
+      @extend .hover;
+    }
+  }
+
+  .carousel-cards {
+    padding-top: var(--pad-sm);
+
+    label,
+    img {
+      border-radius: var(--border-radius-base);
+      max-width: 25rem;
+    }
+  }
+
+  .carousel-cards,
+  .carousel-details {
+    display: flex;
+    height: 20rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .carousel-details {
+    height: 15rem;
+
+    &:hover {
+      @extend .hover;
+      opacity: 0.5;
+    }
+
+    label {
+      max-width: 75vw;
+      padding: 0 var(--pad-sm) 0 var(--pad-sm);
+      text-align: center;
+
+      h2 {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap: var(--pad-xxs);
+        align-items: center;
+
+        i {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
 }

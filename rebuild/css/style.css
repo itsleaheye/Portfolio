@@ -91,7 +91,7 @@ p {
   justify-content: space-between;
 }
 
-.hover, .hoverable:hover, .card-sm:hover, .nav input, .hover-white, .hover-teal, .hoverable:hover h3,
+.hover, .code-portfolio .carousel-details:hover, .code-portfolio label:hover, .hoverable:hover, .card-sm:hover, .nav input, .hover-white, .hover-teal, .hoverable:hover h3,
 .hoverable:hover i, .card-sm:hover i, .banner i:hover {
   cursor: pointer;
   transition: var(--ease-in);
@@ -116,7 +116,7 @@ p {
   color: var(--teal) !important;
 }
 
-.card, .card-long, .card-lg, .card-sm {
+.card, .card-long, .card-sm {
   border: var(--border-size) solid var(--charcoal);
   border-radius: var(--border-radius-base);
   padding: var(--pad-sm);
@@ -128,7 +128,6 @@ p {
   display: flex;
   gap: var(--pad-sm);
   justify-content: center;
-  margin-bottom: var(--pad-sm);
 }
 
 .centre {
@@ -137,6 +136,19 @@ p {
 
 .margin-bottom-md {
   margin-bottom: calc(var(--pad-md) / 1.5);
+}
+
+.ease-in-cards #dev-info-1, #dev-3:checked ~ .carousel-details #dev-info-1, #dev-2:checked ~ .carousel-details #dev-info-1, #dev-1:checked ~ .carousel-details #dev-info-1,
+.ease-in-cards #dev-info-2,
+#dev-3:checked ~ .carousel-details #dev-info-2,
+#dev-2:checked ~ .carousel-details #dev-info-2,
+#dev-1:checked ~ .carousel-details #dev-info-2,
+.ease-in-cards #dev-info-3,
+#dev-3:checked ~ .carousel-details #dev-info-3,
+#dev-2:checked ~ .carousel-details #dev-info-3,
+#dev-1:checked ~ .carousel-details #dev-info-3 {
+  opacity: 1;
+  transition: var(--ease-in);
 }
 
 .logo-animated {
@@ -164,6 +176,67 @@ p {
 
 .fade-in {
   animation: fadein 3s;
+}
+
+#dev-1:checked ~ .carousel-cards #dev-3,
+#dev-2:checked ~ .carousel-cards #dev-1,
+#dev-3:checked ~ .carousel-cards #dev-2 {
+  transform: translatex(-40%) scale(0.8);
+  transition: var(--ease-in);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+#dev-1:checked ~ .carousel-cards #dev-2,
+#dev-2:checked ~ .carousel-cards #dev-3,
+#dev-3:checked ~ .carousel-cards #dev-1 {
+  transform: translatex(40%) scale(0.8);
+  transition: var(--ease-in);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+#dev-1:checked ~ .carousel-cards #dev-1,
+#dev-2:checked ~ .carousel-cards #dev-2,
+#dev-3:checked ~ .carousel-cards #dev-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+#dev-1:checked ~ .carousel-cards #dev-1 img,
+#dev-2:checked ~ .carousel-cards #dev-2 img,
+#dev-3:checked ~ .carousel-cards #dev-3 img {
+  box-shadow: 0 0 5rem 0 var(--black);
+}
+
+#dev-1:checked ~ .carousel-details #dev-info-1 {
+  opacity: 1;
+}
+#dev-1:checked ~ .carousel-details #dev-info-2 {
+  opacity: 0;
+}
+#dev-1:checked ~ .carousel-details #dev-info-3 {
+  opacity: 0;
+}
+
+#dev-2:checked ~ .carousel-details #dev-info-1 {
+  opacity: 0;
+}
+#dev-2:checked ~ .carousel-details #dev-info-2 {
+  opacity: 1;
+}
+#dev-2:checked ~ .carousel-details #dev-info-3 {
+  opacity: 0;
+}
+
+#dev-3:checked ~ .carousel-details #dev-info-1 {
+  opacity: 0;
+}
+#dev-3:checked ~ .carousel-details #dev-info-2 {
+  opacity: 0;
+}
+#dev-3:checked ~ .carousel-details #dev-info-3 {
+  opacity: 1;
 }
 
 @keyframes clipAnimation {
@@ -381,7 +454,7 @@ i {
 }
 
 .container {
-  padding: var(--pad-xs) var(--pad-sm) var(--pad-sm) var(--pad-sm);
+  padding: var(--pad-sm);
 }
 .container h2 {
   margin-bottom: var(--pad-xs);
@@ -413,9 +486,23 @@ i {
 }
 
 .card-lg {
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
   background-color: var(--light-gray);
   border: none;
+}
+.card-lg .about-container {
+  padding: var(--pad-sm);
+}
+.card-lg .about-container p {
+  color: var(--charcoal);
+  border-top: var(--border-size) solid var(--charcoal);
   margin-top: var(--pad-xs);
+  padding-top: var(--pad-xs);
+  text-align: left;
+}
+.card-lg .about-container .script {
+  font-size: var(--font-sm);
 }
 .card-lg img {
   border-radius: 100%;
@@ -427,12 +514,12 @@ i {
     max-width: 15rem;
   }
 }
-.card-lg p {
-  color: var(--medium-gray);
-  border-top: var(--border-size) solid var(--charcoal);
-  margin-top: var(--pad-xs);
-  padding-top: var(--pad-xs);
-  text-align: left;
+.card-lg .avatar-container {
+  padding: var(--pad-sm);
+  background-color: var(--charcoal);
+}
+.card-lg .avatar-container p {
+  text-align: center;
 }
 @media only screen and (min-width: 37.5rem) {
   .card-lg {
@@ -466,7 +553,33 @@ i {
 }
 
 .text-col {
-  width: 20vw;
+  align-items: center;
+  display: flex;
+  gap: var(--pad-xs);
+  margin: var(--pad-sm) auto;
+}
+.text-col i {
+  background-color: var(--teal);
+  border-radius: 100%;
+  color: var(--white);
+  font-size: 1.5rem;
+  min-width: 56px;
+  padding: 1rem 0.9rem;
+  text-align: center;
+  width: 56px;
+}
+.text-col p {
+  color: var(--charcoal);
+}
+@media only screen and (min-width: 46.875rem) {
+  .text-col {
+    max-width: 30rem;
+  }
+}
+
+.tagline {
+  margin-top: -1.5rem;
+  font-size: var(--font-md);
   text-align: center;
 }
 
@@ -513,7 +626,56 @@ i {
 }
 
 .tags {
-  background-color: var(--lighter-gray);
+  background-color: var(--medium-gray);
   border-radius: var(--border-radius-base);
   padding: var(--pad-xxs);
+  margin: 0.2rem;
+}
+
+.code-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pad-xs);
+}
+.code-portfolio input {
+  display: none;
+}
+.code-portfolio label {
+  position: absolute;
+}
+.code-portfolio .carousel-cards {
+  padding-top: var(--pad-sm);
+}
+.code-portfolio .carousel-cards label,
+.code-portfolio .carousel-cards img {
+  border-radius: var(--border-radius-base);
+  max-width: 25rem;
+}
+.code-portfolio .carousel-cards,
+.code-portfolio .carousel-details {
+  display: flex;
+  height: 20rem;
+  justify-content: center;
+  overflow: hidden;
+}
+.code-portfolio .carousel-details {
+  height: 15rem;
+}
+.code-portfolio .carousel-details:hover {
+  opacity: 0.5;
+}
+.code-portfolio .carousel-details label {
+  max-width: 75vw;
+  padding: 0 var(--pad-sm) 0 var(--pad-sm);
+  text-align: center;
+}
+.code-portfolio .carousel-details label h2 {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  gap: var(--pad-xxs);
+  align-items: center;
+}
+.code-portfolio .carousel-details label h2 i {
+  font-size: 1.3rem;
 }/*# sourceMappingURL=style.css.map */
