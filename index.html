@@ -40,391 +40,273 @@
   </head>
   <body>
     <header id="index">
-      <!-- Navigation & Menu -->
       <div class="nav">
         <input type="checkbox" id="nav-check" />
-        <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <ul>
-          <li>
-            <a href="#banner"><img src="img/nav-icon-new.png" alt="Home" /></a>
-          </li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#software">Code</a></li>
-          <li><a href="#design">Design</a></li>
-        </ul>
+        <span></span>
+        <span></span>
+        <span></span>
+        <!-- Logo will replace hamburger menu on larger resolutions -->
+        <div class="logo">
+          <a href="#banner">
+            <img src="img/nav-icon-new.png" alt="Home" />
+          </a>
+        </div>
+        <div class="menu-items">
+          <ul class="links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#software">Code</a></li>
+            <li><a href="#design">Design</a></li>
+            <ul class="social-items">
+              <li>
+                <a href="https://github.com/leahnonay">
+                  <img src="img/icon-github.png" alt="Github icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.casualpancakes.com">
+                  <img src="img/icon-fiverr.png" alt="Art icon"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/leaheyestone/">
+                  <img src="img/icon-linkedin.png" alt="Linkedin icon" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:leaheyestone@gmail.com">
+                  <img src="img/icon-email.png" alt="Email icon" />
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
       <div class="banner" id="banner">
-        <div class="animated-logo"></div>
-        <p class="fade-in tagline">
-          developer <span style="color: var(--teal)">&#9900;</span> designer
-          <span style="color: var(--teal)">&#9900;</span> illustrator
+        <div class="logo-animated fade-in"></div>
+        <p class="fade-in white">
+          developer <span class="teal">&#9900;</span> designer
+          <span class="teal">&#9900;</span> illustrator
         </p>
-        <div class="row fade-in">
-          <div class="col clickable" onclick="location.href='#software'">
+        <div class="fade-in rows">
+          <div class="card-sm cta dark-bg" onclick="location.href='#software'">
             <i class="fa-brands fa-react"></i>
             <p>A full-stack web and mobile application developer</p>
           </div>
-          <div class="col clickable" onclick="location.href='#design'">
-            <i class="fa fa-desktop"></i>
+          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
+            <i class="fa-solid fa-laptop-code"></i>
             <p>A developer who focuses on optimal UI/UX designs</p>
           </div>
-          <div class="col clickable" onclick="location.href='#design'">
+          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
             <i class="fa fa-pen-nib"></i>
             <p>An experienced entrepeneur and character designer</p>
           </div>
-          <div class="row">
-            <div
-              class="clickable banner-arrow"
-              onclick="location.href='#about'"
-            >
-              <i class="fa-sharp fa-solid fa-angle-down"></i>
-            </div>
-          </div>
+        </div>
+        <div class="cta" onclick="location.href='#about'">
+          <i class="fa-sharp fa-solid fa-angle-down"></i>
         </div>
       </div>
     </header>
     <main>
       <!-- About Section -->
       <div class="container" id="about">
-        <div class="row">
-          <h2>About Me</h2>
-        </div>
-        <div class="row">
-          <div class="info-card">
-            <span class="fade-in">
-              <img
-                src="img/avatar.png"
-                alt="Photograph of developer Leah Eyestone"
-              />
-            </span>
-            <span>
-              <h3 class="script">&#60;&#47;software engineer&#62;</h3>
-              <p>
-                Hi, I'm <span class="bolder">Leah Eyestone</span>! A full-stack
-                developer and freelance digital artist based in Western Canada.
-                <br /><br />
-                My unique blend of skills as both a digital artist and
-                developer, allow me to bridge the gap between design and
-                functionality in my apps. As I am able to combine my technical
-                expertise with creative flair, I am able to design and develop
-                intuitive and user-friendly applications that deliver seamless
-                user experiences. <br /><br />
-                <i>Intermediate Software Engineer, Jobber</i>
-              </p>
-            </span>
+        <div class="fade-in card-lg">
+          <div
+            class="avatar-container container"
+            onclick="location.href='https://www.linkedin.com/in/leaheyestone/'"
+          >
+            <img
+              src="img/avatar.png"
+              alt="Photograph of developer Leah Eyestone"
+            />
+            <p class="teal script">&#60;&#47;software engineer&#62;</p>
+          </div>
+          <div class="about-container container">
+            <h2>About Me</h2>
+            <p>
+              <b
+                >Hi, I'm Leah Eyestone! A full-stack developer and freelance
+                digital artist based in Western Canada.</b
+              >
+              <br /><br />
+              My unique blend of skills as both a digital artist and developer,
+              allow me to bridge the gap between design and functionality in my
+              apps. As I am able to combine my technical expertise with creative
+              flair, I am able to design and develop intuitive and user-friendly
+              applications that deliver seamless user experiences.
+              <br /><br />
+              <span class="script"
+                >Intermediate Software Engineer at Jobber</span
+              >
+            </p>
           </div>
         </div>
       </div>
-      <div class="row text-banner">
-        <h2 style="color: var(--light-gray)">Primary Skills</h2>
-        <div class="skill-token">
-          <img src="img/icon-html.png" alt="Html icon" />
-          <p>HTML<br />CSS</p>
-        </div>
-        <div class="skill-token">
-          <img src="img/icon-angular.png" alt="Angular icon" />
-          <p>Angular</p>
-        </div>
-        <div class="skill-token">
-          <img src="img/icon-ruby.png" alt="Ruby icon" />
-          <p>Ruby</p>
-        </div>
-        <div class="skill-token">
-          <img src="img/icon-graphql.png" alt="GraphQL icon" />
-          <p>GraphQL</p>
-        </div>
-        <div class="skill-token">
-          <img src="img/icon-typescript.png" alt="React icon" />
-          <p>React</p>
-        </div>
-        <div class="skill-token">
-          <img src="img/icon-sql.png" alt="SQL icon" />
-          <p>SQL</p>
+      <div class="container dark-bg">
+        <h2>Skills</h2>
+        <div class="flex-wrap">
+          <div class="skill-token">
+            <img src="img/icon-html.png" alt="Html icon" />
+            <p>HTML</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-angular.png" alt="Angular icon" />
+            <p>Angular</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-ruby.png" alt="Ruby icon" />
+            <p>Ruby</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-graphql.png" alt="GraphQL icon" />
+            <p>GraphQL</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-typescript.png" alt="React icon" />
+            <p>React</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-sql.png" alt="SQL icon" />
+            <p>SQL</p>
+          </div>
         </div>
       </div>
       <div class="container">
-        <div class="row">
-          <div class="col info-card hobby-card">
-            <h3 class="script">Additional Skills</h3>
-            <p>
-              <span class="dark-text">Languages & Frameworks.</span>
-              Rails, TypeScript, JavaScript, RSpec, Angular, and React Native
-              <br /><br /><span class="dark-text">Tools.</span> Visual Studio,
-              GitHub, Android Studio, XCode, Bitrise, Docker, JIRA, Twilio,
-              Amplitude, Atlassian, and Figma <br /><br />
-              <span class="dark-text">Additional Experience. </span>
-              UI/UX Design, Mac & Windows OS, Scrum Mastering, and Agile
-            </p>
-          </div>
-          <div class="col info-card hobby hobby-card">
-            <h3 class="script">My Hobbies</h3>
-            <p>
-              <span style="color: var(--teal)">&#9900;</span> UI & graphic
-              design <br />
-              <span style="color: var(--teal)">&#9900;</span>
-              Dungeons and Dragons <br />
-              <span style="color: var(--teal)">&#9900;</span>
-              Video games <br /><span style="color: var(--teal)">&#9900;</span>
-              Interior design & architecture (AutoCAD) <br />
-              <span style="color: var(--teal)">&#9900;</span>
-              Digital art<br />
-              <span style="color: var(--teal)">&#9900;</span>
-              Photography
-              <br />
-            </p>
-          </div>
+        <h2>Additional Experience</h2>
+        <div class="text-col" style="margin-top: 0">
+          <i class="fa-solid fa-code"></i>
+          <p>
+            <b>Languages & Frameworks: </b>
+            Rails, Apollo, TypeScript, JavaScript, CSS, RSpec, and React Native
+          </p>
+        </div>
+        <div class="text-col">
+          <i class="fa-solid fa-hammer"></i>
+          <p>
+            <b>Tools: </b>
+            Visual Studio, Twilio, GitHub, Android Studio, XCode, Docker, JIRA,
+            Amplitude, Atlassian, DataDog, and Figma
+          </p>
+        </div>
+        <div class="text-col" style="margin-bottom: 0">
+          <i class="fa-solid fa-wand-sparkles"></i>
+          <p>
+            <b>Other: </b>
+            UI/UX Design, Mac & Windows OS, Agile, Adobe Creative Suite, and
+            Scrum Master
+          </p>
         </div>
       </div>
       <!-- Software -->
-      <div class="row text-banner" style="margin-bottom: 0" id="software">
-        <h2 style="color: var(--teal)">What I Do</h2>
-        <p>
-          mobile <span style="color: var(--teal)">&#9900;</span> web
-          applications
-        </p>
-      </div>
-      <div class="row text-banner portfolio">
-        <input type="radio" name="slider" id="dev-1" checked />
-        <input type="radio" name="slider" id="dev-2" />
-        <input type="radio" name="slider" id="dev-3" />
-        <input type="radio" name="slider" id="dev-4" />
-        <div class="project-cards">
-          <label class="card" for="dev-1" id="dev-1">
-            <img
-              src="img/dev-dnd.jpg"
-              alt="Cantrip, a dungeons and dragons project thumbnail"
-            />
-          </label>
-          <label class="card" for="dev-2" id="dev-2">
-            <img
-              src="img/design-cap.jpg"
-              alt="Mental health capstone project thumbnail"
-            />
-          </label>
-          <label class="card" for="dev-3" id="dev-3">
-            <img
-              src="img/dev-hack.jpg"
-              alt="Hackathon svg badge builder project thumbnail"
-            />
-          </label>
-          <label class="card" for="dev-4" id="dev-4">
-            <img
-              src="img/dev-hack-jobber.png"
-              alt="Hackathon Jobber automation project thumbnail"
-            />
-          </label>
+      <div class="container dark-bg" id="software">
+        <div>
+          <h2>Code Portfolio</h2>
+          <p class="script teal tagline">mobile and web applications</p>
         </div>
-        <div class="project-details">
-          <div class="info" id="test">
-            <!-- Make cards clickable -->
+        <div class="code-portfolio">
+          <input type="radio" name="slider" id="dev-1" checked />
+          <input type="radio" name="slider" id="dev-2" />
+          <input type="radio" name="slider" id="dev-3" />
+          <div class="carousel-cards">
+            <label class="thumbnail" for="dev-1" id="dev-1">
+              <img
+                src="img/dev-dnd.jpg"
+                alt="Smartphone screen displaying a Dungeons and Dragons character management app named 'Cantrip'. The character shown is Lyra Valkyr, a Level 4 Fighter with various stats such as armor, HP, speed, initiative, hit dice, proficiency, and ability scores."
+              />
+            </label>
+            <label class="thumbnail" for="dev-2" id="dev-2">
+              <img
+                src="img/dev-jobber-timers.png"
+                alt="A tablet screen showing a map with a location pin, indicating arrival at a destination. In front, two smartphones display notifications and time tracking for lawn work, with detailed logs and clock-in/out options, using Jobber."
+              />
+            </label>
+            <label class="thumbnail" for="dev-3" id="dev-3">
+              <img
+                src="img/dev-jobber-reviews.png"
+                alt="A tablet screen displaying a review management dashboard with an average rating of 4.7 stars from 92 reviews. In front, a smartphone shows a notification asking Natasha to leave a Google review, using Jobber."
+              />
+            </label>
+          </div>
+          <div class="carousel-details" id="test">
             <label
               id="dev-info-1"
               onclick="location.href='https://github.com/leahnonay/Cantrip'"
             >
-              <h2>
-                Cantrip <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </h2>
+              <h3 class="teal">
+                Cantrip
+                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
+              </h3>
               <p>
                 I am developing and designing a React Android app for Dungeons
                 and Dragons enthusiasts. It is designed to help users
                 effortlessly create and manage their characters and inventories
                 on their mobile devices.
-                <br /><br />Check out my GitHub repo for more information.
-              </p>
-              <p>
+                <br /><br />
+                Check out my GitHub repo for more details.
+                <br /><br />
                 <span class="tags">React Native</span>
-                <span class="tags">TypeScript</span>
+                <span class="tags">Expo</span>
                 <span class="tags">SQLite</span>
-                <span class="tags">Firebase</span>
               </p>
             </label>
             <label
               id="dev-info-2"
-              onclick="location.href='https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1'"
+              onclick="location.href='https://getjobber.com/features/automatic-time-tracking-software/'"
             >
-              <h2>
-                Chrysalis Anti-Human Trafficking
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </h2>
+              <h3 class="teal">
+                Jobber Location Timers
+                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
+              </h3>
               <p>
-                A web application developed for a national non-profit, in 3
-                months with my university capstone team.
-                <br /><br />With our limited time, we prioritized our security
-                features: crisis chat rooms, location tracking, sms emergency
-                contact, and our 'SafeDate' feature.
-              </p>
-              <p>
-                <span class="tags">TypeScript</span>
-                <span class="tags">JavaScript</span>
-                <span class="tags">MongoDB</span>
-                <span class="tags">React</span>
-                <span class="tags">Firebase</span>
-              </p>
-            </label>
-            <label id="dev-info-3">
-              <h2>Hackathon - SVG Generator</h2>
-              <p>
-                In 2021 I placed 1st in a company wide hackathon event.
-                <br /><br />Within 8 hours I created a certification badge
-                builder from scratch, while employing fundamental UI & UX
-                components. It facilitated user input collection and image
-                uploading, seamlessly integrating this data into a custom badge
-                componnent, which produced a final exportable SVG.
-              </p>
-              <p>
-                <span class="tags">Angular</span>
-                <span class="tags">TypeScript</span>
-                <span class="tags">HTML/SCSS</span>
+                As part of team Workflow, we built an automation tool for the
+                Jobber mobile app. It automatically logs service providers hours
+                based off of their geolocation data (coordinates, velocity,
+                etc.)
+                <br /><br />
+                This included interactive push notifications when entering or
+                exiting a geofence.
+                <br /><br />
+                <span class="tags">React Native</span>
+                <span class="tags">Geolocate</span>
+                <span class="tags">Automation</span>
               </p>
             </label>
-            <label id="dev-info-4">
-              <h2>Hackathon - Automation Widget</h2>
+            <label
+              id="dev-info-3"
+              onclick="location.href='https://getjobber.com/features/marketing-tools/reviews/'"
+            >
+              <h3 class="teal">
+                Jobber Reviews Suite
+                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
+              </h3>
               <p>
-                In 2023 I placed 1st in another hackathon event, this time at
-                Jobber.
-                <br /><br />This event marked my debut as the design and
-                front-end lead for a project, granting me full creative control.
-                Crafting mock-ups and delving into the development of custom
-                components, animations, stepped cards, and supporting my team
-                with the back-end automations.
-              </p>
-              <p>
+                As part of team SC Engagement, we built a suite that
+                automatically requests Google reviews from clients, send
+                reminders, and users can reply without ever leaving the Jobber
+                website.
+                <br /><br />
+                We surpassed our Q1 KPIs in just our 1st week!
+                <br /><br />
                 <span class="tags">React</span>
-                <span class="tags">Ruby on Rails</span>
-                <span class="tags">TypeScript</span>
+                <span class="tags">Google</span>
+                <span class="tags">Automation</span>
               </p>
             </label>
           </div>
         </div>
       </div>
-
       <!-- Design -->
-      <div class="row" id="design">
-        <h2>Design</h2>
-        <p style="color: var(--charcoal)">
-          web design <span style="color: var(--teal)">&#9900;</span> wireframes
-          <span style="color: var(--teal)">&#9900;</span> graphic design
+      <div class="container" id="design">
+        <h2>Design Portfolio</h2>
+        <p class="subtitle">
+          In addition to my software skills, I have experience in UI/UX and web
+          design, graphic design, and freelance illustration
+          <br /><br />
+          <span class="script teal">Currently under construction...</span>
         </p>
       </div>
-      <div class="container">
-        <div class="row">
-          <a
-            class="tile"
-            href="https://www.figma.com/file/t9gJ1cqXQLW8AChamJwsRv/Cantrip-Basic-UI?node-id=0%3A1"
-          >
-            <img src="img/dev-dnd.jpg" alt="design tile" />
-            <p>
-              An interactive prototype & mockup of my upcoming mobile & web
-              application, Cantrip. I completed this after gathering valuable UX
-              feedback from the global DnD community.
-              <br /><br />View More &nbsp;
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </p>
-          </a>
-          <a
-            class="tile"
-            href="https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1"
-          >
-            <img src="img/design-cap.jpg" alt="design tile" />
-            <p>
-              A mockup & rebranding I designed for a non-profit group, as part
-              of a rebranding pitch. I designed both a static website layout,
-              and mobile app UI/UX layout.
-              <br /><br />View More &nbsp;
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </p>
-          </a>
-          <a class="tile" href="https://github.com/leahnonay/casualpancakes">
-            <img src="img/des-temp.jpg" alt="design tile" />
-            <p>
-              I designed & developed my own art portfolio and shop.<br /><br />
-              Click me to view this site live, as well as its corresponding
-              style guides and prototypes
-              <br /><br />View More &nbsp;
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </p>
-          </a>
-        </div>
-        <div class="row" style="margin-top: -2rem">
-          <a class="tile" href="https://github.com/leahnonay/Portfolio">
-            <img src="img/dev-port.jpg" alt="design tile" />
-            <p>
-              Self designed and deployed software portfolio -this website-, to
-              best reflect my own personality and web development skills.
-              <br /><br />View More &nbsp;
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </p>
-          </a>
-          <a
-            class="tile"
-            href="https://github.com/leahnonay/ERC-MembershipTool"
-          >
-            <img src="img/dev-erc.jpg" alt="design tile" />
-            <p>
-              ERC Admin Tool and UI Revamp. I am working on a membership
-              management web app for the Edmonton Rocketry Club. I have also
-              developed and re-designed their previously static website.
-              <br /><br />View More &nbsp;
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </p>
-          </a>
-          <div class="tile">
-            <img src="img/design-logo.jpg" alt="design tile" />
-            <p>My personal logo that I use for my software-centred branding</p>
-          </div>
-        </div>
-        <div class="row" style="margin-top: -2rem">
-          <div class="tile">
-            <img src="img/design-erc.jpg" alt="design tile" />
-            <p>
-              I designed an ad campaign for the ERC's 50th anniversary event.<br /><br />In
-              addition to the logo, posters were also created and displayed
-              across Edmonton (KDays, Telus World of Science, etc.)
-            </p>
-          </div>
-          <div class="tile">
-            <img src="img/des-art1.jpg" alt="design tile" />
-            <p>
-              Taking a break from designing commissioned characters, I took the
-              time for a personal illustration of one of my many DnD
-              adventurers, Quinna.
-            </p>
-          </div>
-          <div class="tile">
-            <img src="img/des-can.jpg" alt="design tile" />
-            <p>A logo I designed for my upcoming Cantrip application.</p>
-          </div>
-        </div>
-        <div class="row" style="margin-top: -2rem">
-          <div class="tile">
-            <img src="img/des-pan.jpg" alt="design tile" />
-            <p>
-              A logo I designed for a client offering interior design services.
-            </p>
-          </div>
-          <div class="tile">
-            <img src="img/des-tea.jpg" alt="design tile" />
-            <p>
-              A rebranding project for a crested gecko breeder that included a
-              complete branding revamp and logo.
-            </p>
-          </div>
-          <div class="tile">
-            <img src="img/des-art2.jpg" alt="design tile" />
-            <p>
-              A frog NPC potions merchant that I designed for an indie card
-              game.
-            </p>
-          </div>
-        </div>
-      </div>
     </main>
-    <footer>
-      <ul>
+    <footer class="dark-bg flex-row">
+      <ul class="social-items">
         <li>
           <a href="https://www.casualpancakes.com"
             ><img src="img/icon-fiverr.png" alt="Art icon"
@@ -454,58 +336,30 @@
       a.addEventListener("click", function (e) {
         e.preventDefault();
         var href = this.getAttribute("href");
-        var element =
-          document.querySelector(href) ||
-          document.querySelector('a[name="' + href.substring(1) + '"]');
-        console.log(href);
-        if (element) {
-          window.scroll({
-            top: element.offsetTop - 85,
-            left: 0,
-            behavior: "smooth",
-          });
-        }
+        smoothScrollToElement(href);
       });
     });
 
-    document.querySelectorAll(".clickable").forEach((a) => {
+    document.querySelectorAll(".cta").forEach((a) => {
       a.onclick = function (e) {
-        var href = this.getAttribute("onclick");
-        var getId = href.substring(15, href.length - 1);
-        var element =
-          document.querySelector(getId) ||
-          document.querySelector('a[name="' + getId.substring(1) + '"]');
-        if (element) {
-          window.scroll({
-            top: element.offsetTop - 85,
-            left: 0,
-            behavior: "smooth",
-          });
-        }
+        e.preventDefault();
+        var attribute = this.getAttribute("onclick");
+        var href = attribute.substring(15, attribute.length - 1);
+        smoothScrollToElement(href);
       };
     });
 
-    document.querySelectorAll(".banner-arrow").forEach((div) => {
-      console.log(div);
-      div.addEventListener("click", function () {
-        var onclickValue = this.getAttribute("onclick");
-        if (onclickValue) {
-          var hashIndex = onclickValue.indexOf("#");
-          if (hashIndex !== -1) {
-            var hash = onclickValue.substring(hashIndex);
-            var element =
-              document.querySelector(hash) ||
-              document.querySelector('a[name="' + hash.substring(1) + '"]');
-            if (element) {
-              window.scroll({
-                top: element.offsetTop - 85,
-                left: 0,
-                behavior: "smooth",
-              });
-            }
-          }
-        }
-      });
-    });
+    function smoothScrollToElement(href) {
+      var element =
+        document.querySelector(href) ||
+        document.querySelector('a[name="' + href.substring(1) + '"]');
+
+      if (element) {
+        window.scroll({
+          top: element.offsetTop - 60,
+          behavior: "smooth",
+        });
+      }
+    }
   </script>
 </html>
