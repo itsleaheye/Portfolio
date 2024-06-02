@@ -167,14 +167,6 @@ p {
 .fade-in {
   animation: fadein 3s;
 }
-.ease-in-cards {
-  #dev-info-1,
-  #dev-info-2,
-  #dev-info-3 {
-    opacity: 1;
-    transition: var(--ease-in);
-  }
-}
 .slide-cards {
   transition: var(--ease-in);
   opacity: 0.5;
@@ -200,38 +192,45 @@ p {
   z-index: 1;
 }
 #dev-1:checked ~ .carousel-details {
-  @extend .ease-in-cards;
   #dev-info-1 {
+    display: block;
     opacity: 1;
+    transform: translatex(0);
   }
   #dev-info-2 {
+    display: none;
     opacity: 0;
   }
   #dev-info-3 {
+    display: none;
     opacity: 0;
   }
 }
 #dev-2:checked ~ .carousel-details {
-  @extend .ease-in-cards;
   #dev-info-1 {
+    display: none;
     opacity: 0;
   }
   #dev-info-2 {
+    display: block;
     opacity: 1;
   }
   #dev-info-3 {
+    display: none;
     opacity: 0;
   }
 }
 #dev-3:checked ~ .carousel-details {
-  @extend .ease-in-cards;
   #dev-info-1 {
+    display: none;
     opacity: 0;
   }
   #dev-info-2 {
+    display: none;
     opacity: 0;
   }
   #dev-info-3 {
+    display: block;
     opacity: 1;
   }
 }
@@ -269,6 +268,8 @@ body {
   letter-spacing: 0.05rem;
   min-height: 100vh;
   scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 .nav {
   @extend .dark-bg;
@@ -421,7 +422,7 @@ i {
 
   .rows {
     @extend .flex-col;
-    @media only screen and (min-width: 46.875rem) {
+    @media only screen and (min-width: 37.5rem) {
       flex-direction: row;
     }
   }
@@ -454,11 +455,21 @@ i {
   background-color: var(--light-gray);
   border: none;
   padding: 0;
+  max-width: 56.5rem;
+  margin: 0 auto;
+  overflow: hidden;
   @media only screen and (min-width: 37.5rem) {
-    padding: var(--pad-sm) var(--pad-md) var(--pad-md) var(--pad-md);
+    display: flex;
+    flex-direction: row;
   }
 
   .about-container {
+    @media only screen and (min-width: 37.5rem) {
+      h2 {
+        text-align: left;
+      }
+    }
+
     p {
       border-top: var(--border-size) solid var(--charcoal);
       padding-top: var(--pad-xs);
@@ -466,10 +477,18 @@ i {
     }
     .script {
       font-size: var(--font-sm);
+      @media only screen and (min-width: 37.5rem) {
+        font-size: var(--font-md);
+      }
     }
   }
   .avatar-container {
     background-color: var(--charcoal);
+    @media only screen and (min-width: 37.5rem) {
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+    }
 
     img {
       border-radius: 100%;
@@ -498,7 +517,7 @@ i {
   display: flex;
   gap: var(--pad-xs);
   margin: var(--pad-sm) auto;
-  @media only screen and (min-width: 46.875rem) {
+  @media only screen and (min-width: 37.5rem) {
     max-width: 30rem;
   }
 
@@ -536,37 +555,46 @@ i {
     }
   }
   .carousel-cards {
+    height: 13rem;
     padding-top: var(--pad-sm);
+    @media only screen and (min-width: 37.5rem) {
+      height: 20rem;
+    }
 
     label,
     img {
       border-radius: var(--border-radius-base);
-      max-width: 25rem;
+      max-width: 15.625rem;
+      @media only screen and (min-width: 37.5rem) {
+        max-width: 25rem;
+      }
     }
   }
   .carousel-cards,
   .carousel-details {
     display: flex;
-    height: 20rem;
     justify-content: center;
     overflow: hidden;
   }
   .carousel-details {
-    height: 23rem;
-    @media only screen and (min-width: 46.875rem) {
-      height: 15rem;
-    }
+    height: 20rem;
+    margin: 0 auto;
+    max-width: 56.5rem;
+    overflow-y: hidden;
     &:hover {
       @extend .hover;
       opacity: 0.5;
+    }
+    @media only screen and (min-width: 37.5rem) {
+      height: 16.5rem;
     }
 
     label {
       max-width: 100vw;
       padding: 0 var(--pad-sm) 0 var(--pad-sm);
       text-align: center;
-      @media only screen and (min-width: 46.875rem) {
-        max-width: 75vw;
+      @media only screen and (min-width: 37.5rem) {
+        max-width: 42rem;
       }
 
       h3 {

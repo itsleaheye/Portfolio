@@ -81,7 +81,7 @@
           </ul>
         </div>
       </div>
-      <div class="banner">
+      <div class="banner" id="banner">
         <div class="logo-animated fade-in"></div>
         <p class="fade-in white">
           developer <span class="teal">&#9900;</span> designer
@@ -206,19 +206,19 @@
               <label class="thumbnail" for="dev-1" id="dev-1">
                 <img
                   src="img/dev-dnd.jpg"
-                  alt="Cantrip, a dungeons and dragons mobile app project thumbnail"
+                  alt="Smartphone screen displaying a Dungeons and Dragons character management app named 'Cantrip'. The character shown is Lyra Valkyr, a Level 4 Fighter with various stats such as armor, HP, speed, initiative, hit dice, proficiency, and ability scores."
                 />
               </label>
               <label class="thumbnail" for="dev-2" id="dev-2">
                 <img
-                  src="img/design-cap.jpg"
-                  alt="Mental health capstone project thumbnail"
+                  src="img/dev-jobber-timers.png"
+                  alt="A tablet screen showing a map with a location pin, indicating arrival at a destination. In front, two smartphones display notifications and time tracking for lawn work, with detailed logs and clock-in/out options, using Jobber."
                 />
               </label>
               <label class="thumbnail" for="dev-3" id="dev-3">
                 <img
-                  src="img/dev-hack.jpg"
-                  alt="Hackathon svg badge builder project thumbnail"
+                  src="img/dev-jobber-reviews.png"
+                  alt="A tablet screen displaying a review management dashboard with an average rating of 4.7 stars from 92 reviews. In front, a smartphone shows a notification asking Natasha to leave a Google review, using Jobber."
                 />
               </label>
             </div>
@@ -266,7 +266,7 @@
               </label>
               <label
                 id="dev-info-3"
-                onclick="location.href='https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1'"
+                onclick="location.href='https://getjobber.com/features/marketing-tools/reviews/'"
               >
                 <h3 class="teal">
                   Jobber Reviews Suite
@@ -276,9 +276,8 @@
                   As part of team SC Engagement, we built a suite that
                   automatically requests Google reviews from clients, send reminders, and users can reply without ever leaving the Jobber website.
                   <br /><br />
-                  We surpassed our KPIs by 200% in our 1st week!
-                </p>
-                <p>
+                  We surpassed our Q1 KPIs in just our 1st week!
+                  <br /><br />
                   <span class="tags">React</span>
                   <span class="tags">Google</span>
                   <span class="tags">Automation</span>
@@ -461,7 +460,7 @@
 
       if (element) {
         window.scroll({
-          top: element.offsetTop,
+          top: element.offsetTop - 60,
           behavior: "smooth",
         });
       }
