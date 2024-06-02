@@ -52,7 +52,7 @@
           </a>
         </div>
         <div class="menu-items">
-          <ul>
+          <ul class="links">
             <li><a href="#about">About</a></li>
             <li><a href="#software">Code</a></li>
             <li><a href="#design">Design</a></li>
@@ -83,20 +83,20 @@
       </div>
       <div class="banner">
         <div class="logo-animated fade-in"></div>
-        <p class="title fade-in">
+        <p class="fade-in white">
           developer <span class="teal">&#9900;</span> designer
           <span class="teal">&#9900;</span> illustrator
         </p>
-        <div class="fade-in row">
-          <div class="card-sm cta" onclick="location.href='#software'">
+        <div class="fade-in rows">
+          <div class="card-sm cta dark-bg" onclick="location.href='#software'">
             <i class="fa-brands fa-react"></i>
             <p>A full-stack web and mobile application developer</p>
           </div>
-          <div class="card-sm cta" onclick="location.href='#design'">
+          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
             <i class="fa-solid fa-laptop-code"></i>
             <p>A developer who focuses on optimal UI/UX designs</p>
           </div>
-          <div class="card-sm cta" onclick="location.href='#design'">
+          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
             <i class="fa fa-pen-nib"></i>
             <p>An experienced entrepeneur and character designer</p>
           </div>
@@ -110,19 +110,19 @@
       <!-- About Section -->
       <div class="container" id="about">
         <div class="fade-in card-lg">
-          <div class="avatar-container">
+          <div class="avatar-container container">
             <img
               src="img/avatar.png"
               alt="Photograph of developer Leah Eyestone"
             />
             <p class="teal script">&#60;&#47;software engineer&#62;</p>
           </div>
-          <div class="about-container">
+          <div class="about-container container">
             <h2>About Me</h2>
             <p>
-              <span class="bolder"
+              <b
                 >Hi, I'm Leah Eyestone! A full-stack developer and freelance
-                digital artist based in Western Canada.</span
+                digital artist based in Western Canada.</b
               >
               <br /><br />
               My unique blend of skills as both a digital artist and developer,
@@ -139,10 +139,8 @@
         </div>
       </div>
       <div class="container dark-bg">
-        <div class="row">
-          <h2>Skills</h2>
-        </div>
-        <div class="wrapped">
+        <h2>Skills</h2>
+        <div class="flex-wrap">
           <div class="skill-token">
             <img src="img/icon-html.png" alt="Html icon" />
             <p>HTML</p>
@@ -170,20 +168,18 @@
         </div>
       </div>
       <div class="container">
-        <div class="row">
-          <h2>Additional Experience</h2>
-        </div>
+        <h2>Additional Experience</h2>
         <div class="text-col" style="margin-top: 0">
           <i class="fa-solid fa-code"></i>
           <p>
-            <span class="bolder">Languages & Frameworks: </span>
+            <b>Languages & Frameworks: </b>
             Rails, Apollo, TypeScript, JavaScript, CSS, RSpec, and React Native
           </p>
         </div>
         <div class="text-col">
           <i class="fa-solid fa-hammer"></i>
-          <p >
-            <span class="bolder">Tools: </span>
+          <p>
+            <b>Tools: </b>
             Visual Studio, Twilio, GitHub, Android Studio, XCode, Docker, JIRA,
             Amplitude, Atlassian, DataDog, and Figma
           </p>
@@ -191,7 +187,7 @@
         <div class="text-col" style="margin-bottom: 0;">
           <i class="fa-solid fa-wand-sparkles"></i>
           <p>
-            <span class="bolder">Other: </span>
+            <b>Other: </b>
             UI/UX Design, Mac & Windows OS, Agile, Adobe Creative Suite, and Scrum Master
           </p>
         </div>
@@ -231,9 +227,9 @@
                 id="dev-info-1"
                 onclick="location.href='https://github.com/leahnonay/Cantrip'"
               >
-                <h2 class="teal">
+                <h3 class="teal">
                   Cantrip <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-                </h2>
+                </h3>
                 <p>
                   I am developing and designing a React Android app for Dungeons
                   and Dragons enthusiasts. It is designed to help users
@@ -243,29 +239,28 @@
                   Check out my GitHub repo for more details.
                   <br /><br />
                   <span class="tags">React Native</span>
-                  <span class="tags">TypeScript</span>
-                  <span class="tags">SQLite</span>
                   <span class="tags">Expo</span>
+                  <span class="tags">SQLite</span>
                 </p>
               </label>
               <label
                 id="dev-info-2"
                 onclick="location.href='https://getjobber.com/features/automatic-time-tracking-software/'"
               >
-                <h2 class="teal">
-                  Automated Location Timers - Jobber
+                <h3 class="teal">
+                  Jobber Location Timers
                   <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-                </h2>
+                </h3>
                 <p>
-                  As part of team Workflow, we developed an automation tool for
+                  As part of team Workflow, we built an automation tool for
                   the Jobber mobile app. It automatically logs service
                   providers hours based off of their geolocation data
-                  (coordinates, velocity, time within a geofence, etc.)
+                  (coordinates, velocity, etc.)
                   <br /><br />
-                  This included sending team push notifications as a reminder to clock in and out when entering or exiting a service site.
+                  This included interactive push notifications when entering or exiting a geofence.
                   <br /><br />
                   <span class="tags">React Native</span>
-                  <span class="tags">Geolocation</span>
+                  <span class="tags">Geolocate</span>
                   <span class="tags">Automation</span>
                 </p>
               </label>
@@ -273,23 +268,19 @@
                 id="dev-info-3"
                 onclick="location.href='https://www.figma.com/file/USfAn1VZh8gQYpQ0wCwoqY/Chrysalis-UI%2FUX-Design?node-id=0%3A1'"
               >
-                <h2 class="teal">
-                  Reviews Suite - Jobber
+                <h3 class="teal">
+                  Jobber Reviews Suite
                   <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-                </h2>
+                </h3>
                 <p>
-                  As part of team SC Engagement, we developed a review suite for
-                  the Jobber mobile app. This suite allows service providers to
-                  automatically request reviews from clients, send follow ups, and
-                  send replies directly from a dashboard within Jobber's web app.
+                  As part of team SC Engagement, we built a suite that
+                  automatically requests Google reviews from clients, send reminders, and users can reply without ever leaving the Jobber website.
                   <br /><br />
-                  Upon the first week of releasing our feature, we surpassed our
-                  KPIs by 200%!
+                  We surpassed our KPIs by 200% in our 1st week!
                 </p>
                 <p>
                   <span class="tags">React</span>
-                  <span class="tags">Google Project</span>
-                  <span class="tags">React Native</span>
+                  <span class="tags">Google</span>
                   <span class="tags">Automation</span>
                 </p>
               </label>
