@@ -4,9 +4,10 @@
 
 # Portfolio Details | [View Live](https://leaheyestone.ca)
 
-Portfolio developed by myself, and has been incrementally improved over the years.  
-All images and content within this portfolio belong to and were created by myself. They are not free to be re-used.
+Portfolio developed and designed by myself. It has been incrementally improved over the years.  
+All images and content within this portfolio belong to and were created by Leah Eyestone. They are not free to be re-used.
 
-- Languages - HTML, JavaScript, SCSS with CSS compression
+- Languages - HTML, JavaScript, SCSS
+  - Utilizing a CSS compression tool
 - Libraries - FontAwesome Icons, Google Fonts
 - IDE - Visual Studio Code
