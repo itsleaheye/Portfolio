@@ -19,6 +19,7 @@
   --timer: 8s;
   --font-md: 1.5rem;
   --font-sm: 1.2rem;
+  --font-xs: 1rem;
   --border-radius-base: 0.25rem;
   --border-size: 0.125rem;
   --icon-lg: 3rem;
@@ -51,6 +52,10 @@ p {
 .dark-text, .script, h2 {
   color: var(--charcoal);
   font-weight: lighter;
+}
+
+.bold-text {
+  font-weight: 600;
 }
 
 .dark-bg, .nav {
@@ -90,7 +95,7 @@ p {
   transition: var(--ease-in);
 }
 
-.teal, .hover-teal, .card-sm:hover i, .banner i:hover {
+.teal, .gallery-grid .col .hover:hover p:first-child, .gallery-grid .col .hover-teal:hover p:first-child, .gallery-grid .col .hover-white:hover p:first-child, .gallery-grid .col .nav input:hover p:first-child, .nav .gallery-grid .col input:hover p:first-child, .gallery-grid .col .banner i:hover p:first-child, .banner .gallery-grid .col i:hover p:first-child, .gallery-grid .col .card-sm:hover p:first-child, .card-sm:hover .gallery-grid .col i:hover p:first-child, .gallery-grid .col .card-lg .avatar-container:hover p:first-child, .card-lg .gallery-grid .col .avatar-container:hover p:first-child, .card-lg .avatar-container:hover .gallery-grid .col img:hover p:first-child, .gallery-grid .col .code-portfolio label:hover p:first-child, .code-portfolio .gallery-grid .col label:hover p:first-child, .gallery-grid .col .code-portfolio .carousel-details:hover p:first-child, .code-portfolio .gallery-grid .col .carousel-details:hover p:first-child, .code-portfolio .carousel-details:hover .gallery-grid .col h3:hover p:first-child, .hover-teal, .card-sm:hover i, .banner i:hover {
   color: var(--teal) !important;
 }
 
@@ -433,6 +438,7 @@ i {
 
 .card-sm {
   max-width: 17.5rem;
+  transition: var(--ease-in);
 }
 .card-sm:hover {
   border: var(--border-size) solid var(--teal);
@@ -441,6 +447,9 @@ i {
   border-top: var(--border-size) solid var(--medium-gray);
   margin-top: var(--pad-sm);
   padding-top: var(--pad-xs);
+}
+.card-sm i {
+  transition: var(--ease-in);
 }
 
 .card-lg {
@@ -591,6 +600,9 @@ i {
     height: 16.5rem;
   }
 }
+.code-portfolio .carousel-details h3 {
+  transition: var(--ease-in);
+}
 .code-portfolio .carousel-details label {
   max-width: 100vw;
   padding: 0 var(--pad-sm) 0 var(--pad-sm);
@@ -625,4 +637,99 @@ footer .social-items {
 }
 footer .social-items li {
   max-width: 2.5rem;
+}
+
+.gallery-grid {
+  margin-top: var(--pad-sm);
+}
+@media only screen and (min-width: 37.5rem) {
+  .gallery-grid {
+    gap: var(--pad-sm);
+    justify-content: center;
+    display: flex;
+  }
+}
+.gallery-grid .col {
+  flex: 1;
+}
+@media only screen and (min-width: 37.5rem) {
+  .gallery-grid .col {
+    max-width: 17.5rem;
+    width: 32%;
+  }
+}
+.gallery-grid .col .hover, .gallery-grid .col .hover-teal, .gallery-grid .col .hover-white, .gallery-grid .col .nav input, .nav .gallery-grid .col input, .gallery-grid .col .banner i:hover, .banner .gallery-grid .col i:hover, .gallery-grid .col .card-sm:hover, .gallery-grid .col .card-sm:hover i, .card-sm:hover .gallery-grid .col i, .gallery-grid .col .card-lg .avatar-container:hover, .card-lg .gallery-grid .col .avatar-container:hover, .gallery-grid .col .card-lg .avatar-container:hover img, .card-lg .avatar-container:hover .gallery-grid .col img, .gallery-grid .col .code-portfolio label:hover, .code-portfolio .gallery-grid .col label:hover, .gallery-grid .col .code-portfolio .carousel-details:hover, .code-portfolio .gallery-grid .col .carousel-details:hover, .gallery-grid .col .code-portfolio .carousel-details:hover h3, .code-portfolio .carousel-details:hover .gallery-grid .col h3 {
+  transition: var(--ease-in);
+}
+.gallery-grid .col .hover:hover img, .gallery-grid .col .hover-teal:hover img, .gallery-grid .col .hover-white:hover img, .gallery-grid .col .nav input:hover img, .nav .gallery-grid .col input:hover img, .gallery-grid .col .banner i:hover img, .banner .gallery-grid .col i:hover img, .gallery-grid .col .card-sm:hover img, .card-sm:hover .gallery-grid .col i:hover img, .gallery-grid .col .card-lg .avatar-container:hover img, .card-lg .gallery-grid .col .avatar-container:hover img, .card-lg .avatar-container:hover .gallery-grid .col img:hover img, .gallery-grid .col .code-portfolio label:hover img, .code-portfolio .gallery-grid .col label:hover img, .gallery-grid .col .code-portfolio .carousel-details:hover img, .code-portfolio .gallery-grid .col .carousel-details:hover img, .code-portfolio .carousel-details:hover .gallery-grid .col h3:hover img {
+  opacity: 0.75;
+}
+.gallery-grid .col .hover:hover .gallery-icon, .gallery-grid .col .hover-teal:hover .gallery-icon, .gallery-grid .col .hover-white:hover .gallery-icon, .gallery-grid .col .nav input:hover .gallery-icon, .nav .gallery-grid .col input:hover .gallery-icon, .gallery-grid .col .banner i:hover .gallery-icon, .banner .gallery-grid .col i:hover .gallery-icon, .gallery-grid .col .card-sm:hover .gallery-icon, .gallery-grid .col .card-sm:hover i:hover .gallery-icon, .card-sm:hover .gallery-grid .col i:hover .gallery-icon, .gallery-grid .col .card-lg .avatar-container:hover .gallery-icon, .card-lg .gallery-grid .col .avatar-container:hover .gallery-icon, .card-lg .avatar-container:hover .gallery-grid .col img:hover .gallery-icon, .gallery-grid .col .code-portfolio label:hover .gallery-icon, .code-portfolio .gallery-grid .col label:hover .gallery-icon, .gallery-grid .col .code-portfolio .carousel-details:hover .gallery-icon, .code-portfolio .gallery-grid .col .carousel-details:hover .gallery-icon, .code-portfolio .carousel-details:hover .gallery-grid .col h3:hover .gallery-icon {
+  color: var(--teal) !important;
+}
+.gallery-grid .col .hover p, .gallery-grid .col .hover-teal p, .gallery-grid .col .hover-white p, .gallery-grid .col .nav input p, .nav .gallery-grid .col input p, .gallery-grid .col .banner i:hover p, .banner .gallery-grid .col i:hover p, .gallery-grid .col .card-sm:hover p, .gallery-grid .col .card-sm:hover i p, .card-sm:hover .gallery-grid .col i p, .gallery-grid .col .card-lg .avatar-container:hover p, .card-lg .gallery-grid .col .avatar-container:hover p, .card-lg .avatar-container:hover .gallery-grid .col img p, .gallery-grid .col .code-portfolio label:hover p, .code-portfolio .gallery-grid .col label:hover p, .gallery-grid .col .code-portfolio .carousel-details:hover p, .code-portfolio .gallery-grid .col .carousel-details:hover p, .code-portfolio .carousel-details:hover .gallery-grid .col h3 p,
+.gallery-grid .col .hover i,
+.gallery-grid .col .hover-teal i,
+.gallery-grid .col .hover-white i,
+.gallery-grid .col .nav input i,
+.nav .gallery-grid .col input i,
+.gallery-grid .col .banner i:hover i,
+.banner .gallery-grid .col i:hover i,
+.gallery-grid .col .card-sm:hover i,
+.gallery-grid .col .card-sm:hover i i,
+.card-sm:hover .gallery-grid .col i i,
+.gallery-grid .col .card-lg .avatar-container:hover i,
+.card-lg .gallery-grid .col .avatar-container:hover i,
+.card-lg .avatar-container:hover .gallery-grid .col img i,
+.gallery-grid .col .code-portfolio label:hover i,
+.code-portfolio .gallery-grid .col label:hover i,
+.gallery-grid .col .code-portfolio .carousel-details:hover i,
+.code-portfolio .gallery-grid .col .carousel-details:hover i,
+.code-portfolio .carousel-details:hover .gallery-grid .col h3 i,
+.gallery-grid .col .hover img,
+.gallery-grid .col .hover-teal img,
+.gallery-grid .col .hover-white img,
+.gallery-grid .col .nav input img,
+.nav .gallery-grid .col input img,
+.gallery-grid .col .banner i:hover img,
+.banner .gallery-grid .col i:hover img,
+.gallery-grid .col .card-sm:hover img,
+.gallery-grid .col .card-sm:hover i img,
+.card-sm:hover .gallery-grid .col i img,
+.gallery-grid .col .card-lg .avatar-container:hover img,
+.card-lg .gallery-grid .col .avatar-container:hover img,
+.card-lg .avatar-container:hover .gallery-grid .col img img,
+.gallery-grid .col .code-portfolio label:hover img,
+.code-portfolio .gallery-grid .col label:hover img,
+.gallery-grid .col .code-portfolio .carousel-details:hover img,
+.code-portfolio .gallery-grid .col .carousel-details:hover img,
+.code-portfolio .carousel-details:hover .gallery-grid .col h3 img {
+  transition: var(--ease-in);
+}
+
+.gallery-container {
+  text-align: center;
+}
+.gallery-container .gallery-details {
+  padding: var(--pad-xxs) 0 var(--pad-xs) 0;
+}
+.gallery-container .gallery-details p:last-child {
+  color: var(--medium-gray);
+  font-size: 1rem;
+}
+.gallery-container .gallery-details .gallery-icon {
+  color: var(--charcoal);
+  font-size: 0.8rem;
+}
+.gallery-container img {
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  width: 100%;
+}
+@media only screen and (min-width: 37.5rem) {
+  .gallery-container img {
+    -o-object-fit: fill;
+       object-fit: fill;
+    height: 12rem;
+  }
 }/*# sourceMappingURL=style.css.map */
