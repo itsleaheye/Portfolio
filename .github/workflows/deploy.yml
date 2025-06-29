@@ -35,11 +35,12 @@ jobs:
           npm run build
 
       # Copy React app build to /webapp in static site
-      - name: Copy React build to static site
+      - name: name: Copy React build to static site
         run: |
           rm -rf ./scrystone
           mkdir -p ./scrystone
-          cp -r ./react-app/scrystone/build/* ./scrystone/
+          cp -r ./react-app/build/* ./scrystone/
+          cp ./react-app/public/_redirects ./scrystone/_redirects
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
