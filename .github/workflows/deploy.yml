@@ -30,11 +30,11 @@ jobs:
           npm ci
           npm run build
 
-      - name: Copy React build to Portfolio static site under /scrystone
+      - name: Copy React app to /scrystone
         run: |
           rm -rf ./scrystone
           mkdir -p ./scrystone
-          cp -r ./react-app/build/* ./scrystone/
+          cp -r ./react-app/dist/* ./scrystone/
           if [ -f ./react-app/public/_redirects ]; then cp ./react-app/public/_redirects ./scrystone/_redirects; fi
 
       - name: Install Netlify CLI
