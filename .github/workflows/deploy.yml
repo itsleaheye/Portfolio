@@ -12,37 +12,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout (Repo A)
       - name: Checkout Portfolio repo (static site)
         uses: actions/checkout@v4
 
-      # Clone React app (Repo B)
       - name: Clone Scrystone repo (React app)
         run: |
           git clone https://x-access-token:${{ secrets.SCRYSTONE_ACCESS_TOKEN }}@github.com/itsleaheye/Scrystone.git react-app
 
-      # Set up Node
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Install and build React app
       - name: Install and build React app
         working-directory: ./react-app
         run: |
           npm ci
           npm run build
 
-      # Copy React app build to /webapp in static site
-      - name: name: Copy React build to static site
+      - name: Copy React build to static site
         run: |
           rm -rf ./scrystone
           mkdir -p ./scrystone
           cp -r ./react-app/build/* ./scrystone/
           cp ./react-app/public/_redirects ./scrystone/_redirects
 
-      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
