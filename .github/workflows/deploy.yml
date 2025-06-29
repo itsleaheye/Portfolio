@@ -29,7 +29,7 @@ jobs:
 
       # Install and build React app
       - name: Install and build React app
-        working-directory: ./react-app/scrystone
+        working-directory: ./react-app
         run: |
           npm ci
           npm run build
