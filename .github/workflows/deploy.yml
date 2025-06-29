@@ -1,4 +1,4 @@
-name: Deploy static site with React app
+name: Build and deploy Portfolio and Scrystone app
 
 on:
   push:
@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Portfolio repo (static site)
+      - name: Checkout Portfolio repo
         uses: actions/checkout@v4
 
-      - name: Clone Scrystone repo (React app)
+      - name: Clone Scrystone repo
         run: |
           git clone https://x-access-token:${{ secrets.SCRYSTONE_ACCESS_TOKEN }}@github.com/itsleaheye/Scrystone.git react-app
 
@@ -30,15 +30,19 @@ jobs:
           npm ci
           npm run build
 
-      - name: Copy React build to static site
+      - name: Copy React build to Portfolio static site under /scrystone
         run: |
           rm -rf ./scrystone
           mkdir -p ./scrystone
           cp -r ./react-app/build/* ./scrystone/
-          cp ./react-app/public/_redirects ./scrystone/_redirects
+          if [ -f ./react-app/public/_redirects ]; then cp ./react-app/public/_redirects ./scrystone/_redirects; fi
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+
+      - name: Deploy combined site to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_ACTION_DEPLOY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          netlify deploy --dir=./ --prod --site=$NETLIFY_SITE_ID
