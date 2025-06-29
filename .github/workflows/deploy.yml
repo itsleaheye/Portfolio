@@ -2,7 +2,10 @@ name: Deploy static site with React app
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+  repository_dispatch:
+    types: [trigger-portfolio-build]
 
 jobs:
   build-and-deploy:
