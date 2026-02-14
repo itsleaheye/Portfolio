@@ -48,6 +48,16 @@
   --desktop: 75rem; // 1200px and up
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#about,
+#software,
+#design {
+  scroll-margin-top: 80px;
+}
+
 // Typography
 h2 {
   @extend .dark-text;

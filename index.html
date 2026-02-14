@@ -64,15 +64,15 @@
         <span></span>
         <!-- Logo will replace hamburger menu on larger resolutions -->
         <div class="logo">
-          <a href="#banner">
+          <a data-scroll="#banner">
             <img src="img/nav-icon-new.png" alt="Home" />
           </a>
         </div>
         <div class="menu-items">
           <ul class="links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#software">Code</a></li>
-            <li><a href="#design">Design</a></li>
+            <li><a data-scroll="#about">About</a></li>
+            <li><a data-scroll="#software">Code</a></li>
+            <li><a data-scroll="#design">Design</a></li>
             <ul class="social-items">
               <li>
                 <a href="https://github.com/itsleaheye">
@@ -105,23 +105,20 @@
           <span class="teal">&#9900;</span> illustrator
         </p>
         <div class="fade-in rows">
-          <div
-            class="card-sm cta dark-bg"
-            onclick="location.href = '#software'"
-          >
+          <div class="card-sm cta dark-bg" data-scroll="#software">
             <i class="fa-brands fa-react"></i>
             <p>A full-stack web and mobile application developer</p>
           </div>
-          <div class="card-sm cta dark-bg" onclick="location.href = '#design'">
+          <div class="card-sm cta dark-bg" data-scroll="#about">
             <i class="fa-solid fa-laptop-code"></i>
             <p>A developer who focuses on optimal UI/UX designs</p>
           </div>
-          <div class="card-sm cta dark-bg" onclick="location.href = '#design'">
+          <div class="card-sm cta dark-bg" data-scroll="#design">
             <i class="fa fa-pen-nib"></i>
             <p>An experienced entrepreneur and character designer</p>
           </div>
         </div>
-        <div class="cta" onclick="location.href = '#about'">
+        <div class="cta" data-scroll="#about">
           <i class="fa-sharp fa-solid fa-angle-down"></i>
         </div>
       </div>
@@ -561,35 +558,18 @@
     </footer>
   </body>
   <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach((a) => {
-      a.addEventListener("click", function (e) {
-        e.preventDefault();
-        var href = this.getAttribute("href");
-        smoothScrollToElement(href);
-      });
-    });
+    document.querySelectorAll("[data-scroll]").forEach((el) => {
+      el.addEventListener("click", () => {
+        const target = document.querySelector(el.dataset.scroll);
+        if (!target) return;
 
-    document.querySelectorAll(".cta").forEach((a) => {
-      a.onclick = function (e) {
-        e.preventDefault();
-        var attribute = this.getAttribute("onclick");
-        var href = attribute.substring(15, attribute.length - 1);
-        smoothScrollToElement(href);
-      };
-    });
+        const y = target.getBoundingClientRect().top + window.scrollY - 60;
 
-    function smoothScrollToElement(href) {
-      var element =
-        document.querySelector(href) ||
-        document.querySelector('a[name="' + href.substring(1) + '"]');
-
-      if (element) {
-        window.scroll({
-          top: element.offsetTop - 60,
+        window.scrollTo({
+          top: y,
           behavior: "smooth",
         });
-      }
-    }
+      });
+    });
   </script>
 </html>
