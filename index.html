@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -105,20 +105,23 @@
           <span class="teal">&#9900;</span> illustrator
         </p>
         <div class="fade-in rows">
-          <div class="card-sm cta dark-bg" onclick="location.href='#software'">
+          <div
+            class="card-sm cta dark-bg"
+            onclick="location.href = '#software'"
+          >
             <i class="fa-brands fa-react"></i>
             <p>A full-stack web and mobile application developer</p>
           </div>
-          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
+          <div class="card-sm cta dark-bg" onclick="location.href = '#design'">
             <i class="fa-solid fa-laptop-code"></i>
             <p>A developer who focuses on optimal UI/UX designs</p>
           </div>
-          <div class="card-sm cta dark-bg" onclick="location.href='#design'">
+          <div class="card-sm cta dark-bg" onclick="location.href = '#design'">
             <i class="fa fa-pen-nib"></i>
             <p>An experienced entrepreneur and character designer</p>
           </div>
         </div>
-        <div class="cta" onclick="location.href='#about'">
+        <div class="cta" onclick="location.href = '#about'">
           <i class="fa-sharp fa-solid fa-angle-down"></i>
         </div>
       </div>
@@ -130,7 +133,9 @@
         <div class="fade-in card-lg">
           <div
             class="avatar-container container"
-            onclick="location.href='https://www.linkedin.com/in/leaheyestone/'"
+            onclick="
+              location.href = 'https://www.linkedin.com/in/leaheyestone/'
+            "
           >
             <img
               src="img/avatar.png"
@@ -141,10 +146,8 @@
           <div class="about-container container">
             <h2>About Me</h2>
             <p>
-              <span class="bold-text"
-                >Hi, I'm Leah Eyestone! A full-stack developer and freelance
-                digital artist based in Western Canada.</span
-              >
+              Hi, I'm Leah Eyestone! A full-stack developer and freelance
+              digital artist based in Western Canada.
               <br /><br />
               My unique blend of skills as both a digital artist and developer,
               allow me to bridge the gap between design and functionality in my
@@ -153,9 +156,7 @@
               and user-friendly applications that deliver seamless user
               experiences.
               <br /><br />
-              <span class="script"
-                >Intermediate Software Engineer at Jobber</span
-              >
+              <span class="script">Senior Software Engineer at Jobber</span>
             </p>
           </div>
         </div>
@@ -164,12 +165,8 @@
         <h2>Skills</h2>
         <div class="flex-wrap">
           <div class="skill-token">
-            <img src="img/icon-html.png" alt="Html icon" />
-            <p>HTML</p>
-          </div>
-          <div class="skill-token">
-            <img src="img/icon-angular.png" alt="Angular icon" />
-            <p>Angular</p>
+            <img src="img/icon-typescript.png" alt="React icon" />
+            <p>React</p>
           </div>
           <div class="skill-token">
             <img src="img/icon-ruby.png" alt="Ruby icon" />
@@ -180,8 +177,12 @@
             <p>GraphQL</p>
           </div>
           <div class="skill-token">
-            <img src="img/icon-typescript.png" alt="React icon" />
-            <p>React</p>
+            <img src="img/icon-html.png" alt="Html icon" />
+            <p>HTML</p>
+          </div>
+          <div class="skill-token">
+            <img src="img/icon-angular.png" alt="Angular icon" />
+            <p>Angular</p>
           </div>
           <div class="skill-token">
             <img src="img/icon-sql.png" alt="SQL icon" />
@@ -195,23 +196,24 @@
           <i class="fa-solid fa-code"></i>
           <p>
             <b>Languages & Frameworks: </b>
-            Rails, GraphQL, TypeScript, JavaScript, HTML, CSS, and React Native
+            Rails, GraphQL, TypeScript, Vite, JavaScript, HTML, CSS, Tailwind,
+            and React Native
           </p>
         </div>
         <div class="text-col">
           <i class="fa-solid fa-hammer"></i>
           <p>
             <b>Tools: </b>
-            Visual Studio, Twilio, GitHub, Android Studio, XCode, Docker, JIRA,
-            Amplitude, Atlassian, DataDog, and Figma
+            Twilio, GitHub, Android Studio, XCode, Docker, JIRA, Amplitude,
+            Intercom, DataDog, Cursor, and Figma
           </p>
         </div>
         <div class="text-col" style="margin-bottom: 0">
           <i class="fa-solid fa-wand-sparkles"></i>
           <p>
             <b>Other: </b>
-            UI/UX Design, Mac & Windows OS, Agile, Adobe Creative Suite, and
-            Scrum Master
+            UI/UX Design, AI, Mac & Windows OS, Agile, Visual Studio, Adobe
+            Creative Suite, and Scrum Master
           </p>
         </div>
       </div>
@@ -246,68 +248,110 @@
             </label>
           </div>
           <div class="carousel-details" id="test">
-            <label
-              id="dev-info-1"
-              onclick="location.href='https://scrystone.netlify.app/'"
-            >
-              <h3 class="teal">
-                Scrystone
-                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-              </h3>
-              <p>
-                I developed and designed a web app for Magic the Gathering
-                players and collectors. It is designed to help users
-                effortlessly create and manage their decks and collections.
-                <br /><br />
-                Check it out!
-                <br /><br />
-                <span class="tags">Typescript</span>
-                <span class="tags">Vite</span>
-                <span class="tags">Firebase</span>
-              </p>
+            <label id="dev-info-1">
+              <div class="carousel-details-header">
+                <h3>Scrystone</h3>
+                <div class="carousel-tags-row">
+                  <span class="tags">Typescript</span>
+                  <span class="tags">Vite</span>
+                  <span class="tags">Firebase</span>
+                  <span class="tags">Tailwind</span>
+                </div>
+              </div>
+              <div class="carousel-details-body">
+                <p>
+                  I developed and designed a mobile responsive web app for Magic
+                  the Gathering players and collectors that enables deck
+                  building, collection management, and sharing. The app
+                  integrates real-time card data and pricing via the Scryfall
+                  API and supports automated bulk CSV uploads for rapid
+                  collection importing.
+                </p>
+
+                <div class="carousel-actions-row">
+                  <button
+                    class="primary-btn"
+                    onclick="location.href = 'https://scrystone.netlify.app/'"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i
+                    >View Live
+                  </button>
+                  <button
+                    class="secondary-btn"
+                    onclick="
+                      location.href =
+                        'https://www.figma.com/design/K4yFBl1FcD3B8TdgK76oQl/Scrystone?node-id=0-1&t=fKnoJBLvJBjh7in0-1'
+                    "
+                  >
+                    <i class="fa-brands fa-figma fa-sm"></i>Design Guide
+                  </button>
+                </div>
+              </div>
             </label>
-            <label
-              id="dev-info-2"
-              onclick="location.href='https://getjobber.com/features/automatic-time-tracking-software/'"
-            >
-              <h3 class="teal">
-                Jobber Location Timers
-                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-              </h3>
-              <p>
-                As part of team Workflow, we built an automation tool for the
-                Jobber mobile app. It automatically logs service providers hours
-                based off of their geolocation data (coordinates, velocity,
-                etc.)
-                <br /><br />
-                This included interactive push notifications when entering or
-                exiting a geofence.
-                <br /><br />
-                <span class="tags">React Native</span>
-                <span class="tags">Geolocate</span>
-                <span class="tags">Automation</span>
-              </p>
+            <label id="dev-info-2">
+              <div class="carousel-details-header">
+                <h3>Location Timers</h3>
+                <div class="carousel-tags-row">
+                  <span class="tags">React Native</span>
+                  <span class="tags">Geolocate</span>
+                  <span class="tags">Automation</span>
+                </div>
+              </div>
+              <div class="carousel-details-body">
+                <p>
+                  As part of Jobber's team Workflow, we built an automation tool
+                  for our mobile app. It automatically logs service providers
+                  hours based off of their geolocation data (coordinates,
+                  velocity, etc.). This includes interactive push notifications
+                  when entering or exiting a geofence.
+                </p>
+
+                <div class="carousel-actions-row">
+                  <button
+                    class="primary-btn"
+                    onclick="
+                      location.href =
+                        'https://getjobber.com/features/automatic-time-tracking-software/'
+                    "
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i
+                    >View Details
+                  </button>
+                </div>
+              </div>
             </label>
-            <label
-              id="dev-info-3"
-              onclick="location.href='https://getjobber.com/features/marketing-tools/reviews/'"
-            >
-              <h3 class="teal">
-                Jobber Reviews Suite
-                <i class="fa-solid fa-arrow-up-right-from-square teal"></i>
-              </h3>
-              <p>
-                As part of team SC Engagement, we built a suite that
-                automatically requests Google reviews from clients, send
-                reminders, and users can reply without ever leaving the Jobber
-                website.
-                <br /><br />
-                We surpassed our Q1 KPIs in just our 2nd week!
-                <br /><br />
-                <span class="tags">React</span>
-                <span class="tags">Google</span>
-                <span class="tags">Automation</span>
-              </p>
+            <label id="dev-info-3">
+              <div class="carousel-details-header">
+                <h3>Reviews Suite</h3>
+                <div class="carousel-tags-row">
+                  <span class="tags">Google APIs</span>
+                  <span class="tags">Automation</span>
+                  <span class="tags">✨ AI</span>
+                </div>
+              </div>
+              <div class="carousel-details-body">
+                <p>
+                  As part of Jobber's team SCE, we built a suite that
+                  automatically collects company Google reviews, supports
+                  scheduled or customizable automated reminders, comms
+                  templates, and AI assisted review reply generations.
+                  <br />
+                  We surpassed our Q1 KPIs in just our 2nd week!
+                </p>
+
+                <div class="carousel-actions-row">
+                  <button
+                    class="primary-btn"
+                    onclick="
+                      location.href =
+                        'https://getjobber.com/features/marketing-tools/reviews/'
+                    "
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i
+                    >View Details
+                  </button>
+                </div>
+              </div>
             </label>
           </div>
         </div>
@@ -320,7 +364,9 @@
           <div class="col">
             <div
               class="gallery-container hover"
-              onclick="location.href='https://github.com/itsleaheye/Portfolio'"
+              onclick="
+                location.href = 'https://github.com/itsleaheye/Portfolio'
+              "
             >
               <img
                 src="img/design-logo.jpg"
@@ -341,7 +387,10 @@
             </div>
             <div
               class="gallery-container hover"
-              onclick="location.href='https://www.figma.com/design/e3m35ak0yghUWMs03AJuvH/Personal-Work-Space?node-id=127-3410'"
+              onclick="
+                location.href =
+                  'https://www.figma.com/design/e3m35ak0yghUWMs03AJuvH/Personal-Work-Space?node-id=127-3410'
+              "
             >
               <img
                 src="img/design-cap.jpg"
@@ -376,7 +425,9 @@
           <div class="col">
             <div
               class="gallery-container hover"
-              onclick="location.href='https://github.com/itsleaheye/casualpancakes'"
+              onclick="
+                location.href = 'https://github.com/itsleaheye/casualpancakes'
+              "
             >
               <img
                 src="img/des-temp.jpg"
@@ -397,7 +448,10 @@
             </div>
             <div
               class="gallery-container hover"
-              onclick="location.href='https://github.com/itsleaheye/ERC-MembershipTool'"
+              onclick="
+                location.href =
+                  'https://github.com/itsleaheye/ERC-MembershipTool'
+              "
             >
               <img
                 src="img/design-erc.jpg"
@@ -432,7 +486,10 @@
           <div class="col">
             <div
               class="gallery-container hover"
-              onclick="location.href='https://www.figma.com/design/t9gJ1cqXQLW8AChamJwsRv/Cantrip-Basic-UI?t=eU7PiJMhRE2OzGfZ-1'"
+              onclick="
+                location.href =
+                  'https://www.figma.com/design/t9gJ1cqXQLW8AChamJwsRv/Cantrip-Basic-UI?t=eU7PiJMhRE2OzGfZ-1'
+              "
             >
               <img
                 src="img/des-can.jpg"
