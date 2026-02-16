@@ -33,6 +33,16 @@
   --desktop: 75rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#about,
+#software,
+#design {
+  scroll-margin-top: 80px;
+}
+
 h2 {
   font-size: 2rem;
   margin-bottom: var(--pad-xs);
@@ -53,9 +63,7 @@ p {
   color: var(--charcoal);
 }
 
-.dark-text,
-.script,
-h2 {
+.dark-text, .script, h2 {
   color: var(--charcoal);
   font-weight: lighter;
 }
@@ -64,16 +72,13 @@ h2 {
   font-weight: 600;
 }
 
-.dark-bg,
-.nav {
+.dark-bg, .nav {
   background-color: var(--charcoal);
 }
-.dark-bg h2,
-.nav h2 {
+.dark-bg h2, .nav h2 {
   color: var(--light-gray);
 }
-.dark-bg p,
-.nav p {
+.dark-bg p, .nav p {
   color: var(--light-gray);
 }
 
@@ -87,76 +92,40 @@ h2 {
   line-height: 1.75rem;
 }
 
-.position-fixed,
-.logo-animated::before,
-.logo-animated::after,
-.logo-animated {
+.position-fixed, .logo-animated::before,
+.logo-animated::after, .logo-animated {
   bottom: 0;
   left: 0;
   right: 0;
   top: 0;
 }
 
-.space-evenly,
-.social-items {
+.space-evenly, .social-items {
   display: flex;
   justify-content: space-between;
 }
 
-.hover,
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .secondary-btn:hover,
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .primary-btn:hover,
-.code-portfolio label:hover,
-.card-lg .avatar-container:hover img,
-.card-lg .avatar-container:hover,
-.card-sm:hover,
-.nav input,
-.hover-white,
-.hover-teal,
-.card-sm:hover i,
-.banner i:hover {
+.hover, .code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .secondary-btn:hover, .code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .primary-btn:hover, .code-portfolio label:hover, .card-lg .avatar-container:hover img, .card-lg .avatar-container:hover, .card-sm:hover, .nav input, .hover-white, .hover-teal, .card-sm:hover i, .banner i:hover {
   cursor: pointer;
   transition: var(--ease-in);
 }
 
-.teal,
-.hover-teal,
-.card-sm:hover i,
-.banner i:hover {
+.teal, .hover-teal, .card-sm:hover i, .banner i:hover {
   color: var(--teal) !important;
 }
 
-.white,
-.hover-white {
+.white, .hover-white {
   color: var(--white) !important;
 }
 
-.card,
-.card-lg,
-.card-sm {
+.card, .card-lg, .card-sm {
   border: var(--border-size) solid var(--charcoal);
   border-radius: var(--border-radius-base);
   padding: var(--pad-sm);
   text-align: center;
 }
 
-.flex,
-.flex-row,
-.flex-col,
-.gallery-container .gallery-details,
-.code-portfolio,
-.skill-token,
-.banner .rows,
-.banner,
-.flex-wrap {
+.flex, .flex-row, .flex-col, .gallery-container .gallery-details, .code-portfolio, .skill-token, .banner .rows, .banner, .flex-wrap {
   display: flex;
   justify-content: center;
   gap: var(--pad-sm);
@@ -167,12 +136,7 @@ h2 {
   flex-direction: row;
 }
 
-.flex-col,
-.gallery-container .gallery-details,
-.code-portfolio,
-.skill-token,
-.banner .rows,
-.banner {
+.flex-col, .gallery-container .gallery-details, .code-portfolio, .skill-token, .banner .rows, .banner {
   flex-direction: column;
 }
 
@@ -207,11 +171,9 @@ h2 {
   animation: fadein 3s;
 }
 
-.slide-cards,
-#dev-1:checked ~ .carousel-cards #dev-2,
+.slide-cards, #dev-1:checked ~ .carousel-cards #dev-2,
 #dev-2:checked ~ .carousel-cards #dev-3,
-#dev-3:checked ~ .carousel-cards #dev-1,
-#dev-1:checked ~ .carousel-cards #dev-3,
+#dev-3:checked ~ .carousel-cards #dev-1, #dev-1:checked ~ .carousel-cards #dev-3,
 #dev-2:checked ~ .carousel-cards #dev-1,
 #dev-3:checked ~ .carousel-cards #dev-2 {
   transition: var(--ease-in);
@@ -319,11 +281,7 @@ h2 {
   }
 }
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
+  0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
   }
   40% {
@@ -384,10 +342,7 @@ body {
   margin-bottom: var(--pad-xxs);
   position: relative;
   transform-origin: 0.45rem 0.063rem;
-  transition:
-    transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
-    opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   width: 3rem;
   z-index: 1;
 }
@@ -677,36 +632,40 @@ i {
     height: 16.5rem;
   }
 }
-.code-portfolio .carousel-details label {
+.code-portfolio .carousel-details .carousel-details-body {
   max-width: 100vw;
-  padding: var(--pad-xs) var(--pad-xs) 0 var(--pad-xs);
 }
 @media only screen and (min-width: 37.5rem) {
-  .code-portfolio .carousel-details label {
+  .code-portfolio .carousel-details .carousel-details-body {
     max-width: 35rem;
     padding: 0;
   }
 }
-.code-portfolio .carousel-details label h3 {
+.code-portfolio .carousel-details .carousel-details-body h3 {
   color: var(--white);
   gap: var(--pad-xxs);
   font-weight: bold;
   margin-bottom: var(--pad-xxxs);
+}
+.code-portfolio .carousel-details .carousel-details-body p {
+  font-size: 1rem;
 }
 .code-portfolio .carousel-details .carousel-details-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: var(--pad-xxs);
+  cursor: default;
+  color: var(--white);
+}
+.code-portfolio .carousel-details .carousel-details-header h3 {
+  font-size: 2rem;
 }
 .code-portfolio .carousel-details .carousel-details-header .carousel-tags-row {
   display: none;
 }
 @media only screen and (min-width: 37.5rem) {
-  .code-portfolio
-    .carousel-details
-    .carousel-details-header
-    .carousel-tags-row {
+  .code-portfolio .carousel-details .carousel-details-header .carousel-tags-row {
     display: block;
   }
 }
@@ -714,6 +673,7 @@ i {
   display: flex;
   gap: var(--pad-xs);
   flex-direction: column;
+  cursor: default;
 }
 .code-portfolio .carousel-details .carousel-details-body .carousel-actions-row {
   display: flex;
@@ -721,11 +681,8 @@ i {
   gap: var(--pad-xs);
   width: 100%;
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  button {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row button {
+  cursor: pointer;
   border: none;
   border-radius: var(--border-radius-base);
   padding: var(--pad-xxxs) var(--pad-xs);
@@ -737,48 +694,28 @@ i {
   font-size: 0.95rem;
   line-height: 1.75rem;
   width: 50%;
+  gap: var(--pad-sm);
 }
 @media only screen and (min-width: 37.5rem) {
-  .code-portfolio
-    .carousel-details
-    .carousel-details-body
-    .carousel-actions-row
-    button {
+  .code-portfolio .carousel-details .carousel-details-body .carousel-actions-row button {
     font-size: 1.1rem;
   }
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .primary-btn {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .primary-btn {
   background-color: var(--teal);
   color: var(--charcoal);
   font-weight: 600;
   display: flex;
   gap: var(--pad-xxs);
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .primary-btn
-  i {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .primary-btn i {
   color: var(--black);
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .primary-btn:hover {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .primary-btn:hover {
   opacity: 0.5;
   transition: var(--ease-in);
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .secondary-btn {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .secondary-btn {
   background-color: var(--light-charcoal);
   color: var(--white);
   font-weight: 500;
@@ -786,19 +723,10 @@ i {
   display: flex;
   gap: var(--pad-xxs);
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .secondary-btn
-  i {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .secondary-btn i {
   color: var(--white);
 }
-.code-portfolio
-  .carousel-details
-  .carousel-details-body
-  .carousel-actions-row
-  .secondary-btn:hover {
+.code-portfolio .carousel-details .carousel-details-body .carousel-actions-row .secondary-btn:hover {
   opacity: 0.5;
   transition: var(--ease-in);
 }
@@ -875,11 +803,11 @@ footer .social-items li {
 .gallery-container img {
   border-radius: var(--border-radius-base);
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 @media only screen and (min-width: 37.5rem) {
   .gallery-container img {
     height: 13rem;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -656,10 +656,9 @@ i {
       height: 16.5rem;
     }
 
-    label {
+    .carousel-details-body {
       max-width: 100vw;
-      padding: var(--pad-xs) var(--pad-xs) 0 var(--pad-xs);
-      // text-align: center;
+      // padding: var(--pad-xs) var(--pad-xs) 0 var(--pad-xs);
 
       @media only screen and (min-width: 37.5rem) {
         max-width: 35rem;
@@ -669,9 +668,12 @@ i {
       h3 {
         color: var(--white);
         gap: var(--pad-xxs);
-        // justify-content: center;
         font-weight: bold;
         margin-bottom: var(--pad-xxxs);
+      }
+
+      p {
+        font-size: 1rem;
       }
     }
 
@@ -680,6 +682,12 @@ i {
       justify-content: space-between;
       align-items: center;
       gap: var(--pad-xxs);
+      cursor: default;
+      color: var(--white);
+
+      h3 {
+        font-size: 2rem;
+      }
 
       .carousel-tags-row {
         display: none;
@@ -694,6 +702,7 @@ i {
       display: flex;
       gap: var(--pad-xs);
       flex-direction: column;
+      cursor: default;
 
       .carousel-actions-row {
         display: flex;
@@ -702,6 +711,7 @@ i {
         width: 100%;
 
         button {
+          cursor: pointer;
           border: none;
           border-radius: var(--border-radius-base);
           padding: var(--pad-xxxs) var(--pad-xs);
@@ -713,6 +723,7 @@ i {
           font-size: 0.95rem;
           line-height: 1.75rem;
           width: 50%;
+          gap: var(--pad-sm);
 
           @media only screen and (min-width: 37.5rem) {
             font-size: 1.1rem;
