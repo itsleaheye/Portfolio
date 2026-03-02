@@ -316,10 +316,11 @@ body {
 .nav {
   @extend .dark-bg;
   background-color: var(--black);
-  padding: var(--pad-sm);
+  padding: var(--pad-xs);
   position: fixed;
   width: 100vw;
   z-index: 2;
+
   @media only screen and (min-width: 37.5rem) {
     background-color: var(--black);
     padding: var(--pad-xs) var(--pad-sm);
@@ -339,8 +340,9 @@ body {
     height: 1.5rem;
     opacity: 0;
     position: absolute;
-    width: 2.5rem;
+    width: 2rem;
     z-index: 2;
+
     @media only screen and (min-width: 37.5rem) {
       display: none;
     }
@@ -352,13 +354,14 @@ body {
     height: 0.25rem;
     margin-bottom: var(--pad-xxs);
     position: relative;
-    transform-origin: 0.45rem 0.063rem;
+    transform-origin: 0rem;
     transition:
       transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       opacity 0.55s ease;
-    width: 3rem;
+    width: 2.1rem;
     z-index: 1;
+
     @media only screen and (min-width: 37.5rem) {
       display: none;
     }
@@ -393,7 +396,7 @@ body {
 .menu-items {
   background: var(--black);
   left: 0;
-  padding: var(--pad-md) var(--pad-sm) var(--pad-sm) var(--pad-sm);
+  padding: var(--pad-md) var(--pad-sm) var(--pad-xs) var(--pad-sm);
   position: absolute;
   top: 0;
   transform-origin: 0% 0%;
@@ -401,6 +404,7 @@ body {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   width: 100vw;
   box-shadow: inset 0 0 0 var(--path-width) var(--teal);
+
   @media only screen and (min-width: 37.5rem) {
     margin-left: calc(var(--icon-lg) + var(--pad-xs));
     padding: 0;
