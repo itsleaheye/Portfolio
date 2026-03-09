@@ -474,10 +474,11 @@ i {
 }
 .card-sm p {
   border-top: var(--border-size) solid var(--medium-gray);
-  margin-top: var(--pad-sm);
+  margin-top: var(--pad-xs);
   padding-top: var(--pad-xs);
 }
 .card-sm i {
+  font-size: var(--icon-lg);
   transition: var(--ease-in);
 }
 
@@ -555,7 +556,7 @@ i {
 }
 @media only screen and (min-width: 37.5rem) {
   .text-col {
-    max-width: 35rem;
+    max-width: 36rem;
   }
 }
 .text-col i {

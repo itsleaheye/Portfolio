@@ -416,6 +416,7 @@ body {
     li {
       font-size: var(--font-md);
       margin: var(--pad-xs) 0;
+
       @media only screen and (min-width: 37.5rem) {
         float: left;
         font-size: var(--font-sm);
@@ -500,11 +501,12 @@ i {
 
   p {
     border-top: var(--border-size) solid var(--medium-gray);
-    margin-top: var(--pad-sm);
+    margin-top: var(--pad-xs);
     padding-top: var(--pad-xs);
   }
 
   i {
+    font-size: var(--icon-lg);
     transition: var(--ease-in);
   }
 }
@@ -584,7 +586,7 @@ i {
   gap: var(--pad-xs);
   margin: var(--pad-sm) auto;
   @media only screen and (min-width: 37.5rem) {
-    max-width: 35rem;
+    max-width: 36rem;
   }
 
   i {
