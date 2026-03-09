@@ -541,7 +541,7 @@ i {
 .skill-token {
   text-align: center;
   gap: var(--pad-xxs);
-  width: 75px;
+  width: 85px;
 }
 .skill-token img {
   max-width: 3.5rem;
